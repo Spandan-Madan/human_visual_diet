@@ -2,7 +2,7 @@
 
 <div align="center">
 <h3>Improving generalization by mimicking the human visual diet</h3>
-  <img src="teaser_part_1.png" alt="Teaser Figure">
+  <img src="fig_1_overview.jpg" alt="Teaser Figure">
   
   <a href="https://arxiv.org/abs/2206.07802">Paper</a> •
   <a href="#overview">Overview</a> •
