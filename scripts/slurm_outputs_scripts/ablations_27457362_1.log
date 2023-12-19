@@ -1,0 +1,63 @@
+1
+2022-09-23 14:10:58.254050: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-09-23 14:10:58.254289: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/cuda/__init__.py:145: UserWarning: 
+NVIDIA A40 with CUDA capability sm_86 is not compatible with the current PyTorch installation.
+The current PyTorch install supports CUDA capabilities sm_37 sm_50 sm_60 sm_70.
+If you want to use the NVIDIA A40 GPU with PyTorch, please check the instructions at https://pytorch.org/get-started/locally/
+
+  warnings.warn(incompatible_device_warn.format(device_name, capability, " ".join(arch_list), device_name))
+Task is classification, not lift the flap.
+Hard mining set to:both
+Using materials: ['scannet_xml_50_2', 'scannet_xml_realistic']
+Hotswapped material loader being used.
+{1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9, 11: 10, 12: 11, 13: 12}
+-------------------------------
+Annotation Counts
+-------------------------------
+table                       887
+sofa                        246
+chair                       996
+window                      290
+monitor                     122
+trash_bin                   164
+bed                         177
+lamp                         59
+file_cabinet                 58
+bathtub                     131
+bookshelf                   140
+flowerpot                     5
+Total                      3275
+-------------------------------
+
+annotations: ../openrooms/annotation_files/train_scannet_xml_50_v2.json
+batch_size: 10
+checkpoint: null
+git: fb8600a628428381abf6c19fbf66e4592ce41f87
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/train_scannet_real_50_v2.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+No checkpoint was passed.
+Traceback (most recent call last):
+  File "train_hotswapped_augmented.py", line 154, in <module>
+    context_images, target_images, context_images_2, target_images_2, bbox, labels = iter(dataloader).next()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 530, in __next__
+    data = self._next_data()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 570, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 49, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/WhenPigsFlyContext/core/dataset_hotswapped_augmented.py", line 156, in __getitem__
+    transforms.RandomAffine(),
+TypeError: __init__() missing 1 required positional argument: 'degrees'

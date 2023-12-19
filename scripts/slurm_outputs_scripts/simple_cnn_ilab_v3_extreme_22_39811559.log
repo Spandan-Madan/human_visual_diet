@@ -1,0 +1,8 @@
+22
+Warning: You are running the empty baseline, so network is being fed an input of just zeros.
+Traceback (most recent call last):
+  File "test_simple_cnn_grayscale.py", line 160, in <module>
+    save_config(cfg, args.outdir, "config_%s.yaml"%args.outname)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/WhenPigsFlyContext/core/config.py", line 108, in save_config
+    with open(os.path.join(savedir, save_name), "w") as f:
+OSError: [Errno 30] Read-only file system: 'ilab_v3_extreme/vit_style/config_train_style_test_transformations.yaml'

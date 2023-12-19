@@ -1,0 +1,1110 @@
+9
+Warning: You are running the empty baseline, so network is being fed an input of just zeros.
+annotations: ../openrooms/annotation_files/train_main_xml_50_v3.json
+batch_size: 200
+checkpoint: checkpoint_30.tar
+empty_baseline: false
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+no_context: true
+no_target: false
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/train_main_xml_50_v3.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: true
+
+Initializing model from checkpoint checkpoint_30.tar
+-------------------------------
+Annotation Counts
+-------------------------------
+desk                       4829
+trash_bin                  3204
+chair                     19905
+window                    10204
+lamp                       2489
+table                     11541
+monitor                    3094
+file_cabinet               1727
+bookshelf                  3902
+bed                        3214
+sofa                       3550
+bathtub                    1988
+flowerpot                   227
+Total                     69874
+-------------------------------
+
+batch size is 200
+Data Loader lenght is 350
+Test Batches:   0%|          | 0/350 [00:00<?, ?it/s]Test Batches:   0%|          | 1/350 [00:31<3:05:53, 31.96s/it]Test Batches:   1%|          | 2/350 [00:35<1:29:24, 15.42s/it]Test Batches:   1%|          | 3/350 [00:40<59:59, 10.37s/it]  Test Batches:   1%|          | 4/350 [00:44<46:08,  8.00s/it]Test Batches:   1%|▏         | 5/350 [00:49<39:17,  6.83s/it]Test Batches:   2%|▏         | 6/350 [00:53<33:12,  5.79s/it]Test Batches:   2%|▏         | 7/350 [00:57<29:54,  5.23s/it]Test Batches:   2%|▏         | 8/350 [01:01<27:20,  4.80s/it]Test Batches:   3%|▎         | 9/350 [01:05<25:59,  4.57s/it]Test Batches:   3%|▎         | 10/350 [01:09<25:46,  4.55s/it]Test Batches:   3%|▎         | 11/350 [01:13<24:58,  4.42s/it]Test Batches:   3%|▎         | 12/350 [01:18<25:16,  4.49s/it]Test Batches:   4%|▎         | 13/350 [01:22<24:38,  4.39s/it]Test Batches:   4%|▍         | 14/350 [01:26<23:48,  4.25s/it]Test Batches:   4%|▍         | 15/350 [01:31<25:00,  4.48s/it]Test Batches:   5%|▍         | 16/350 [01:35<24:47,  4.45s/it]Test Batches:   5%|▍         | 17/350 [01:40<24:51,  4.48s/it]Test Batches:   5%|▌         | 18/350 [01:44<24:30,  4.43s/it]Test Batches:   5%|▌         | 19/350 [01:49<24:27,  4.43s/it]Test Batches:   6%|▌         | 20/350 [01:53<24:25,  4.44s/it]Test Batches:   6%|▌         | 21/350 [01:58<24:45,  4.51s/it]Test Batches:   6%|▋         | 22/350 [02:03<25:08,  4.60s/it]Test Batches:   7%|▋         | 23/350 [02:07<25:16,  4.64s/it]Test Batches:   7%|▋         | 24/350 [02:12<25:14,  4.65s/it]Test Batches:   7%|▋         | 25/350 [02:16<24:07,  4.45s/it]Test Batches:   7%|▋         | 26/350 [02:20<23:20,  4.32s/it]Test Batches:   8%|▊         | 27/350 [02:25<23:51,  4.43s/it]Test Batches:   8%|▊         | 28/350 [02:29<24:09,  4.50s/it]Test Batches:   8%|▊         | 29/350 [02:33<23:05,  4.31s/it]Test Batches:   9%|▊         | 30/350 [02:38<23:06,  4.33s/it]Test Batches:   9%|▉         | 31/350 [02:42<23:30,  4.42s/it]Test Batches:   9%|▉         | 32/350 [02:46<23:10,  4.37s/it]Test Batches:   9%|▉         | 33/350 [02:52<24:44,  4.68s/it]Test Batches:  10%|▉         | 34/350 [02:56<23:39,  4.49s/it]Test Batches:  10%|█         | 35/350 [03:00<22:54,  4.36s/it]Test Batches:  10%|█         | 36/350 [03:04<22:38,  4.33s/it]Test Batches:  11%|█         | 37/350 [03:08<22:00,  4.22s/it]Test Batches:  11%|█         | 38/350 [03:12<21:21,  4.11s/it]Test Batches:  11%|█         | 39/350 [03:16<21:08,  4.08s/it]Test Batches:  11%|█▏        | 40/350 [03:21<21:51,  4.23s/it]Test Batches:  12%|█▏        | 41/350 [03:25<21:20,  4.14s/it]Test Batches:  12%|█▏        | 42/350 [03:29<21:40,  4.22s/it]Test Batches:  12%|█▏        | 43/350 [03:33<21:33,  4.21s/it]Test Batches:  13%|█▎        | 44/350 [03:38<22:39,  4.44s/it]Test Batches:  13%|█▎        | 45/350 [03:43<23:28,  4.62s/it]Test Batches:  13%|█▎        | 46/350 [03:47<22:36,  4.46s/it]Test Batches:  13%|█▎        | 47/350 [03:52<22:46,  4.51s/it]Test Batches:  14%|█▎        | 48/350 [03:56<22:47,  4.53s/it]Test Batches:  14%|█▍        | 49/350 [04:01<22:50,  4.55s/it]Test Batches:  14%|█▍        | 50/350 [04:05<21:49,  4.37s/it]Test Batches:  15%|█▍        | 51/350 [04:09<21:26,  4.30s/it]Test Batches:  15%|█▍        | 52/350 [04:13<20:51,  4.20s/it]Test Batches:  15%|█▌        | 53/350 [04:17<20:16,  4.10s/it]Test Batches:  15%|█▌        | 54/350 [04:21<20:29,  4.15s/it]Test Batches:  16%|█▌        | 55/350 [04:26<21:08,  4.30s/it]Test Batches:  16%|█▌        | 56/350 [04:31<21:52,  4.46s/it]Test Batches:  16%|█▋        | 57/350 [04:35<21:33,  4.42s/it]Test Batches:  17%|█▋        | 58/350 [04:40<21:45,  4.47s/it]Test Batches:  17%|█▋        | 59/350 [04:44<21:19,  4.40s/it]Test Batches:  17%|█▋        | 60/350 [04:48<21:18,  4.41s/it]Test Batches:  17%|█▋        | 61/350 [04:53<20:53,  4.34s/it]Test Batches:  18%|█▊        | 62/350 [04:57<20:39,  4.30s/it]Test Batches:  18%|█▊        | 63/350 [05:01<20:51,  4.36s/it]Test Batches:  18%|█▊        | 64/350 [05:06<20:46,  4.36s/it]Test Batches:  19%|█▊        | 65/350 [05:11<21:30,  4.53s/it]Test Batches:  19%|█▉        | 66/350 [05:14<20:38,  4.36s/it]Test Batches:  19%|█▉        | 67/350 [05:19<20:37,  4.37s/it]Test Batches:  19%|█▉        | 68/350 [05:23<20:18,  4.32s/it]Test Batches:  20%|█▉        | 69/350 [05:28<20:44,  4.43s/it]Test Batches:  20%|██        | 70/350 [05:32<20:13,  4.34s/it]Test Batches:  20%|██        | 71/350 [05:36<19:16,  4.15s/it]Test Batches:  21%|██        | 72/350 [05:40<19:11,  4.14s/it]Test Batches:  21%|██        | 73/350 [05:45<20:40,  4.48s/it]Test Batches:  21%|██        | 74/350 [05:49<19:30,  4.24s/it]Test Batches:  21%|██▏       | 75/350 [05:53<19:12,  4.19s/it]Test Batches:  22%|██▏       | 76/350 [05:57<18:57,  4.15s/it]Test Batches:  22%|██▏       | 77/350 [06:01<18:27,  4.06s/it]Test Batches:  22%|██▏       | 78/350 [06:05<18:28,  4.08s/it]Test Batches:  23%|██▎       | 79/350 [06:09<18:22,  4.07s/it]Test Batches:  23%|██▎       | 80/350 [06:13<19:03,  4.23s/it]Test Batches:  23%|██▎       | 81/350 [06:18<19:20,  4.31s/it]Test Batches:  23%|██▎       | 82/350 [06:23<20:14,  4.53s/it]Test Batches:  24%|██▎       | 83/350 [06:27<19:30,  4.38s/it]Test Batches:  24%|██▍       | 84/350 [06:31<19:27,  4.39s/it]Test Batches:  24%|██▍       | 85/350 [06:36<19:08,  4.33s/it]Test Batches:  25%|██▍       | 86/350 [06:40<19:06,  4.34s/it]Test Batches:  25%|██▍       | 87/350 [06:45<19:42,  4.50s/it]Test Batches:  25%|██▌       | 88/350 [06:49<18:56,  4.34s/it]Test Batches:  25%|██▌       | 89/350 [06:53<18:55,  4.35s/it]Test Batches:  26%|██▌       | 90/350 [06:59<20:12,  4.66s/it]Test Batches:  26%|██▌       | 91/350 [07:03<19:27,  4.51s/it]Test Batches:  26%|██▋       | 92/350 [07:08<19:46,  4.60s/it]Test Batches:  27%|██▋       | 93/350 [07:12<19:27,  4.54s/it]Test Batches:  27%|██▋       | 94/350 [07:17<19:50,  4.65s/it]Test Batches:  27%|██▋       | 95/350 [07:22<19:52,  4.68s/it]Test Batches:  27%|██▋       | 96/350 [07:26<19:55,  4.71s/it]Test Batches:  28%|██▊       | 97/350 [07:31<19:29,  4.62s/it]Test Batches:  28%|██▊       | 98/350 [07:35<18:55,  4.51s/it]Test Batches:  28%|██▊       | 99/350 [07:40<19:45,  4.72s/it]Test Batches:  29%|██▊       | 100/350 [07:45<19:42,  4.73s/it]Test Batches:  29%|██▉       | 101/350 [07:49<19:09,  4.62s/it]Test Batches:  29%|██▉       | 102/350 [07:54<18:40,  4.52s/it]Test Batches:  29%|██▉       | 103/350 [07:58<17:54,  4.35s/it]Test Batches:  30%|██▉       | 104/350 [08:02<17:42,  4.32s/it]Test Batches:  30%|███       | 105/350 [08:06<17:23,  4.26s/it]Test Batches:  30%|███       | 106/350 [08:10<17:19,  4.26s/it]Test Batches:  31%|███       | 107/350 [08:15<17:33,  4.33s/it]Test Batches:  31%|███       | 108/350 [08:19<17:25,  4.32s/it]Test Batches:  31%|███       | 109/350 [08:23<17:15,  4.30s/it]Test Batches:  31%|███▏      | 110/350 [08:27<16:36,  4.15s/it]Test Batches:  32%|███▏      | 111/350 [08:31<16:29,  4.14s/it]Test Batches:  32%|███▏      | 112/350 [08:35<16:27,  4.15s/it]Test Batches:  32%|███▏      | 113/350 [08:40<16:54,  4.28s/it]Test Batches:  33%|███▎      | 114/350 [08:44<16:33,  4.21s/it]Test Batches:  33%|███▎      | 115/350 [08:48<16:31,  4.22s/it]Test Batches:  33%|███▎      | 116/350 [08:54<17:44,  4.55s/it]Test Batches:  33%|███▎      | 117/350 [08:58<17:34,  4.53s/it]Test Batches:  34%|███▎      | 118/350 [09:03<17:44,  4.59s/it]Test Batches:  34%|███▍      | 119/350 [09:08<17:55,  4.66s/it]Test Batches:  34%|███▍      | 120/350 [09:12<17:02,  4.45s/it]Test Batches:  35%|███▍      | 121/350 [09:16<17:11,  4.50s/it]Test Batches:  35%|███▍      | 122/350 [09:20<16:51,  4.44s/it]Test Batches:  35%|███▌      | 123/350 [09:25<16:36,  4.39s/it]Test Batches:  35%|███▌      | 124/350 [09:29<16:14,  4.31s/it]Test Batches:  36%|███▌      | 125/350 [09:33<16:11,  4.32s/it]Test Batches:  36%|███▌      | 126/350 [09:37<15:57,  4.27s/it]Test Batches:  36%|███▋      | 127/350 [09:41<15:30,  4.17s/it]Test Batches:  37%|███▋      | 128/350 [09:46<15:35,  4.21s/it]Test Batches:  37%|███▋      | 129/350 [09:50<16:02,  4.35s/it]Test Batches:  37%|███▋      | 130/350 [09:55<16:47,  4.58s/it]Test Batches:  37%|███▋      | 131/350 [10:00<16:59,  4.65s/it]Test Batches:  38%|███▊      | 132/350 [10:04<16:25,  4.52s/it]Test Batches:  38%|███▊      | 133/350 [10:09<16:24,  4.54s/it]Test Batches:  38%|███▊      | 134/350 [10:13<16:16,  4.52s/it]Test Batches:  39%|███▊      | 135/350 [10:18<16:23,  4.58s/it]Test Batches:  39%|███▉      | 136/350 [10:22<15:59,  4.48s/it]Test Batches:  39%|███▉      | 137/350 [10:27<15:44,  4.43s/it]Test Batches:  39%|███▉      | 138/350 [10:32<16:12,  4.59s/it]Test Batches:  40%|███▉      | 139/350 [10:36<15:50,  4.50s/it]Test Batches:  40%|████      | 140/350 [10:41<16:04,  4.59s/it]Test Batches:  40%|████      | 141/350 [10:45<15:30,  4.45s/it]Test Batches:  41%|████      | 142/350 [10:49<15:19,  4.42s/it]Test Batches:  41%|████      | 143/350 [10:53<14:51,  4.31s/it]Test Batches:  41%|████      | 144/350 [10:58<15:33,  4.53s/it]Test Batches:  41%|████▏     | 145/350 [11:02<15:00,  4.39s/it]Test Batches:  42%|████▏     | 146/350 [11:07<14:39,  4.31s/it]Test Batches:  42%|████▏     | 147/350 [11:11<14:44,  4.36s/it]Test Batches:  42%|████▏     | 148/350 [11:15<14:41,  4.37s/it]Test Batches:  43%|████▎     | 149/350 [11:20<14:42,  4.39s/it]Test Batches:  43%|████▎     | 150/350 [11:24<14:05,  4.23s/it]Test Batches:  43%|████▎     | 151/350 [11:27<13:24,  4.04s/it]Test Batches:  43%|████▎     | 152/350 [11:32<13:38,  4.13s/it]Test Batches:  44%|████▎     | 153/350 [11:37<14:31,  4.43s/it]Test Batches:  44%|████▍     | 154/350 [11:42<14:57,  4.58s/it]Test Batches:  44%|████▍     | 155/350 [11:47<15:08,  4.66s/it]Test Batches:  45%|████▍     | 156/350 [11:52<15:24,  4.76s/it]Test Batches:  45%|████▍     | 157/350 [11:56<15:01,  4.67s/it]Test Batches:  45%|████▌     | 158/350 [12:01<14:47,  4.62s/it]Test Batches:  45%|████▌     | 159/350 [12:05<14:45,  4.63s/it]Test Batches:  46%|████▌     | 160/350 [12:10<14:41,  4.64s/it]Test Batches:  46%|████▌     | 161/350 [12:14<14:33,  4.62s/it]Test Batches:  46%|████▋     | 162/350 [12:19<14:36,  4.66s/it]Test Batches:  47%|████▋     | 163/350 [12:24<14:13,  4.56s/it]Test Batches:  47%|████▋     | 164/350 [12:28<14:09,  4.57s/it]Test Batches:  47%|████▋     | 165/350 [12:33<14:15,  4.63s/it]Test Batches:  47%|████▋     | 166/350 [12:37<14:08,  4.61s/it]Test Batches:  48%|████▊     | 167/350 [12:42<14:23,  4.72s/it]Test Batches:  48%|████▊     | 168/350 [12:47<14:16,  4.70s/it]Test Batches:  48%|████▊     | 169/350 [12:52<14:15,  4.73s/it]Test Batches:  49%|████▊     | 170/350 [12:56<13:15,  4.42s/it]Test Batches:  49%|████▉     | 171/350 [13:00<12:56,  4.34s/it]Test Batches:  49%|████▉     | 172/350 [13:04<12:23,  4.17s/it]Test Batches:  49%|████▉     | 173/350 [13:08<12:10,  4.13s/it]Test Batches:  50%|████▉     | 174/350 [13:12<11:58,  4.08s/it]Test Batches:  50%|█████     | 175/350 [13:16<12:15,  4.20s/it]Test Batches:  50%|█████     | 176/350 [13:20<12:20,  4.25s/it]Test Batches:  51%|█████     | 177/350 [13:25<12:17,  4.26s/it]Test Batches:  51%|█████     | 178/350 [13:29<12:34,  4.39s/it]Test Batches:  51%|█████     | 179/350 [13:33<11:51,  4.16s/it]Test Batches:  51%|█████▏    | 180/350 [13:38<12:14,  4.32s/it]Test Batches:  52%|█████▏    | 181/350 [13:42<12:14,  4.35s/it]Test Batches:  52%|█████▏    | 182/350 [13:46<11:59,  4.28s/it]Test Batches:  52%|█████▏    | 183/350 [13:51<12:09,  4.37s/it]Test Batches:  53%|█████▎    | 184/350 [13:55<11:46,  4.26s/it]Test Batches:  53%|█████▎    | 185/350 [13:59<11:45,  4.27s/it]Test Batches:  53%|█████▎    | 186/350 [14:03<11:37,  4.25s/it]Test Batches:  53%|█████▎    | 187/350 [14:08<11:38,  4.29s/it]Test Batches:  54%|█████▎    | 188/350 [14:11<11:07,  4.12s/it]Test Batches:  54%|█████▍    | 189/350 [14:15<11:02,  4.11s/it]Test Batches:  54%|█████▍    | 190/350 [14:20<11:13,  4.21s/it]Test Batches:  55%|█████▍    | 191/350 [14:24<10:54,  4.11s/it]Test Batches:  55%|█████▍    | 192/350 [14:28<11:06,  4.22s/it]Test Batches:  55%|█████▌    | 193/350 [14:33<11:34,  4.43s/it]Test Batches:  55%|█████▌    | 194/350 [14:37<11:20,  4.36s/it]Test Batches:  56%|█████▌    | 195/350 [14:41<10:53,  4.21s/it]Test Batches:  56%|█████▌    | 196/350 [14:45<10:50,  4.22s/it]Test Batches:  56%|█████▋    | 197/350 [14:50<10:56,  4.29s/it]Test Batches:  57%|█████▋    | 198/350 [14:54<10:42,  4.23s/it]Test Batches:  57%|█████▋    | 199/350 [14:58<10:22,  4.12s/it]Test Batches:  57%|█████▋    | 200/350 [15:02<10:06,  4.04s/it]Test Batches:  57%|█████▋    | 201/350 [15:06<09:49,  3.96s/it]Test Batches:  58%|█████▊    | 202/350 [15:10<09:48,  3.98s/it]Test Batches:  58%|█████▊    | 203/350 [15:15<10:32,  4.30s/it]Test Batches:  58%|█████▊    | 204/350 [15:19<10:33,  4.34s/it]Test Batches:  59%|█████▊    | 205/350 [15:24<10:44,  4.45s/it]Test Batches:  59%|█████▉    | 206/350 [15:28<10:36,  4.42s/it]Test Batches:  59%|█████▉    | 207/350 [15:32<10:21,  4.35s/it]Test Batches:  59%|█████▉    | 208/350 [15:36<10:05,  4.26s/it]Test Batches:  60%|█████▉    | 209/350 [15:40<09:37,  4.10s/it]Test Batches:  60%|██████    | 210/350 [15:44<09:47,  4.19s/it]Test Batches:  60%|██████    | 211/350 [15:48<09:30,  4.10s/it]Test Batches:  61%|██████    | 212/350 [15:53<10:05,  4.38s/it]Test Batches:  61%|██████    | 213/350 [15:58<10:11,  4.46s/it]Test Batches:  61%|██████    | 214/350 [16:02<09:53,  4.37s/it]Test Batches:  61%|██████▏   | 215/350 [16:06<09:42,  4.32s/it]Test Batches:  62%|██████▏   | 216/350 [16:11<09:47,  4.38s/it]Test Batches:  62%|██████▏   | 217/350 [16:16<09:58,  4.50s/it]Test Batches:  62%|██████▏   | 218/350 [16:20<09:41,  4.40s/it]Test Batches:  63%|██████▎   | 219/350 [16:24<09:44,  4.46s/it]Test Batches:  63%|██████▎   | 220/350 [16:29<09:47,  4.52s/it]Test Batches:  63%|██████▎   | 221/350 [16:34<09:39,  4.49s/it]Test Batches:  63%|██████▎   | 222/350 [16:39<10:12,  4.78s/it]Test Batches:  64%|██████▎   | 223/350 [16:43<09:24,  4.45s/it]Test Batches:  64%|██████▍   | 224/350 [16:47<09:21,  4.45s/it]Test Batches:  64%|██████▍   | 225/350 [16:52<09:14,  4.44s/it]Test Batches:  65%|██████▍   | 226/350 [16:56<09:15,  4.48s/it]Test Batches:  65%|██████▍   | 227/350 [17:00<08:59,  4.39s/it]Test Batches:  65%|██████▌   | 228/350 [17:05<08:52,  4.37s/it]Test Batches:  65%|██████▌   | 229/350 [17:09<08:42,  4.32s/it]Test Batches:  66%|██████▌   | 230/350 [17:13<08:30,  4.25s/it]Test Batches:  66%|██████▌   | 231/350 [17:17<08:36,  4.34s/it]Test Batches:  66%|██████▋   | 232/350 [17:22<08:34,  4.36s/it]Test Batches:  67%|██████▋   | 233/350 [17:26<08:34,  4.40s/it]Test Batches:  67%|██████▋   | 234/350 [17:30<08:13,  4.25s/it]Test Batches:  67%|██████▋   | 235/350 [17:35<08:24,  4.38s/it]Test Batches:  67%|██████▋   | 236/350 [17:39<08:23,  4.42s/it]Test Batches:  68%|██████▊   | 237/350 [17:44<08:23,  4.45s/it]Test Batches:  68%|██████▊   | 238/350 [17:48<08:19,  4.46s/it]Test Batches:  68%|██████▊   | 239/350 [17:52<07:54,  4.27s/it]Test Batches:  69%|██████▊   | 240/350 [17:57<07:48,  4.26s/it]Test Batches:  69%|██████▉   | 241/350 [18:00<07:30,  4.14s/it]Test Batches:  69%|██████▉   | 242/350 [18:05<07:44,  4.30s/it]Test Batches:  69%|██████▉   | 243/350 [18:09<07:33,  4.24s/it]Test Batches:  70%|██████▉   | 244/350 [18:14<07:37,  4.32s/it]Test Batches:  70%|███████   | 245/350 [18:18<07:36,  4.35s/it]Test Batches:  70%|███████   | 246/350 [18:22<07:25,  4.29s/it]Test Batches:  71%|███████   | 247/350 [18:26<07:11,  4.19s/it]Test Batches:  71%|███████   | 248/350 [18:31<07:20,  4.32s/it]Test Batches:  71%|███████   | 249/350 [18:35<07:23,  4.39s/it]Test Batches:  71%|███████▏  | 250/350 [18:40<07:15,  4.36s/it]Test Batches:  72%|███████▏  | 251/350 [18:44<07:10,  4.35s/it]Test Batches:  72%|███████▏  | 252/350 [18:48<06:55,  4.24s/it]Test Batches:  72%|███████▏  | 253/350 [18:52<06:45,  4.18s/it]Test Batches:  73%|███████▎  | 254/350 [18:57<07:01,  4.39s/it]Test Batches:  73%|███████▎  | 255/350 [19:02<07:07,  4.50s/it]Test Batches:  73%|███████▎  | 256/350 [19:06<06:55,  4.42s/it]Test Batches:  73%|███████▎  | 257/350 [19:10<06:40,  4.30s/it]Test Batches:  74%|███████▎  | 258/350 [19:14<06:38,  4.33s/it]Test Batches:  74%|███████▍  | 259/350 [19:19<06:35,  4.35s/it]Test Batches:  74%|███████▍  | 260/350 [19:23<06:42,  4.47s/it]Test Batches:  75%|███████▍  | 261/350 [19:28<06:50,  4.62s/it]Test Batches:  75%|███████▍  | 262/350 [19:32<06:30,  4.44s/it]Test Batches:  75%|███████▌  | 263/350 [19:37<06:23,  4.41s/it]Test Batches:  75%|███████▌  | 264/350 [19:41<06:14,  4.35s/it]Test Batches:  76%|███████▌  | 265/350 [19:45<06:08,  4.33s/it]Test Batches:  76%|███████▌  | 266/350 [19:50<06:14,  4.45s/it]Test Batches:  76%|███████▋  | 267/350 [19:55<06:21,  4.60s/it]Test Batches:  77%|███████▋  | 268/350 [19:59<06:08,  4.50s/it]Test Batches:  77%|███████▋  | 269/350 [20:04<06:14,  4.63s/it]Test Batches:  77%|███████▋  | 270/350 [20:09<06:06,  4.58s/it]Test Batches:  77%|███████▋  | 271/350 [20:13<06:03,  4.60s/it]Test Batches:  78%|███████▊  | 272/350 [20:17<05:46,  4.45s/it]Test Batches:  78%|███████▊  | 273/350 [20:22<05:37,  4.38s/it]Test Batches:  78%|███████▊  | 274/350 [20:26<05:34,  4.40s/it]Test Batches:  79%|███████▊  | 275/350 [20:30<05:12,  4.17s/it]Test Batches:  79%|███████▉  | 276/350 [20:34<05:20,  4.33s/it]Test Batches:  79%|███████▉  | 277/350 [20:40<05:34,  4.59s/it]Test Batches:  79%|███████▉  | 278/350 [20:44<05:28,  4.56s/it]Test Batches:  80%|███████▉  | 279/350 [20:49<05:25,  4.59s/it]Test Batches:  80%|████████  | 280/350 [20:54<05:26,  4.67s/it]Test Batches:  80%|████████  | 281/350 [20:57<05:04,  4.41s/it]Test Batches:  81%|████████  | 282/350 [21:02<04:57,  4.37s/it]Test Batches:  81%|████████  | 283/350 [21:06<04:49,  4.32s/it]Test Batches:  81%|████████  | 284/350 [21:11<04:53,  4.45s/it]Test Batches:  81%|████████▏ | 285/350 [21:15<04:45,  4.40s/it]Test Batches:  82%|████████▏ | 286/350 [21:19<04:43,  4.42s/it]Test Batches:  82%|████████▏ | 287/350 [21:24<04:39,  4.44s/it]Test Batches:  82%|████████▏ | 288/350 [21:28<04:38,  4.50s/it]Test Batches:  83%|████████▎ | 289/350 [21:34<04:45,  4.68s/it]Test Batches:  83%|████████▎ | 290/350 [21:37<04:24,  4.41s/it]Test Batches:  83%|████████▎ | 291/350 [21:42<04:30,  4.58s/it]Test Batches:  83%|████████▎ | 292/350 [21:47<04:31,  4.67s/it]Test Batches:  84%|████████▎ | 293/350 [21:51<04:16,  4.50s/it]Test Batches:  84%|████████▍ | 294/350 [21:56<04:11,  4.48s/it]Test Batches:  84%|████████▍ | 295/350 [22:00<04:10,  4.55s/it]Test Batches:  85%|████████▍ | 296/350 [22:05<04:06,  4.57s/it]Test Batches:  85%|████████▍ | 297/350 [22:09<03:55,  4.44s/it]Test Batches:  85%|████████▌ | 298/350 [22:14<03:52,  4.47s/it]Test Batches:  85%|████████▌ | 299/350 [22:19<03:59,  4.70s/it]Test Batches:  86%|████████▌ | 300/350 [22:24<03:54,  4.70s/it]Test Batches:  86%|████████▌ | 301/350 [22:28<03:50,  4.71s/it]Test Batches:  86%|████████▋ | 302/350 [22:33<03:40,  4.59s/it]Test Batches:  87%|████████▋ | 303/350 [22:37<03:31,  4.49s/it]Test Batches:  87%|████████▋ | 304/350 [22:41<03:19,  4.34s/it]Test Batches:  87%|████████▋ | 305/350 [22:45<03:14,  4.31s/it]Test Batches:  87%|████████▋ | 306/350 [22:50<03:09,  4.31s/it]Test Batches:  88%|████████▊ | 307/350 [22:54<03:04,  4.29s/it]Test Batches:  88%|████████▊ | 308/350 [22:58<03:00,  4.30s/it]Test Batches:  88%|████████▊ | 309/350 [23:03<03:03,  4.48s/it]Test Batches:  89%|████████▊ | 310/350 [23:07<02:58,  4.47s/it]Test Batches:  89%|████████▉ | 311/350 [23:12<02:56,  4.52s/it]Test Batches:  89%|████████▉ | 312/350 [23:16<02:46,  4.38s/it]Test Batches:  89%|████████▉ | 313/350 [23:21<02:45,  4.48s/it]Test Batches:  90%|████████▉ | 314/350 [23:25<02:33,  4.27s/it]Test Batches:  90%|█████████ | 315/350 [23:29<02:30,  4.30s/it]Test Batches:  90%|█████████ | 316/350 [23:33<02:25,  4.27s/it]Test Batches:  91%|█████████ | 317/350 [23:37<02:19,  4.22s/it]Test Batches:  91%|█████████ | 318/350 [23:42<02:19,  4.35s/it]Test Batches:  91%|█████████ | 319/350 [23:47<02:16,  4.41s/it]Test Batches:  91%|█████████▏| 320/350 [23:50<02:04,  4.16s/it]Test Batches:  92%|█████████▏| 321/350 [23:54<01:54,  3.93s/it]Test Batches:  92%|█████████▏| 322/350 [23:57<01:45,  3.77s/it]Test Batches:  92%|█████████▏| 323/350 [24:01<01:40,  3.73s/it]Test Batches:  93%|█████████▎| 324/350 [24:04<01:36,  3.71s/it]Test Batches:  93%|█████████▎| 325/350 [24:08<01:33,  3.75s/it]Test Batches:  93%|█████████▎| 326/350 [24:11<01:26,  3.61s/it]Test Batches:  93%|█████████▎| 327/350 [24:15<01:21,  3.53s/it]Test Batches:  94%|█████████▎| 328/350 [24:19<01:20,  3.67s/it]Test Batches:  94%|█████████▍| 329/350 [24:22<01:16,  3.66s/it]Test Batches:  94%|█████████▍| 330/350 [24:26<01:12,  3.64s/it]Test Batches:  95%|█████████▍| 331/350 [24:29<01:08,  3.60s/it]Test Batches:  95%|█████████▍| 332/350 [24:33<01:05,  3.63s/it]Test Batches:  95%|█████████▌| 333/350 [24:37<01:02,  3.69s/it]Test Batches:  95%|█████████▌| 334/350 [24:41<01:00,  3.77s/it]Test Batches:  96%|█████████▌| 335/350 [24:45<00:57,  3.81s/it]Test Batches:  96%|█████████▌| 336/350 [24:49<00:53,  3.79s/it]Test Batches:  96%|█████████▋| 337/350 [24:52<00:49,  3.82s/it]Test Batches:  97%|█████████▋| 338/350 [24:56<00:44,  3.73s/it]Test Batches:  97%|█████████▋| 339/350 [24:59<00:39,  3.63s/it]Test Batches:  97%|█████████▋| 340/350 [25:03<00:37,  3.75s/it]Test Batches:  97%|█████████▋| 341/350 [25:07<00:34,  3.84s/it]Test Batches:  98%|█████████▊| 342/350 [25:11<00:30,  3.80s/it]Test Batches:  98%|█████████▊| 343/350 [25:15<00:26,  3.80s/it]Test Batches:  98%|█████████▊| 344/350 [25:19<00:22,  3.78s/it]Test Batches:  99%|█████████▊| 345/350 [25:22<00:18,  3.74s/it]Test Batches:  99%|█████████▉| 346/350 [25:26<00:15,  3.80s/it]Test Batches:  99%|█████████▉| 347/350 [25:30<00:11,  3.80s/it]Test Batches:  99%|█████████▉| 348/350 [25:34<00:07,  3.75s/it]Test Batches: 100%|█████████▉| 349/350 [25:37<00:03,  3.69s/it]Test Batches: 100%|██████████| 350/350 [25:39<00:00,  2.98s/it]Test Batches: 100%|██████████| 350/350 [25:39<00:00,  4.40s/it]
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([200, 20])
+torch.Size([200, 20])
+torch.Size([200, 40])
+torch.Size([74, 20])
+torch.Size([74, 20])
+torch.Size([74, 40])
+
+Total Test Accuracy: 0.7072810530662537
+Class                Accuracy  
+table                    0.5152
+desk                     0.4216
+bookshelf                0.7506
+sofa                     0.8344
+trash_bin                0.8589
+bed                      0.9428
+chair                    0.8183
+monitor                  0.5931
+bathtub                  0.7555
+file_cabinet             0.7690
+flowerpot                0.3744
+window                   0.7416
+lamp                     0.8192

@@ -1,0 +1,747 @@
+0
+2022-09-03 20:44:38.284329: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-09-03 20:44:38.284691: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Task is classification, not lift the flap.
+Hard mining set to:both
+Using materials: ['scannet_xml_50_2', 'scannet_xml_realistic']
+Hotswapped material loader being used.
+{1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9, 11: 10, 12: 11, 13: 12}
+-------------------------------
+Annotation Counts
+-------------------------------
+table                       887
+sofa                        246
+chair                       996
+window                      290
+monitor                     122
+trash_bin                   164
+bed                         177
+lamp                         59
+file_cabinet                 58
+bathtub                     131
+bookshelf                   140
+flowerpot                     5
+Total                      3275
+-------------------------------
+
+annotations: ../openrooms/annotation_files/train_scannet_xml_50_v2.json
+batch_size: 10
+checkpoint: checkpoint_44.tar
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/train_scannet_real_50_v2.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+Initializing from checkpoint checkpoint_44.tar
+Starting epoch: 45
+batch num:0
+using contrastive loss
+overall: tensor(1.6825, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5156, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0024, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0454, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.0250, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1737, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0570, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.8157, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0354, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9958, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5210, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2207, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6841, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5205, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2530, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.3382, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6179, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2669, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3446, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7303, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8575, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7291, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4182, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9260, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2361, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0043, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4240, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8074, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9735, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5116, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9845, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8392, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0834, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3990, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6142, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3683, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5126, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0025, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5011, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0473, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4234, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2658, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0814, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9343, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9186, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6432, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7486, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7914, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1838, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4452, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4498, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1770, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5445, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5185, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.8137, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6923, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9396, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7966, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.0633, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9973, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.5801, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.9156, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9979, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4720, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4575, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9658, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.8977, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0555, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8015, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1605, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3082, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2852, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8128, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8919, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4431, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1404, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2145, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4137, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6881, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6439, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6321, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3030, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3366, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2389, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.5503, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0239, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2392, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.8133, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2035, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2771, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2916, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0061, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4365, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5136, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7951, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0734, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9662, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9338, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6214, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1986, device='cuda:0', grad_fn=<AddBackward0>)
+batch num:100
+using contrastive loss
+overall: tensor(1.4731, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4222, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6510, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4975, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0142, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1359, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3122, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.1284, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8747, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2684, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8996, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8833, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6947, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1506, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2615, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.9886, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6978, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4468, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6309, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0307, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1398, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9582, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1796, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1430, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5663, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9202, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7315, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6521, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4488, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9237, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2583, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9823, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1472, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7567, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2801, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6866, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7047, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0401, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9920, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.8272, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.0970, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9884, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4221, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2718, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9514, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6842, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7544, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1593, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4301, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5353, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8576, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3212, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.5950, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0268, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8734, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8431, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0978, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9553, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6039, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2624, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0931, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1754, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0689, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3483, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0638, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.8046, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.8120, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4102, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2641, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6215, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1156, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3935, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9380, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0171, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2050, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9171, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4242, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1280, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3301, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9988, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6924, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.5139, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8332, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3956, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8844, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7828, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0937, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3895, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7021, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7308, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.5261, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0950, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2594, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8805, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.2020, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.1091, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.8814, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3006, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2145, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9590, device='cuda:0', grad_fn=<AddBackward0>)
+batch num:200
+using contrastive loss
+overall: tensor(1.4437, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4304, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8329, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7137, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7251, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7570, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0966, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6493, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(3.0054, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1977, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.4367, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2072, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6664, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9932, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.2830, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4157, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4366, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7120, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5204, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9154, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6739, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.8532, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7655, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6096, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0549, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1777, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7580, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6790, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8649, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2829, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2674, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.2869, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0205, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6201, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.5148, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7272, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2380, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0480, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0025, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7073, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2829, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9252, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4304, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7890, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2793, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9655, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9176, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.9552, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8973, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0151, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6566, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0529, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9838, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.3373, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6775, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.0935, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6857, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7774, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5947, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9120, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.0880, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0077, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1095, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.4632, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2932, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.3836, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6317, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2301, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4254, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9420, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9090, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7118, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0669, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2577, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9833, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7035, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6000, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2669, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8740, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3502, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2137, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3404, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8352, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.5746, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0093, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1933, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9720, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2620, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.8592, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9227, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6192, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.7347, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4866, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7448, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.1253, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5372, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5225, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8431, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3394, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5045, device='cuda:0', grad_fn=<AddBackward0>)
+batch num:300
+using contrastive loss
+overall: tensor(1.1681, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0720, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.6432, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4638, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0430, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8311, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.9799, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8805, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2036, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5434, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(2.3059, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.3401, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.1742, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4192, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.0775, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3899, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9299, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.2536, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.9143, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5926, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.6481, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.8570, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.9728, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(0.7236, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.5865, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.3327, device='cuda:0', grad_fn=<AddBackward0>)
+using contrastive loss
+overall: tensor(1.4102, device='cuda:0', grad_fn=<AddBackward0>)
+
+Epoch 45, Train Accuracy: 0.7932210564613342
+Class                Accuracy  
+table                    0.9278
+desk                     0.0000
+bookshelf                0.8750
+sofa                     0.9004
+trash_bin                0.9049
+bed                      0.9350
+chair                    0.9377
+monitor                  0.9221
+bathtub                  0.9884
+file_cabinet             0.8362
+flowerpot                0.2000
+window                   0.9776
+lamp                     0.9068
+Checkpoint saved.
+Starting evaluation on test data.
+-------------------------------
+Annotation Counts
+-------------------------------
+table                       887
+sofa                        246
+chair                       996
+window                      290
+monitor                     122
+trash_bin                   164
+bed                         177
+lamp                         59
+file_cabinet                 58
+bathtub                     131
+bookshelf                   140
+flowerpot                     5
+Total                      3275
+-------------------------------
+
+batch size is 10
+Data Loader lenght is 328
+Test Batches:   0%|          | 0/328 [00:00<?, ?it/s]Test Batches:   0%|          | 0/328 [00:01<?, ?it/s]
+Traceback (most recent call last):
+  File "train_hotswapped.py", line 289, in <module>
+    test_accuracy = test(model, cfg.batch_size, cfg.test_annotations, cfg.test_imagedir, outdir=args.outdir, epoch=epoch)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/WhenPigsFlyContext/test.py", line 49, in test
+    if cfg.empty_baseline:
+NameError: name 'cfg' is not defined

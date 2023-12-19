@@ -1,0 +1,47 @@
+2
+2022-09-11 21:32:02.173167: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-09-11 21:32:02.173358: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Task is classification, not lift the flap.
+-------------------------------
+Annotation Counts
+-------------------------------
+f1car                      3096
+pickup                     3564
+plane                      2668
+van                        3180
+car                        9648
+monster                    2776
+equip                      3128
+tank                       3876
+semi                       3228
+heli                       3816
+ufo                        2428
+mil                        6960
+bus                        3900
+boat                       3680
+train                      3116
+Total                     59064
+-------------------------------
+
+annotations: ../iLab/annotation_files/train_iLab_light_v3.json
+batch_size: 40
+checkpoint: null
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 15
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../iLab/annotation_files/test_iLab_light_v3.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+No checkpoint was passed.
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:487: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:487: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+slurmstepd: error: *** JOB 26287582 ON holygpu2c0913 CANCELLED AT 2022-09-11T21:32:24 ***

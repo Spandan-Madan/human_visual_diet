@@ -1,0 +1,31 @@
+40
+Warning: You are running the empty baseline, so network is being fed an input of just zeros.
+annotations: ../openrooms/annotation_files/train_main_xml_50_v3.json
+batch_size: 200
+blur_context: 0
+blur_target: 0
+checkpoint: checkpoint_10.tar
+cnn_baseline: true
+empty_baseline: false
+git: 2179780af36e53218cf9f25623959fb36ae2379d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+lift_the_flap: false
+no_context: false
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/train_main_xml_50_test_v3.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: true
+
+Initializing model from checkpoint checkpoint_10.tar
+Traceback (most recent call last):
+  File "test.py", line 238, in <module>
+    model = TwoStreamCNN(cfg.num_classes)
+  File "test.py", line 38, in __init__
+    vit_base = timm.create_model('vit_base_patch16_224', pretrained=True)
+NameError: name 'timm' is not defined

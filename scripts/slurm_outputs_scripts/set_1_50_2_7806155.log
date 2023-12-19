@@ -1,0 +1,84 @@
+2
+2022-04-30 13:33:54.066196: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-04-30 13:33:54.066492: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Task is classification, not lift the flap.
+Hard mining set to:both
+Using materials: ['main_xml_50_lights_1', 'main_xml_50_lights_2']
+Hotswapped material loader being used.
+{1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9, 11: 10, 12: 11, 13: 12}
+-------------------------------
+Annotation Counts
+-------------------------------
+desk                       4829
+trash_bin                  3204
+chair                     19905
+window                    10204
+lamp                       2489
+table                     11541
+monitor                    3094
+file_cabinet               1727
+bookshelf                  3902
+bed                        3214
+sofa                       3550
+bathtub                    1988
+flowerpot                   227
+Total                     69874
+-------------------------------
+
+annotations: ../openrooms/annotation_files/train_main_xml_50_lights_v3.json
+batch_size: 15
+checkpoint: null
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: null
+test_imagedir: null
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+No checkpoint was passed.
+Starting epoch: 1
+batch num:0
+overall: tensor(6.3431, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.2436, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.7163, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.7279, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(4.9661, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(4.9272, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.1108, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.2997, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.3059, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(4.9566, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(4.9378, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(4.4597, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.4058, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.3717, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.1499, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(4.6786, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.2550, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(4.2210, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(5.3346, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(4.7907, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(4.9352, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(4.9926, device='cuda:0', grad_fn=<AddBackward0>)
+../openrooms/all_openrooms/main_xml_50_lights//scene0168_01/im_11.png
+../openrooms/stylized_all_openrooms/main_xml_50_lights_1//scene0168_01/im_11.png
+Traceback (most recent call last):
+  File "train_hotswapped.py", line 173, in <module>
+    for i, (context_images, target_images, context_images_2, target_images_2, bbox, labels_cpu) in enumerate(dataloader):
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 44, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/WhenPigsFlyContext/core/dataset_hotswapped.py", line 123, in __getitem__
+    image_2 = image_2.convert("RGB")
+UnboundLocalError: local variable 'image_2' referenced before assignment

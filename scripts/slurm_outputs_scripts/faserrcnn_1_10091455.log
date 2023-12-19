@@ -1,0 +1,83 @@
+1
+Loading config /n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/model_zoo/configs/COCO-Detection/../Base-RetinaNet.yaml with yaml.unsafe_load. Your machine may be at risk if the file contains malicious content.
+Region proposal deactivated, ground truth bounding boxes are used.
+[32m[05/16 11:34:41 d2.data.datasets.coco]: [0mLoaded 11598 images in COCO format from ../../../../openrooms/annotation_files/train_main_viewpoints_0_1_v3_fasterrcnn.json
+[32m[05/16 11:34:41 d2.data.build]: [0mRemoved 0 images with no usable annotations. 11598 images left.
+[32m[05/16 11:34:42 d2.data.build]: [0mDistribution of instances among all 13 categories:
+[36m|   category   | #instances   |  category  | #instances   |  category  | #instances   |
+|:------------:|:-------------|:----------:|:-------------|:----------:|:-------------|
+|    table     | 10252        |    desk    | 4200         | bookshelf  | 3324         |
+|     sofa     | 3102         | trash_bin  | 2857         |    bed     | 2831         |
+|    chair     | 17117        |  monitor   | 2408         |  bathtub   | 1518         |
+| file_cabinet | 1418         | flowerpot  | 162          |   window   | 5089         |
+|     lamp     | 589          |            |              |            |              |
+|    total     | 54867        |            |              |            |              |[0m
+Proposal boxes added.
+[32m[05/16 11:34:42 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in training: []
+[32m[05/16 11:34:42 d2.data.common]: [0mSerializing 11598 elements to byte tensors and concatenating them all ...
+[32m[05/16 11:34:42 d2.data.common]: [0mSerialized dataset takes 8.64 MiB
+[5m[31mWARNING[0m [32m[05/16 11:34:42 d2.solver.build]: [0mSOLVER.STEPS contains values larger than SOLVER.MAX_ITER. These values will be ignored.
+2022-05-16 11:34:44.796541: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/cv2/../../lib64:
+2022-05-16 11:34:44.796794: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+The checkpoint state_dict contains keys that are not used by the model:
+  [35mpixel_mean[0m
+  [35mpixel_std[0m
+[32m[05/16 11:35:15 d2.engine.train_loop]: [0mStarting training from iteration 0
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[4m[5m[31mERROR[0m [32m[05/16 11:35:21 d2.engine.train_loop]: [0mException during training:
+Traceback (most recent call last):
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 285, in run_step
+    losses.backward()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/_tensor.py", line 255, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/autograd/__init__.py", line 147, in backward
+    Variable._execution_engine.run_backward(
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+  File "<string>", line 134, in fallback_function
+        def neg(self):
+            def backward(grad_output):
+                return grad_output.neg()
+                       ~~~~~~~~~~~~~~~ <--- HERE
+
+            return torch.neg(self), backward
+RuntimeError: CUDA out of memory. Tried to allocate 438.00 MiB (GPU 0; 15.78 GiB total capacity; 12.74 GiB already allocated; 399.75 MiB free; 14.07 GiB reserved in total by PyTorch)
+
+[32m[05/16 11:35:21 d2.engine.hooks]: [0mTotal training time: 0:00:02 (0:00:00 on hooks)
+[32m[05/16 11:35:21 d2.utils.events]: [0m iter: 2  total_loss: 12.62  loss_cls: 10.45  loss_box_reg: 2.17  data_time: 1.0363  lr: 4.9975e-07  max_mem: 13653M
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/_tensor.py:575: UserWarning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (Triggered internally at  ../aten/src/ATen/native/BinaryOps.cpp:467.)
+  return torch.floor_divide(self, other)
+Traceback (most recent call last):
+  File "finetune.py", line 70, in <module>
+    trainer.train()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 285, in run_step
+    losses.backward()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/_tensor.py", line 255, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph, inputs=inputs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/autograd/__init__.py", line 147, in backward
+    Variable._execution_engine.run_backward(
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+  File "<string>", line 134, in fallback_function
+        def neg(self):
+            def backward(grad_output):
+                return grad_output.neg()
+                       ~~~~~~~~~~~~~~~ <--- HERE
+
+            return torch.neg(self), backward
+RuntimeError: CUDA out of memory. Tried to allocate 438.00 MiB (GPU 0; 15.78 GiB total capacity; 12.74 GiB already allocated; 399.75 MiB free; 14.07 GiB reserved in total by PyTorch)
+

@@ -1,0 +1,34 @@
+34
+Warning: You are running the empty baseline, so network is being fed an input of just zeros.
+annotations: ../openrooms/annotation_files/train_main_xml_50_v3.json
+batch_size: 200
+blur_context: 0
+blur_target: 0
+checkpoint: checkpoint_15.tar
+empty_baseline: false
+git: fb8600a628428381abf6c19fbf66e4592ce41f87
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+lift_the_flap: false
+no_context: false
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/train_main_xml_50_test_v3.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: true
+
+Initializing model from checkpoint checkpoint_15.tar
+Traceback (most recent call last):
+  File "test.py", line 182, in <module>
+    checkpoint = torch.load(args.checkpoint, map_location="cpu")
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'v3_output/4_style_hotswapped_material_50_non_contrastive_repeat_2/checkpoint_15.tar'

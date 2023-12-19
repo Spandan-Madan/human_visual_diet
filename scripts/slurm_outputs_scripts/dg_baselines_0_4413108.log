@@ -1,0 +1,40 @@
+0
+Environment:
+	Python: 3.8.11
+	PyTorch: 1.9.1+cu102
+	Torchvision: 0.10.1+cu102
+	CUDA: 10.2
+	CUDNN: 7605
+	NumPy: 1.21.2
+	PIL: 8.3.1
+Args:
+	algorithm: ERM
+	checkpoint_freq: None
+	data_dir: ./domainbed/data/
+	dataset: DGMaterials
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 0
+	output_dir: train_output/ERM
+	save_model_every_checkpoint: False
+	seed: 0
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [6]
+	trial_seed: 0
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 8
+	class_balanced: False
+	data_augmentation: True
+	lr: 5e-05
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.0
+	weight_decay: 0.0
+env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  env4_in_acc   env4_out_acc  env5_in_acc   env5_out_acc  env6_in_acc   env6_out_acc  epoch         loss          mem_gb        step          step_time    
+0.0868694097  0.0885931015  0.0881037567  0.0879490482  0.0928980322  0.0891655932  0.0888014311  0.0878059253  0.0922003578  0.0886646629  0.0977817531  0.0930299127  0.0932558140  0.0937455274  0.0000000000  2.7111797333  4.0074415207  0             2.1061403751 
+0.5509838998  0.5539573494  0.5795885510  0.5859453270  0.5667799642  0.5675540289  0.5796779964  0.5819378846  0.5771914132  0.5797194790  0.5704114490  0.5702018033  0.5890697674  0.5884499785  0.0429338104  1.4731897187  4.2766914368  300           0.7316239158 
+0.6129695886  0.6147846000  0.6207871199  0.6208673250  0.6117352415  0.6077715758  0.6186225403  0.6187920424  0.6147048301  0.6221554315  0.6105724508  0.6100615429  0.6155277281  0.6162873909  0.0858676208  1.2021618026  4.2766914368  600           0.7907536713 
+slurmstepd: error: *** JOB 4413109 ON holygpu2c0913 CANCELLED AT 2022-04-12T20:10:07 ***

@@ -1,0 +1,96 @@
+3
+2022-03-15 04:16:05.177763: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-03-15 04:16:05.178022: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/cuda/__init__.py:83: UserWarning: 
+    Found GPU%d %s which is of cuda capability %d.%d.
+    PyTorch no longer supports this GPU because it is too old.
+    The minimum cuda capability supported by this library is %d.%d.
+    
+  warnings.warn(old_gpu_warn.format(d, name, major, minor, min_arch // 10, min_arch % 10))
+Task is classification, not lift the flap.
+Hard mining set to:both
+Using materials: ['main_xml_50_2', 'main_xml_50_3', 'main_xml_50_4']
+Hotswapped material loader being used.
+{1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9, 11: 10, 12: 11, 13: 12}
+-------------------------------
+Annotation Counts
+-------------------------------
+desk                       4829
+trash_bin                  3204
+chair                     19905
+window                    10204
+lamp                       2489
+table                     11541
+monitor                    3094
+file_cabinet               1727
+bookshelf                  3902
+bed                        3214
+sofa                       3550
+bathtub                    1988
+flowerpot                   227
+Total                     69874
+-------------------------------
+
+annotations: ../openrooms/annotation_files/train_main_xml_50_v3.json
+batch_size: 15
+checkpoint: null
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: null
+test_imagedir: null
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+No checkpoint was passed.
+CUDA error: no kernel image is available for execution on the device
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+Error occurs, No graph saved
+Traceback (most recent call last):
+  File "train_hotswapped.py", line 155, in <module>
+    writer.add_graph(model, input_to_model=[context_images.to(device), target_images.to(device), bbox.to(device)]) # add model graph to tensorboard log
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/tensorboard/writer.py", line 727, in add_graph
+    self._get_file_writer().add_graph(graph(model, input_to_model, verbose))
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/tensorboard/_pytorch_graph.py", line 292, in graph
+    raise e
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/tensorboard/_pytorch_graph.py", line 286, in graph
+    trace = torch.jit.trace(model, args)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/jit/_trace.py", line 735, in trace
+    return trace_module(
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/jit/_trace.py", line 952, in trace_module
+    module._c._create_method_from_trace(
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1039, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/WhenPigsFlyContext/core/model.py", line 88, in forward
+    target_encoding = self.target_encoder(target_images)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1039, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/WhenPigsFlyContext/core/model.py", line 156, in forward
+    return self.encoder(image)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1039, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1039, in _slow_forward
+    result = self.forward(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/activation.py", line 102, in forward
+    return F.relu(input, inplace=self.inplace)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/functional.py", line 1296, in relu
+    result = torch.relu_(input)
+RuntimeError: CUDA error: no kernel image is available for execution on the device
+CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1.

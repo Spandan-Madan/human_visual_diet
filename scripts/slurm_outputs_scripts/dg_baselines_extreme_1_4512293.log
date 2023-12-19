@@ -1,0 +1,74 @@
+1
+Environment:
+	Python: 3.8.11
+	PyTorch: 1.9.1+cu102
+	Torchvision: 0.10.1+cu102
+	CUDA: 10.2
+	CUDNN: 7605
+	NumPy: 1.21.2
+	PIL: 8.3.1
+Args:
+	algorithm: Mixup
+	checkpoint_freq: None
+	data_dir: ./domainbed/data/
+	dataset: DGMaterials
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 0
+	output_dir: train_output_extreme/Mixup
+	save_model_every_checkpoint: False
+	seed: 0
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [2, 3, 4, 5]
+	trial_seed: 0
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 8
+	class_balanced: False
+	data_augmentation: True
+	lr: 5e-05
+	mixup_alpha: 0.2
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.0
+	weight_decay: 0.0
+env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  env4_in_acc   env4_out_acc  env5_in_acc   env5_out_acc  env6_in_acc   env6_out_acc  epoch         loss          mem_gb        step          step_time    
+0.0764758497  0.0761414055  0.0732558140  0.0698439960  0.0796779964  0.0789323028  0.0726654741  0.0718477172  0.0686046512  0.0686274510  0.0704293381  0.0680549592  0.0694454383  0.0723486475  0.0000000000  2.6323468685  2.0738439560  0             0.5252788067 
+0.4865116279  0.4891942178  0.4896422182  0.4866180049  0.4872093023  0.4888364105  0.4965831843  0.4955631888  0.4910196780  0.5020752827  0.4906797853  0.4896235867  0.4859212880  0.4871189352  0.0429338104  1.8749621518  2.3460621834  300           0.4019172510 
+0.5484794275  0.5484471161  0.5289445438  0.5284099041  0.5219320215  0.5196794046  0.5238819320  0.5246171461  0.5215921288  0.5248318305  0.5210912343  0.5211106340  0.5210375671  0.5228996708  0.0858676208  1.6604930554  2.3460621834  600           0.4019827064 
+0.5755456172  0.5757120366  0.5659928444  0.5735651925  0.5542039356  0.5524545585  0.5614490161  0.5671962216  0.5614847943  0.5677687133  0.5544901610  0.5508086446  0.5615026834  0.5589666524  0.1288014311  1.5379359051  2.3460621834  900           0.4030462503 
+0.5831484794  0.5812938314  0.5787119857  0.5776441964  0.5623434705  0.5669099757  0.5803041145  0.5839416058  0.5766368515  0.5845140976  0.5660286225  0.5697724345  0.5734525939  0.5683412051  0.1717352415  1.4876398387  2.3460621834  1200          0.4440078290 
+0.5439177102  0.5451552884  0.5614311270  0.5658365536  0.5336314848  0.5325604694  0.5569051878  0.5566766853  0.5603041145  0.5712036639  0.5363327370  0.5387147560  0.5578711986  0.5551738944  0.2146690519  1.4623516629  2.3460621834  1500          0.4426246309 
+0.5873524150  0.5871618720  0.5788729875  0.5780020037  0.5624865832  0.5602547588  0.5728980322  0.5724202090  0.5723255814  0.5787891799  0.5632379249  0.5679118363  0.5733810376  0.5719908401  0.2576028623  1.4310432722  2.3460621834  1800          0.4443984000 
+0.6145080501  0.6099899814  0.6208050089  0.6255188207  0.6027012522  0.5988263919  0.6098926655  0.6086303134  0.6123255814  0.6071990840  0.6022719141  0.6065550308  0.6155098390  0.6158580220  0.3005366726  1.4432011022  2.3460621834  2100          0.4439860145 
+0.6133452594  0.6107055961  0.6208586762  0.6198654644  0.5971198569  0.5933161586  0.6183899821  0.6175039359  0.6193738819  0.6229426077  0.6085509839  0.6058394161  0.6178890877  0.6187920424  0.3434704830  1.3694368041  2.3460621834  2400          0.4210325098 
+Traceback (most recent call last):
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/scripts/train.py", line 234, in <module>
+    acc = misc.accuracy(algorithm, loader, weights, device)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/lib/misc.py", line 159, in accuracy
+    for x, y in loader:
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/lib/fast_data_loader.py", line 70, in __iter__
+    yield next(self._infinite_iterator)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 521, in __next__
+    data = self._next_data()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 561, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 44, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 44, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/lib/misc.py", line 119, in __getitem__
+    return self.underlying_dataset[self.keys[key]]
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/datasets/folder.py", line 232, in __getitem__
+    sample = self.loader(path)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/datasets/folder.py", line 269, in default_loader
+    return pil_loader(path)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/datasets/folder.py", line 249, in pil_loader
+    with open(path, 'rb') as f:
+FileNotFoundError: [Errno 2] No such file or directory: './domainbed/data/DGMaterials/depcrecated/chair/train_main_xml_50_v3_57589.png'

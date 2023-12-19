@@ -1,0 +1,60 @@
+7
+Warning: You are running the empty baseline, so network is being fed an input of just zeros.
+annotations: ../openrooms/annotation_files/train_main_xml_v3.json
+batch_size: 200
+checkpoint: checkpoint_50.tar
+empty_baseline: false
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+lift_the_flap: false
+no_context: false
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/test_mainDiffMat_xml_v3.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: true
+
+Initializing model from checkpoint checkpoint_50.tar
+-------------------------------
+Annotation Counts
+-------------------------------
+trash_bin                   746
+bed                         612
+flowerpot                     8
+window                     1680
+lamp                        538
+desk                        795
+chair                      2320
+sofa                        776
+table                      1747
+bookshelf                   830
+monitor                     564
+file_cabinet                226
+bathtub                     381
+Total                     11223
+-------------------------------
+
+batch size is 200
+Data Loader lenght is 57
+Test Batches:   0%|          | 0/57 [00:00<?, ?it/s]Test Batches:   2%|▏         | 1/57 [00:07<06:49,  7.32s/it]Test Batches:   4%|▎         | 2/57 [00:14<06:31,  7.13s/it]Test Batches:   5%|▌         | 3/57 [00:20<06:11,  6.87s/it]Test Batches:   7%|▋         | 4/57 [00:27<05:57,  6.75s/it]Test Batches:   9%|▉         | 5/57 [00:33<05:47,  6.68s/it]Test Batches:  11%|█         | 6/57 [00:40<05:43,  6.74s/it]Test Batches:  12%|█▏        | 7/57 [00:47<05:29,  6.59s/it]Test Batches:  14%|█▍        | 8/57 [00:53<05:20,  6.54s/it]Test Batches:  16%|█▌        | 9/57 [01:00<05:15,  6.58s/it]Test Batches:  18%|█▊        | 10/57 [01:07<05:13,  6.67s/it]Test Batches:  19%|█▉        | 11/57 [01:13<05:04,  6.63s/it]Test Batches:  21%|██        | 12/57 [01:20<04:56,  6.59s/it]Test Batches:  23%|██▎       | 13/57 [01:27<05:06,  6.97s/it]Test Batches:  25%|██▍       | 14/57 [01:34<04:52,  6.81s/it]Test Batches:  26%|██▋       | 15/57 [01:41<04:54,  7.01s/it]Test Batches:  28%|██▊       | 16/57 [01:49<04:48,  7.05s/it]Test Batches:  30%|██▉       | 17/57 [01:55<04:37,  6.94s/it]Test Batches:  32%|███▏      | 18/57 [02:02<04:29,  6.91s/it]Test Batches:  33%|███▎      | 19/57 [02:08<04:15,  6.73s/it]Test Batches:  35%|███▌      | 20/57 [02:15<04:08,  6.72s/it]Test Batches:  37%|███▋      | 21/57 [02:22<04:02,  6.74s/it]Test Batches:  39%|███▊      | 22/57 [02:28<03:44,  6.42s/it]Test Batches:  40%|████      | 23/57 [02:35<03:45,  6.64s/it]Test Batches:  42%|████▏     | 24/57 [02:41<03:38,  6.61s/it]Test Batches:  44%|████▍     | 25/57 [02:48<03:35,  6.72s/it]Test Batches:  46%|████▌     | 26/57 [02:54<03:18,  6.41s/it]Test Batches:  47%|████▋     | 27/57 [03:02<03:26,  6.88s/it]Test Batches:  49%|████▉     | 28/57 [03:10<03:32,  7.34s/it]Test Batches:  51%|█████     | 29/57 [03:17<03:19,  7.12s/it]Test Batches:  53%|█████▎    | 30/57 [03:23<03:02,  6.77s/it]Test Batches:  54%|█████▍    | 31/57 [03:28<02:45,  6.35s/it]Test Batches:  56%|█████▌    | 32/57 [03:34<02:32,  6.11s/it]Test Batches:  58%|█████▊    | 33/57 [03:41<02:34,  6.43s/it]Test Batches:  60%|█████▉    | 34/57 [03:48<02:29,  6.50s/it]Test Batches:  61%|██████▏   | 35/57 [03:55<02:25,  6.64s/it]Test Batches:  63%|██████▎   | 36/57 [04:02<02:27,  7.01s/it]Test Batches:  65%|██████▍   | 37/57 [04:11<02:28,  7.44s/it]Test Batches:  67%|██████▋   | 38/57 [04:19<02:23,  7.54s/it]Test Batches:  68%|██████▊   | 39/57 [04:27<02:20,  7.78s/it]Test Batches:  70%|███████   | 40/57 [04:35<02:11,  7.76s/it]Test Batches:  72%|███████▏  | 41/57 [04:44<02:09,  8.07s/it]Test Batches:  74%|███████▎  | 42/57 [04:50<01:55,  7.69s/it]Test Batches:  75%|███████▌  | 43/57 [04:57<01:43,  7.42s/it]Test Batches:  77%|███████▋  | 44/57 [05:05<01:38,  7.58s/it]Test Batches:  79%|███████▉  | 45/57 [05:11<01:26,  7.22s/it]Test Batches:  81%|████████  | 46/57 [05:18<01:15,  6.89s/it]Test Batches:  82%|████████▏ | 47/57 [05:26<01:14,  7.47s/it]Test Batches:  84%|████████▍ | 48/57 [05:34<01:07,  7.54s/it]Test Batches:  86%|████████▌ | 49/57 [05:41<00:58,  7.36s/it]Test Batches:  88%|████████▊ | 50/57 [05:51<00:56,  8.08s/it]Test Batches:  89%|████████▉ | 51/57 [05:58<00:46,  7.68s/it]Test Batches:  91%|█████████ | 52/57 [06:04<00:36,  7.32s/it]Test Batches:  93%|█████████▎| 53/57 [06:11<00:29,  7.32s/it]Test Batches:  95%|█████████▍| 54/57 [06:17<00:20,  6.79s/it]Test Batches:  96%|█████████▋| 55/57 [06:22<00:12,  6.40s/it]Test Batches:  98%|█████████▊| 56/57 [06:30<00:06,  6.81s/it]Test Batches: 100%|██████████| 57/57 [06:31<00:00,  4.94s/it]Test Batches: 100%|██████████| 57/57 [06:31<00:00,  6.86s/it]
+
+Total Test Accuracy: 0.6240701079368591
+Class                Accuracy  
+table                    0.6245
+desk                     0.3950
+bookshelf                0.6337
+sofa                     0.5387
+trash_bin                0.6917
+bed                      0.7010
+chair                    0.7789
+monitor                  0.6738
+bathtub                  0.7717
+file_cabinet             0.3584
+flowerpot                0.1250
+window                   0.9155
+lamp                     0.9052

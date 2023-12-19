@@ -1,0 +1,64 @@
+12
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=DenseNet169_Weights.IMAGENET1K_V1`. You can also use `weights=DenseNet169_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Task is classification, not lift the flap.
+Hard mining set to:both
+Using materials: ['main_xml_viewpoint_2', 'main_xml_viewpoint_3', 'main_xml_viewpoint_4']
+Hotswapped material loader being used.
+{1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9, 11: 10, 12: 11, 13: 12}
+-------------------------------
+Annotation Counts
+-------------------------------
+table                      9509
+sofa                       2972
+chair                     15855
+window                     6739
+bookshelf                  3273
+bed                        2603
+monitor                    2528
+trash_bin                  2622
+desk                       3946
+lamp                       1166
+file_cabinet               1316
+flowerpot                   164
+bathtub                    1547
+Total                     54240
+-------------------------------
+
+annotations: ../openrooms/annotation_files/train_main_viewpoints_0_4_v3.json
+batch_size: 100
+checkpoint: last
+git: 2179780af36e53218cf9f25623959fb36ae2379d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: null
+test_imagedir: null
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+Searching for last checkpoint...
+No checkpoints found, starting from scratch...
+No checkpoint was passed.
+../openrooms/all_openrooms/main_xml//scene0291_02/im_11.png
+../openrooms/stylized_all_openrooms/main_xml_viewpoint_3//scene0291_02/im_11.png
+Traceback (most recent call last):
+  File "train_hotswapped_auto_load.py", line 213, in <module>
+    context_images, target_images, context_images_2, target_images_2, bbox, labels = next(iter(dataloader))
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 58, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 58, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/n/holylfs05/LABS/pfister_lab/Lab/coxfs01/pfister_lab2/Lab/spandan/contextual_domain_adaptation/WhenPigsFlyContext/core/dataset_hotswapped.py", line 126, in __getitem__
+    image_2 = image_2.convert("RGB")
+UnboundLocalError: local variable 'image_2' referenced before assignment

@@ -1,0 +1,30 @@
+0
+Warning: You are running the empty baseline, so network is being fed an input of just zeros.
+annotations: ../openrooms/annotation_files/train_main_viewpoints_0_1_v3.json
+batch_size: 200
+checkpoint: checkpoint_20.tar
+empty_baseline: false
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+lift_the_flap: false
+no_context: false
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/test_main_viewpoints_0_1_v3.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: true
+
+Initializing model from checkpoint checkpoint_20.tar
+Traceback (most recent call last):
+  File "test.py", line 174, in <module>
+    test(model, cfg.test_annotations, cfg.test_imagedir, args.outdir, outname=args.outname, record_individual_scores=args.record_individual_scores , print_batch_metrics=args.print_batch_metrics)
+  File "test.py", line 31, in test
+    testset = COCODatasetWithID(annotations_file, imagedir, (224,224), normalize_means=[0.485, 0.456, 0.406], normalize_stds=[0.229, 0.224, 0.225])
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/WhenPigsFlyContext/core/dataset.py", line 34, in __init__
+    with open(annotations_file) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../openrooms/annotation_files/test_main_viewpoints_0_1_v3.json'

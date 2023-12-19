@@ -1,0 +1,86 @@
+22
+Warning: You are running the empty baseline, so network is being fed an input of just zeros.
+annotations: ../iLab/annotation_files/train_iLab_style_v3_extreme.json
+batch_size: 200
+checkpoint: checkpoint_30.tar
+empty_baseline: false
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+lift_the_flap: false
+no_context: false
+num_classes: 15
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../iLab/annotation_files/contents_train_style_test_transformations.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+Initializing model from checkpoint checkpoint_30.tar
+cfg is
+annotations: ../iLab/annotation_files/train_iLab_style_v3_extreme.json
+batch_size: 200
+checkpoint: checkpoint_30.tar
+empty_baseline: false
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+lift_the_flap: false
+no_context: false
+num_classes: 15
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../iLab/annotation_files/contents_train_style_test_transformations.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+args is
+Namespace(annotations='../iLab/annotation_files/contents_train_style_test_transformations.json', batch_size=200, checkpoint='ilab_v3_extreme/vit_style/checkpoint_30.tar', config='ilab_v3_extreme/vit_style/config.yaml', empty_baseline=False, imagedir='../', lift_the_flap=False, model_name='vit', no_context=False, outdir='ilab_v3_extreme/vit_style', outname='train_style_test_transformations', print_batch_metrics=False, record_individual_scores=False, uncertainty_gate_type=None, uncertainty_threshold=None, weighted_prediction=None)
+-------------------------------
+Annotation Counts
+-------------------------------
+f1car                      1549
+pickup                     1782
+plane                      1334
+van                        1590
+car                        4824
+monster                    1388
+equip                      1564
+tank                       1938
+semi                       1614
+heli                       1908
+ufo                        1214
+mil                        3480
+bus                        1950
+boat                       1840
+train                      1558
+Total                     29533
+-------------------------------
+
+batch size is 200
+Data Loader lenght is 148
+Test Batches:   0%|          | 0/148 [00:00<?, ?it/s]Test Batches:   1%|          | 1/148 [00:12<30:09, 12.31s/it]Test Batches:   1%|▏         | 2/148 [00:12<13:14,  5.44s/it]Test Batches:   2%|▏         | 3/148 [00:13<07:50,  3.25s/it]Test Batches:   3%|▎         | 4/148 [00:16<07:21,  3.07s/it]Test Batches:   3%|▎         | 5/148 [00:19<06:59,  2.93s/it]Test Batches:   4%|▍         | 6/148 [00:22<07:31,  3.18s/it]Test Batches:   5%|▍         | 7/148 [00:32<12:25,  5.29s/it]Test Batches:   5%|▌         | 8/148 [00:40<14:46,  6.33s/it]Test Batches:   6%|▌         | 9/148 [00:49<16:27,  7.11s/it]Test Batches:   7%|▋         | 10/148 [00:58<17:22,  7.55s/it]Test Batches:   7%|▋         | 11/148 [01:06<17:37,  7.72s/it]Test Batches:   8%|▊         | 12/148 [01:13<17:19,  7.64s/it]Test Batches:   9%|▉         | 13/148 [01:21<17:29,  7.77s/it]Test Batches:   9%|▉         | 14/148 [01:29<17:26,  7.81s/it]Test Batches:  10%|█         | 15/148 [01:37<17:14,  7.78s/it]Test Batches:  11%|█         | 16/148 [01:45<17:08,  7.79s/it]Test Batches:  11%|█▏        | 17/148 [01:53<17:05,  7.83s/it]Test Batches:  12%|█▏        | 18/148 [02:00<16:46,  7.74s/it]Test Batches:  13%|█▎        | 19/148 [02:08<16:36,  7.73s/it]Test Batches:  14%|█▎        | 20/148 [02:15<15:56,  7.48s/it]Test Batches:  14%|█▍        | 21/148 [02:23<16:08,  7.63s/it]Test Batches:  15%|█▍        | 22/148 [02:30<15:40,  7.46s/it]Test Batches:  16%|█▌        | 23/148 [02:37<15:23,  7.39s/it]Test Batches:  16%|█▌        | 24/148 [02:44<15:11,  7.35s/it]Test Batches:  17%|█▋        | 25/148 [02:52<15:19,  7.48s/it]Test Batches:  18%|█▊        | 26/148 [03:00<15:15,  7.50s/it]Test Batches:  18%|█▊        | 27/148 [03:07<14:49,  7.35s/it]Test Batches:  19%|█▉        | 28/148 [03:14<14:46,  7.38s/it]Test Batches:  20%|█▉        | 29/148 [03:21<14:05,  7.11s/it]Test Batches:  20%|██        | 30/148 [03:27<13:43,  6.98s/it]Test Batches:  21%|██        | 31/148 [03:34<13:21,  6.85s/it]Test Batches:  22%|██▏       | 32/148 [03:41<13:20,  6.90s/it]Test Batches:  22%|██▏       | 33/148 [03:48<13:18,  6.95s/it]Test Batches:  23%|██▎       | 34/148 [03:54<12:41,  6.68s/it]Test Batches:  24%|██▎       | 35/148 [04:01<12:51,  6.83s/it]Test Batches:  24%|██▍       | 36/148 [04:09<13:07,  7.03s/it]Test Batches:  25%|██▌       | 37/148 [04:16<12:56,  7.00s/it]Test Batches:  26%|██▌       | 38/148 [04:22<12:37,  6.89s/it]Test Batches:  26%|██▋       | 39/148 [04:29<12:10,  6.70s/it]Test Batches:  27%|██▋       | 40/148 [04:35<11:46,  6.54s/it]Test Batches:  28%|██▊       | 41/148 [04:41<11:21,  6.37s/it]Test Batches:  28%|██▊       | 42/148 [04:47<11:13,  6.36s/it]Test Batches:  29%|██▉       | 43/148 [04:53<10:58,  6.28s/it]Test Batches:  30%|██▉       | 44/148 [04:59<10:51,  6.27s/it]Test Batches:  30%|███       | 45/148 [05:06<10:50,  6.32s/it]Test Batches:  31%|███       | 46/148 [05:12<10:34,  6.22s/it]Test Batches:  32%|███▏      | 47/148 [05:19<10:52,  6.46s/it]Test Batches:  32%|███▏      | 48/148 [05:24<10:23,  6.23s/it]Test Batches:  33%|███▎      | 49/148 [05:30<10:04,  6.11s/it]Test Batches:  34%|███▍      | 50/148 [05:36<09:49,  6.02s/it]Test Batches:  34%|███▍      | 51/148 [05:42<09:51,  6.09s/it]Test Batches:  35%|███▌      | 52/148 [05:48<09:29,  5.93s/it]Test Batches:  36%|███▌      | 53/148 [05:54<09:34,  6.04s/it]Test Batches:  36%|███▋      | 54/148 [06:00<09:16,  5.92s/it]Test Batches:  37%|███▋      | 55/148 [06:05<08:53,  5.74s/it]Test Batches:  38%|███▊      | 56/148 [06:11<08:54,  5.81s/it]Test Batches:  39%|███▊      | 57/148 [06:17<08:44,  5.76s/it]Test Batches:  39%|███▉      | 58/148 [06:23<08:52,  5.92s/it]Test Batches:  40%|███▉      | 59/148 [06:29<08:59,  6.06s/it]Test Batches:  41%|████      | 60/148 [06:35<08:35,  5.86s/it]Test Batches:  41%|████      | 61/148 [06:40<08:16,  5.71s/it]Test Batches:  42%|████▏     | 62/148 [06:46<08:05,  5.64s/it]Test Batches:  43%|████▎     | 63/148 [06:52<08:23,  5.92s/it]Test Batches:  43%|████▎     | 64/148 [06:58<08:01,  5.73s/it]Test Batches:  44%|████▍     | 65/148 [07:03<07:36,  5.50s/it]Test Batches:  45%|████▍     | 66/148 [07:08<07:32,  5.52s/it]Test Batches:  45%|████▌     | 67/148 [07:14<07:25,  5.50s/it]Test Batches:  46%|████▌     | 68/148 [07:19<07:21,  5.52s/it]Test Batches:  47%|████▋     | 69/148 [07:24<07:05,  5.38s/it]Test Batches:  47%|████▋     | 70/148 [07:30<07:00,  5.39s/it]Test Batches:  48%|████▊     | 71/148 [07:34<06:43,  5.24s/it]Test Batches:  49%|████▊     | 72/148 [07:39<06:32,  5.16s/it]Test Batches:  49%|████▉     | 73/148 [07:44<06:20,  5.07s/it]Test Batches:  50%|█████     | 74/148 [07:49<06:09,  4.99s/it]Test Batches:  51%|█████     | 75/148 [07:54<06:01,  4.96s/it]Test Batches:  51%|█████▏    | 76/148 [07:59<05:53,  4.91s/it]Test Batches:  52%|█████▏    | 77/148 [08:03<05:42,  4.82s/it]Test Batches:  53%|█████▎    | 78/148 [08:09<05:43,  4.90s/it]Test Batches:  53%|█████▎    | 79/148 [08:13<05:33,  4.83s/it]Test Batches:  54%|█████▍    | 80/148 [08:18<05:32,  4.89s/it]Test Batches:  55%|█████▍    | 81/148 [08:23<05:24,  4.84s/it]Test Batches:  55%|█████▌    | 82/148 [08:28<05:21,  4.87s/it]Test Batches:  56%|█████▌    | 83/148 [08:33<05:14,  4.84s/it]Test Batches:  57%|█████▋    | 84/148 [08:37<04:58,  4.66s/it]Test Batches:  57%|█████▋    | 85/148 [08:41<04:47,  4.56s/it]Test Batches:  58%|█████▊    | 86/148 [08:46<04:51,  4.70s/it]Test Batches:  59%|█████▉    | 87/148 [08:50<04:38,  4.57s/it]Test Batches:  59%|█████▉    | 88/148 [08:56<04:42,  4.71s/it]Test Batches:  60%|██████    | 89/148 [09:00<04:34,  4.65s/it]Test Batches:  61%|██████    | 90/148 [09:05<04:32,  4.69s/it]Test Batches:  61%|██████▏   | 91/148 [09:10<04:31,  4.77s/it]Test Batches:  62%|██████▏   | 92/148 [09:14<04:21,  4.66s/it]Test Batches:  63%|██████▎   | 93/148 [09:19<04:11,  4.58s/it]Test Batches:  64%|██████▎   | 94/148 [09:24<04:14,  4.71s/it]Test Batches:  64%|██████▍   | 95/148 [09:28<04:09,  4.71s/it]Test Batches:  65%|██████▍   | 96/148 [09:32<03:53,  4.50s/it]Test Batches:  66%|██████▌   | 97/148 [09:37<03:47,  4.46s/it]Test Batches:  66%|██████▌   | 98/148 [09:41<03:36,  4.32s/it]Test Batches:  67%|██████▋   | 99/148 [09:45<03:30,  4.30s/it]Test Batches:  68%|██████▊   | 100/148 [09:49<03:25,  4.29s/it]Test Batches:  68%|██████▊   | 101/148 [09:54<03:25,  4.38s/it]Test Batches:  69%|██████▉   | 102/148 [09:58<03:18,  4.31s/it]Test Batches:  70%|██████▉   | 103/148 [10:02<03:10,  4.23s/it]Test Batches:  70%|███████   | 104/148 [10:06<03:04,  4.20s/it]Test Batches:  71%|███████   | 105/148 [10:10<03:01,  4.23s/it]Test Batches:  72%|███████▏  | 106/148 [10:15<03:00,  4.29s/it]Test Batches:  72%|███████▏  | 107/148 [10:19<02:51,  4.18s/it]Test Batches:  73%|███████▎  | 108/148 [10:29<03:54,  5.85s/it]Test Batches:  74%|███████▎  | 109/148 [10:39<04:48,  7.39s/it]Test Batches:  74%|███████▍  | 110/148 [10:49<05:10,  8.17s/it]Test Batches:  75%|███████▌  | 111/148 [10:59<05:14,  8.50s/it]Test Batches:  76%|███████▌  | 112/148 [11:07<05:04,  8.45s/it]Test Batches:  76%|███████▋  | 113/148 [11:15<04:52,  8.35s/it]Test Batches:  77%|███████▋  | 114/148 [11:23<04:37,  8.17s/it]Test Batches:  78%|███████▊  | 115/148 [11:30<04:19,  7.85s/it]Test Batches:  78%|███████▊  | 116/148 [11:37<04:03,  7.60s/it]Test Batches:  79%|███████▉  | 117/148 [11:44<03:45,  7.27s/it]Test Batches:  80%|███████▉  | 118/148 [11:50<03:34,  7.14s/it]Test Batches:  80%|████████  | 119/148 [11:57<03:23,  7.02s/it]Test Batches:  81%|████████  | 120/148 [12:04<03:15,  6.97s/it]Test Batches:  82%|████████▏ | 121/148 [12:10<03:02,  6.77s/it]Test Batches:  82%|████████▏ | 122/148 [12:16<02:51,  6.59s/it]Test Batches:  83%|████████▎ | 123/148 [12:22<02:35,  6.21s/it]Test Batches:  84%|████████▍ | 124/148 [12:27<02:24,  6.01s/it]Test Batches:  84%|████████▍ | 125/148 [12:33<02:16,  5.92s/it]Test Batches:  85%|████████▌ | 126/148 [12:38<02:03,  5.61s/it]Test Batches:  86%|████████▌ | 127/148 [12:44<02:00,  5.76s/it]Test Batches:  86%|████████▋ | 128/148 [12:49<01:52,  5.64s/it]Test Batches:  87%|████████▋ | 129/148 [12:54<01:39,  5.26s/it]Test Batches:  88%|████████▊ | 130/148 [12:58<01:30,  5.04s/it]Test Batches:  89%|████████▊ | 131/148 [13:02<01:20,  4.75s/it]Test Batches:  89%|████████▉ | 132/148 [13:07<01:14,  4.68s/it]Test Batches:  90%|████████▉ | 133/148 [13:11<01:09,  4.63s/it]Test Batches:  91%|█████████ | 134/148 [13:15<01:01,  4.41s/it]Test Batches:  91%|█████████ | 135/148 [13:19<00:56,  4.32s/it]Test Batches:  92%|█████████▏| 136/148 [13:23<00:50,  4.25s/it]Test Batches:  93%|█████████▎| 137/148 [13:28<00:46,  4.25s/it]Test Batches:  93%|█████████▎| 138/148 [13:31<00:40,  4.00s/it]Test Batches:  94%|█████████▍| 139/148 [13:35<00:35,  3.93s/it]Test Batches:  95%|█████████▍| 140/148 [13:39<00:30,  3.84s/it]Test Batches:  95%|█████████▌| 141/148 [13:42<00:26,  3.75s/it]Test Batches:  96%|█████████▌| 142/148 [13:46<00:22,  3.68s/it]Test Batches:  97%|█████████▋| 143/148 [13:49<00:17,  3.54s/it]Test Batches:  97%|█████████▋| 144/148 [13:52<00:13,  3.46s/it]Test Batches:  98%|█████████▊| 145/148 [13:55<00:10,  3.42s/it]Test Batches:  99%|█████████▊| 146/148 [14:00<00:07,  3.75s/it]Test Batches:  99%|█████████▉| 147/148 [14:04<00:03,  3.72s/it]Test Batches: 100%|██████████| 148/148 [14:05<00:00,  3.09s/it]Test Batches: 100%|██████████| 148/148 [14:05<00:00,  5.71s/it]
+
+Total Test Accuracy: 0.1451748162508011
+Class                Accuracy  
+boat                     0.1484
+bus                      0.0046
+car                      0.0390
+equip                    0.2225
+f1car                    0.0452
+heli                     0.5933
+mil                      0.0443
+monster                  0.0807
+pickup                   0.0331
+plane                    0.3426
+semi                     0.0211
+tank                     0.0485
+train                    0.0032
+ufo                      0.4588
+van                      0.0925

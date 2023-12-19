@@ -1,0 +1,89 @@
+2
+Loading config /n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/model_zoo/configs/COCO-Detection/../Base-RetinaNet.yaml with yaml.unsafe_load. Your machine may be at risk if the file contains malicious content.
+Region proposal deactivated, ground truth bounding boxes are used.
+[32m[05/16 11:34:41 d2.data.datasets.coco]: [0mLoaded 15769 images in COCO format from ../../../../openrooms/annotation_files/train_main_xml_50_lights_v3_fasterrcnn.json
+[32m[05/16 11:34:41 d2.data.build]: [0mRemoved 969 images with no usable annotations. 14800 images left.
+[32m[05/16 11:34:42 d2.data.build]: [0mDistribution of instances among all 13 categories:
+[36m|   category   | #instances   |  category  | #instances   |  category  | #instances   |
+|:------------:|:-------------|:----------:|:-------------|:----------:|:-------------|
+|    table     | 11541        |    desk    | 4829         | bookshelf  | 3902         |
+|     sofa     | 3550         | trash_bin  | 3204         |    bed     | 3214         |
+|    chair     | 19905        |  monitor   | 3094         |  bathtub   | 1988         |
+| file_cabinet | 1727         | flowerpot  | 227          |   window   | 10204        |
+|     lamp     | 2489         |            |              |            |              |
+|    total     | 69874        |            |              |            |              |[0m
+Proposal boxes added.
+[32m[05/16 11:34:42 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in training: []
+[32m[05/16 11:34:42 d2.data.common]: [0mSerializing 14800 elements to byte tensors and concatenating them all ...
+[32m[05/16 11:34:43 d2.data.common]: [0mSerialized dataset takes 11.15 MiB
+[5m[31mWARNING[0m [32m[05/16 11:34:43 d2.solver.build]: [0mSOLVER.STEPS contains values larger than SOLVER.MAX_ITER. These values will be ignored.
+2022-05-16 11:34:44.801991: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/cv2/../../lib64:
+2022-05-16 11:34:44.802020: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+The checkpoint state_dict contains keys that are not used by the model:
+  [35mpixel_mean[0m
+  [35mpixel_std[0m
+[32m[05/16 11:35:15 d2.engine.train_loop]: [0mStarting training from iteration 0
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[4m[5m[31mERROR[0m [32m[05/16 11:35:20 d2.engine.train_loop]: [0mException during training:
+Traceback (most recent call last):
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/modeling/meta_arch/dense_detector.py", line 101, in forward
+    return self.forward_training(images, features, predictions, gt_instances)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/modeling/meta_arch/retinanet.py", line 158, in forward_training
+    return self.losses(anchors, pred_logits, gt_labels, pred_anchor_deltas, gt_boxes)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/modeling/meta_arch/retinanet.py", line 189, in losses
+    loss_cls = sigmoid_focal_loss_jit(
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/fvcore/nn/focal_loss.py", line 39, in sigmoid_focal_loss
+
+    if alpha >= 0:
+        alpha_t = alpha * targets + (1 - alpha) * (1 - targets)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ <--- HERE
+        loss = alpha_t * loss
+RuntimeError: CUDA out of memory. Tried to allocate 438.00 MiB (GPU 0; 15.78 GiB total capacity; 12.90 GiB already allocated; 361.75 MiB free; 14.11 GiB reserved in total by PyTorch)
+
+[32m[05/16 11:35:20 d2.engine.hooks]: [0mTotal training time: 0:00:02 (0:00:00 on hooks)
+[32m[05/16 11:35:20 d2.utils.events]: [0m iter: 2  total_loss: 13.19  loss_cls: 10.62  loss_box_reg: 2.566  data_time: 1.0048  lr: 4.9975e-07  max_mem: 13649M
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/_tensor.py:575: UserWarning: floor_divide is deprecated, and will be removed in a future version of pytorch. It currently rounds toward 0 (like the 'trunc' function NOT 'floor'). This results in incorrect rounding for negative values.
+To keep the current behavior, use torch.div(a, b, rounding_mode='trunc'), or for actual floor division, use torch.div(a, b, rounding_mode='floor'). (Triggered internally at  ../aten/src/ATen/native/BinaryOps.cpp:467.)
+  return torch.floor_divide(self, other)
+Traceback (most recent call last):
+  File "finetune.py", line 70, in <module>
+    trainer.train()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 484, in train
+    super().train(self.start_iter, self.max_iter)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 149, in train
+    self.run_step()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/defaults.py", line 494, in run_step
+    self._trainer.run_step()
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/engine/train_loop.py", line 273, in run_step
+    loss_dict = self.model(data)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/modeling/meta_arch/dense_detector.py", line 101, in forward
+    return self.forward_training(images, features, predictions, gt_instances)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/modeling/meta_arch/retinanet.py", line 158, in forward_training
+    return self.losses(anchors, pred_logits, gt_labels, pred_anchor_deltas, gt_boxes)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/modeling/meta_arch/retinanet.py", line 189, in losses
+    loss_cls = sigmoid_focal_loss_jit(
+RuntimeError: The following operation failed in the TorchScript interpreter.
+Traceback of TorchScript (most recent call last):
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/fvcore/nn/focal_loss.py", line 39, in sigmoid_focal_loss
+
+    if alpha >= 0:
+        alpha_t = alpha * targets + (1 - alpha) * (1 - targets)
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ <--- HERE
+        loss = alpha_t * loss
+RuntimeError: CUDA out of memory. Tried to allocate 438.00 MiB (GPU 0; 15.78 GiB total capacity; 12.90 GiB already allocated; 361.75 MiB free; 14.11 GiB reserved in total by PyTorch)
+

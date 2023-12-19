@@ -1,0 +1,8 @@
+0
+Task is classification, not lift the flap.
+Traceback (most recent call last):
+  File "train.py", line 64, in <module>
+    dataset = COCODataset(cfg.annotations, cfg.imagedir, image_size =(224,224), normalize_means=[0.485, 0.456, 0.406], normalize_stds=[0.229, 0.224, 0.225])
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/WhenPigsFlyContext/core/dataset.py", line 37, in __init__
+    self.annotations = self.coco_dict["annotations"]
+TypeError: string indices must be integers

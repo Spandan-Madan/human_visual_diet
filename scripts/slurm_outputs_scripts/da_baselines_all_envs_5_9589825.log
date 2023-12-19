@@ -1,0 +1,74 @@
+5
+Environment:
+	Python: 3.8.11
+	PyTorch: 1.9.1+cu102
+	Torchvision: 0.10.1+cu102
+	CUDA: 10.2
+	CUDNN: 7605
+	NumPy: 1.21.2
+	PIL: 8.3.1
+Args:
+	algorithm: MTL
+	checkpoint_freq: None
+	continue_training: False
+	data_dir: ./domainbed/data/
+	dataset: DGMaterials
+	holdout_fraction: 0.01
+	hparams: None
+	hparams_seed: 24596
+	output_dir: da_all_envs/MTL
+	save_model_every_checkpoint: False
+	seed: 0
+	skip_model_save: False
+	steps: None
+	task: domain_adaptation
+	test_envs: [5]
+	trial_seed: 0
+	uda_holdout_fraction: 0.5
+HParams:
+	batch_size: 36
+	class_balanced: False
+	data_augmentation: True
+	lr: 1.7962115863050557e-05
+	mtl_ema: 1.0
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.0
+	weight_decay: 0.00023369708368151316
+appending uda for env: 5
+Traceback (most recent call last):
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/scripts/train.py", line 272, in <module>
+    step_vals = algorithm.update(minibatches_device, uda_device)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/algorithms.py", line 720, in update
+    loss += F.cross_entropy(self.predict(x, env), y)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/algorithms.py", line 740, in predict
+    features = self.featurizer(x)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/networks.py", line 104, in forward
+    return self.dropout(self.network(x))
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/resnet.py", line 249, in forward
+    return self._forward_impl(x)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/resnet.py", line 239, in _forward_impl
+    x = self.layer3(x)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/resnet.py", line 133, in forward
+    out = self.bn3(out)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 167, in forward
+    return F.batch_norm(
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/functional.py", line 2281, in batch_norm
+    return torch.batch_norm(
+RuntimeError: CUDA out of memory. Tried to allocate 28.00 MiB (GPU 0; 15.78 GiB total capacity; 14.21 GiB already allocated; 17.75 MiB free; 14.45 GiB reserved in total by PyTorch)

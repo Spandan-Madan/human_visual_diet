@@ -1,0 +1,51 @@
+10
+Using pretrained networks
+Task is classification, not lift the flap.
+-------------------------------
+Annotation Counts
+-------------------------------
+table                     10252
+sofa                       3102
+chair                     17117
+window                     5089
+bookshelf                  3324
+bed                        2831
+monitor                    2408
+trash_bin                  2857
+file_cabinet               1418
+desk                       4200
+lamp                        589
+bathtub                    1518
+flowerpot                   162
+Total                     54867
+-------------------------------
+
+annotations: ../openrooms/annotation_files/train_main_viewpoints_0_1_v3.json
+batch_size: 40
+checkpoint: null
+git: 2179780af36e53218cf9f25623959fb36ae2379d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/train_main_viewpoints_5_v3.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+No checkpoint was passed.
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=DenseNet121_Weights.IMAGENET1K_V1`. You can also use `weights=DenseNet121_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:554: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Traceback (most recent call last):
+  File "train_simple_cnn.py", line 135, in <module>
+    context_images, target_images, bbox, labels = iter(dataloader).next()
+AttributeError: '_MultiProcessingDataLoaderIter' object has no attribute 'next'

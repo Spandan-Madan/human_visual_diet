@@ -1,0 +1,42 @@
+1
+Environment:
+	Python: 3.8.11
+	PyTorch: 1.9.1+cu102
+	Torchvision: 0.10.1+cu102
+	CUDA: 10.2
+	CUDNN: 7605
+	NumPy: 1.21.2
+	PIL: 8.3.1
+Args:
+	algorithm: IRM
+	checkpoint_freq: None
+	data_dir: ./domainbed/data/
+	dataset: DGMaterials
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 0
+	output_dir: train_output/IRM
+	save_model_every_checkpoint: False
+	seed: 0
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [6]
+	trial_seed: 0
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 8
+	class_balanced: False
+	data_augmentation: True
+	irm_lambda: 100.0
+	irm_penalty_anneal_iters: 500
+	lr: 5e-05
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.0
+	weight_decay: 0.0
+env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  env4_in_acc   env4_out_acc  env5_in_acc   env5_out_acc  env6_in_acc   env6_out_acc  epoch         loss          mem_gb        nll           penalty       step          step_time    
+0.0764221825  0.0770717046  0.0780858676  0.0758551596  0.0815921288  0.0769285817  0.0777638640  0.0785029340  0.0786583184  0.0782166881  0.0852057245  0.0840131673  0.0825581395  0.0837984829  0.0000000000  2.7301518917  4.0074505806  2.7111794949  0.0189723112  0             1.7943921089 
+0.5169767442  0.5171747531  0.5342576029  0.5349935595  0.5275134168  0.5258336911  0.5339534884  0.5372835265  0.5330590340  0.5399313010  0.5289445438  0.5332045227  0.5366547406  0.5419350222  0.0429338104  1.7567732692  4.2767004967  1.7382630984  0.0185101722  300           0.7315983645 
+0.3097495528  0.3085015028  0.3165474061  0.3197366538  0.3152415027  0.3117217690  0.3148658318  0.3170888793  0.3154919499  0.3179476170  0.3149910555  0.3140117361  0.3192844365  0.3180191785  0.0858676208  2.3616965091  4.2776160240  1.6489157923  0.0145368739  600           0.7964722832 
+slurmstepd: error: *** JOB 4413110 ON holygpu2c0913 CANCELLED AT 2022-04-12T20:10:07 ***

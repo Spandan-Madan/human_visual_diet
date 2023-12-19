@@ -1,0 +1,53 @@
+44
+Warning: You are running the empty baseline, so network is being fed an input of just zeros.
+annotations: ../openrooms/annotation_files/train_main_xml_50_v3.json
+batch_size: 200
+blur_context: 0
+blur_target: -2
+checkpoint: checkpoint_20.tar
+cnn_baseline: false
+empty_baseline: false
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+lift_the_flap: false
+no_context: false
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/train_main_xml_50_test_v3.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: true
+
+Initializing model from checkpoint checkpoint_20.tar
+-------------------------------
+Annotation Counts
+-------------------------------
+desk                       4952
+trash_bin                  3281
+chair                     20114
+window                    10283
+lamp                       2513
+table                     11652
+monitor                    3103
+file_cabinet               1735
+bookshelf                  4002
+bed                        3356
+sofa                       3567
+bathtub                    1988
+flowerpot                   227
+Total                     70773
+-------------------------------
+
+batch size is 200
+Data Loader lenght is 354
+Test Batches:   0%|          | 0/354 [00:00<?, ?it/s]Test Batches:   0%|          | 0/354 [00:09<?, ?it/s]
+Traceback (most recent call last):
+  File "test.py", line 290, in <module>
+    test(model, cfg, cfg.test_annotations, cfg.test_imagedir, args.outdir, outname=args.outname, record_individual_scores=args.record_individual_scores , print_batch_metrics=args.print_batch_metrics)
+  File "test.py", line 128, in test
+    dat = target_images.permute(1,2,0)
+RuntimeError: number of dims don't match in permute

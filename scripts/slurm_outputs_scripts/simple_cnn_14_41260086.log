@@ -1,0 +1,85 @@
+14
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+Warning: You are running the empty baseline, so network is being fed an input of just zeros.
+annotations: ../openrooms/annotation_files/train_main_viewpoints_0_1_v3.json
+batch_size: 50
+checkpoint: checkpoint_20.tar
+empty_baseline: false
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+lift_the_flap: false
+no_context: false
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/scannet_handmade_test_set.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: true
+
+Initializing model from checkpoint checkpoint_20.tar
+cfg is
+annotations: ../openrooms/annotation_files/train_main_viewpoints_0_1_v3.json
+batch_size: 50
+checkpoint: checkpoint_20.tar
+empty_baseline: false
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+lift_the_flap: false
+no_context: false
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/scannet_handmade_test_set.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: true
+
+args is
+Namespace(annotations='../openrooms/annotation_files/scannet_handmade_test_set.json', batch_size=50, checkpoint='v3_output/squeezenet_viewpoint_transfer_scratch/checkpoint_20.tar', config='v3_output/squeezenet_viewpoint_transfer_scratch/config.yaml', empty_baseline=False, imagedir='../', lift_the_flap=False, model_name='squeezenet', no_context=False, outdir='v3_output/squeezenet_viewpoint_transfer_scratch/', outname='scannet_handmade', print_batch_metrics=False, record_individual_scores=False, uncertainty_gate_type=None, uncertainty_threshold=None, weighted_prediction=True)
+-------------------------------
+Annotation Counts
+-------------------------------
+chair                       106
+bed                           4
+bookshelf                    13
+sofa                        108
+table                        58
+monitor                      13
+bathtub                       6
+trash_bin                    10
+lamp                          6
+window                        1
+desk                          1
+file_cabinet                  1
+Total                       327
+-------------------------------
+
+batch size is 50
+Data Loader lenght is 7
+Test Batches:   0%|          | 0/7 [00:00<?, ?it/s]Test Batches:  14%|█▍        | 1/7 [00:05<00:31,  5.28s/it]Test Batches:  29%|██▊       | 2/7 [00:05<00:12,  2.48s/it]Test Batches:  43%|████▎     | 3/7 [00:07<00:08,  2.19s/it]Test Batches:  57%|█████▋    | 4/7 [00:09<00:06,  2.07s/it]Test Batches:  71%|███████▏  | 5/7 [00:11<00:03,  2.00s/it]Test Batches:  86%|████████▌ | 6/7 [00:13<00:01,  1.95s/it]Test Batches: 100%|██████████| 7/7 [00:14<00:00,  1.63s/it]Test Batches: 100%|██████████| 7/7 [00:14<00:00,  2.04s/it]
+
+Total Test Accuracy: 0.14830245077610016
+Class                Accuracy  
+table                    0.3621
+desk                     0.0000
+bookshelf                0.0000
+sofa                     0.0093
+trash_bin                0.0000
+bed                      0.0000
+chair                    0.5566
+monitor                  0.0000
+bathtub                  0.0000
+file_cabinet             0.0000
+flowerpot                0.0000
+window                   1.0000
+lamp                     0.0000

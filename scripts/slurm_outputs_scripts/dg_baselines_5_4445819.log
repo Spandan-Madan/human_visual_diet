@@ -1,0 +1,40 @@
+5
+Environment:
+	Python: 3.8.11
+	PyTorch: 1.9.1+cu102
+	Torchvision: 0.10.1+cu102
+	CUDA: 10.2
+	CUDNN: 7605
+	NumPy: 1.21.2
+	PIL: 8.3.1
+Args:
+	algorithm: MTL
+	checkpoint_freq: None
+	data_dir: ./domainbed/data/
+	dataset: DGMaterials
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 0
+	output_dir: train_output/MTL
+	save_model_every_checkpoint: False
+	seed: 0
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [5]
+	trial_seed: 0
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 8
+	class_balanced: False
+	data_augmentation: True
+	lr: 5e-05
+	mtl_ema: 0.99
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.0
+	weight_decay: 0.0
+env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  env4_in_acc   env4_out_acc  env5_in_acc   env5_out_acc  env6_in_acc   env6_out_acc  epoch         loss          mem_gb        step          step_time    
+0.2496601073  0.2497495349  0.2504651163  0.2528982396  0.2482826476  0.2527551166  0.2511449016  0.2559038214  0.2492486583  0.2522541863  0.2497674419  0.2461714613  0.2502325581  0.2533991699  0.0000000000  15.888692855  3.9893131256  0             1.1266865730 
+0.5273345259  0.5249749535  0.5574776386  0.5601116359  0.5476744186  0.5485186775  0.5562254025  0.5586088450  0.5547048301  0.5556748247  0.5620214669  0.5608272506  0.5508586762  0.5534564191  0.0429338104  9.6416173410  4.2675051689  300           0.8134270517 
+slurmstepd: error: *** JOB 4445825 ON holygpu2c0913 CANCELLED AT 2022-04-13T00:15:57 ***

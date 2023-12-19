@@ -1,0 +1,52 @@
+8
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=DenseNet169_Weights.IMAGENET1K_V1`. You can also use `weights=DenseNet169_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Task is classification, not lift the flap.
+Hard mining set to:both
+Using materials: ['main_xml_50_lights_1', 'main_xml_50_lights_2', 'main_xml_50_lights_3', 'main_xml_50_lights_4']
+Hotswapped material loader being used.
+{1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9, 11: 10, 12: 11, 13: 12}
+-------------------------------
+Annotation Counts
+-------------------------------
+desk                       4829
+trash_bin                  3204
+chair                     19905
+window                    10204
+lamp                       2489
+table                     11541
+monitor                    3094
+file_cabinet               1727
+bookshelf                  3902
+bed                        3214
+sofa                       3550
+bathtub                    1988
+flowerpot                   227
+Total                     69874
+-------------------------------
+
+annotations: ../openrooms/annotation_files/train_main_xml_50_lights_v3.json
+batch_size: 200
+checkpoint: last
+git: 2179780af36e53218cf9f25623959fb36ae2379d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: null
+test_imagedir: null
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+Searching for last checkpoint...
+No checkpoints found, starting from scratch...
+No checkpoint was passed.
+Traceback (most recent call last):
+  File "train_hotswapped_auto_load.py", line 213, in <module>
+    context_images, target_images, context_images_2, target_images_2, bbox, labels = iter(dataloader).next()
+AttributeError: '_SingleProcessDataLoaderIter' object has no attribute 'next'

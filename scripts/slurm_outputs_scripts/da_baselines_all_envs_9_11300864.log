@@ -1,0 +1,52 @@
+9
+Environment:
+	Python: 3.8.11
+	PyTorch: 1.11.0+cu102
+	Torchvision: 0.12.0+cu102
+	CUDA: 10.2
+	CUDNN: 7605
+	NumPy: 1.21.2
+	PIL: 9.1.0
+Args:
+	algorithm: IGA
+	batch_size: 24
+	checkpoint_freq: None
+	continue_training: False
+	data_dir: ./domainbed/data/
+	dataset: DGViewpoints
+	holdout_fraction: 0.01
+	hparams: None
+	hparams_seed: 24596
+	output_dir: VIEWPOINTS/da_viewpoints_all_envs/IGA
+	save_model_every_checkpoint: False
+	seed: 0
+	skip_model_save: False
+	steps: None
+	task: domain_adaptation
+	test_envs: [5]
+	trial_seed: 0
+	uda_holdout_fraction: 0.5
+Changed batch_size to 24
+HParams:
+	batch_size: 24
+	class_balanced: False
+	data_augmentation: True
+	lr: 1.7962115863050557e-05
+	nonlinear_classifier: False
+	penalty: 1998.4189154591388
+	resnet18: False
+	resnet_dropout: 0.0
+	weight_decay: 0.00023369708368151316
+appending uda for env: 5
+Traceback (most recent call last):
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/scripts/train.py", line 277, in <module>
+    step_vals = algorithm.update(minibatches_device, uda_device)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/algorithms.py", line 1011, in update
+    env_grad = autograd.grad(env_loss, self.network.parameters(), 
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/autograd/__init__.py", line 275, in grad
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+RuntimeError: CUDA out of memory. Tried to allocate 20.00 MiB (GPU 0; 15.78 GiB total capacity; 13.97 GiB already allocated; 11.75 MiB free; 14.54 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

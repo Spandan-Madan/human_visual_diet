@@ -1,0 +1,40 @@
+4
+Environment:
+	Python: 3.8.11
+	PyTorch: 1.9.1+cu102
+	Torchvision: 0.10.1+cu102
+	CUDA: 10.2
+	CUDNN: 7605
+	NumPy: 1.21.2
+	PIL: 8.3.1
+Args:
+	algorithm: CORAL
+	checkpoint_freq: None
+	data_dir: ./domainbed/data/
+	dataset: DGMaterials
+	holdout_fraction: 0.2
+	hparams: None
+	hparams_seed: 0
+	output_dir: train_output/CORAL
+	save_model_every_checkpoint: False
+	seed: 0
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [5]
+	trial_seed: 0
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 8
+	class_balanced: False
+	data_augmentation: True
+	lr: 5e-05
+	mmd_gamma: 1.0
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.0
+	weight_decay: 0.0
+env0_in_acc   env0_out_acc  env1_in_acc   env1_out_acc  env2_in_acc   env2_out_acc  env3_in_acc   env3_out_acc  env4_in_acc   env4_out_acc  env5_in_acc   env5_out_acc  env6_in_acc   env6_out_acc  epoch         loss          mem_gb        penalty       step          step_time    
+0.0789624329  0.0775726349  0.0825760286  0.0811507085  0.0855992844  0.0836553600  0.0798389982  0.0773579505  0.0834168157  0.0817232002  0.0912880143  0.0867325032  0.0817352415  0.0778588808  0.0000000000  2.6652328968  4.2473950386  0.0368490703  0             1.1624732018 
+0.5605366726  0.5619722341  0.5750805009  0.5810791470  0.5642397138  0.5687705739  0.5716100179  0.5773579505  0.5705366726  0.5739945613  0.5769051878  0.5755689137  0.5680322004  0.5661227995  0.0429338104  1.4942694559  4.5378627777  0.0393438606  300           0.8218759894 
+slurmstepd: error: *** JOB 4445824 ON holygpu2c0913 CANCELLED AT 2022-04-13T00:21:02 ***

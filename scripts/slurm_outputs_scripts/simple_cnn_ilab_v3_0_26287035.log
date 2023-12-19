@@ -1,0 +1,319 @@
+0
+2022-09-11 21:30:10.552686: W tensorflow/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2022-09-11 21:30:10.552976: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+Task is classification, not lift the flap.
+-------------------------------
+Annotation Counts
+-------------------------------
+car                        9583
+tank                       3907
+monster                    2729
+f1car                      3197
+mil                        6823
+boat                       3710
+train                      3148
+equip                      3100
+plane                      2819
+bus                        3986
+van                        3180
+semi                       3291
+heli                       3792
+ufo                        2369
+pickup                     3507
+Total                     59141
+-------------------------------
+
+annotations: ../iLab/annotation_files/train_iLab_viewpoints_v3.json
+batch_size: 40
+checkpoint: null
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 15
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../iLab/annotation_files/test_iLab_viewpoints_v3.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+No checkpoint was passed.
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:487: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:487: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Epochs:   0%|          | 0/50 [00:00<?, ?it/s]
+Batches:   0%|          | 0/1478 [00:00<?, ?it/s][A/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:487: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+
+Batches:   0%|          | 1/1478 [00:01<44:41,  1.82s/it][A
+Batches:   0%|          | 2/1478 [00:01<19:57,  1.23it/s][A
+Batches:   0%|          | 3/1478 [00:02<12:56,  1.90it/s][A
+Batches:   0%|          | 4/1478 [00:02<09:26,  2.60it/s][A
+Batches:   0%|          | 5/1478 [00:03<13:14,  1.85it/s][A
+Batches:   0%|          | 6/1478 [00:03<10:27,  2.35it/s][A
+Batches:   0%|          | 7/1478 [00:03<08:18,  2.95it/s][A
+Batches:   1%|          | 8/1478 [00:03<07:11,  3.40it/s][A
+Batches:   1%|          | 9/1478 [00:04<11:29,  2.13it/s][A
+Batches:   1%|          | 10/1478 [00:04<09:27,  2.59it/s][A
+Batches:   1%|          | 11/1478 [00:04<07:50,  3.12it/s][A
+Batches:   1%|          | 12/1478 [00:05<06:49,  3.58it/s][A
+Batches:   1%|          | 13/1478 [00:05<11:34,  2.11it/s][A
+Batches:   1%|          | 14/1478 [00:06<09:26,  2.58it/s][A
+Batches:   1%|          | 15/1478 [00:06<07:49,  3.12it/s][A
+Batches:   1%|          | 16/1478 [00:06<06:41,  3.64it/s][A
+Batches:   1%|          | 17/1478 [00:07<11:14,  2.17it/s][A
+Batches:   1%|          | 18/1478 [00:07<09:09,  2.66it/s][A
+Batches:   1%|▏         | 19/1478 [00:07<07:47,  3.12it/s][A
+Batches:   1%|▏         | 20/1478 [00:07<06:42,  3.62it/s][A
+Batches:   1%|▏         | 21/1478 [00:08<11:03,  2.20it/s][A
+Batches:   1%|▏         | 22/1478 [00:09<09:04,  2.67it/s][A
+Batches:   2%|▏         | 23/1478 [00:09<07:34,  3.20it/s][A
+Batches:   2%|▏         | 24/1478 [00:09<06:46,  3.58it/s][A
+Batches:   2%|▏         | 25/1478 [00:10<11:26,  2.12it/s][A
+Batches:   2%|▏         | 26/1478 [00:10<09:16,  2.61it/s][A
+Batches:   2%|▏         | 27/1478 [00:10<07:46,  3.11it/s][A
+Batches:   2%|▏         | 28/1478 [00:10<06:38,  3.64it/s][A
+Batches:   2%|▏         | 29/1478 [00:11<11:42,  2.06it/s][A
+Batches:   2%|▏         | 30/1478 [00:11<09:31,  2.53it/s][A
+Batches:   2%|▏         | 31/1478 [00:12<07:56,  3.04it/s][A
+Batches:   2%|▏         | 32/1478 [00:12<06:56,  3.47it/s][A
+Batches:   2%|▏         | 33/1478 [00:13<11:56,  2.02it/s][A
+Batches:   2%|▏         | 34/1478 [00:13<09:43,  2.48it/s][A
+Batches:   2%|▏         | 35/1478 [00:13<08:00,  3.00it/s][A
+Batches:   2%|▏         | 36/1478 [00:13<06:53,  3.49it/s][A
+Batches:   3%|▎         | 37/1478 [00:14<11:22,  2.11it/s][A
+Batches:   3%|▎         | 38/1478 [00:14<09:26,  2.54it/s][A
+Batches:   3%|▎         | 39/1478 [00:15<07:49,  3.07it/s][A
+Batches:   3%|▎         | 40/1478 [00:15<06:36,  3.63it/s][A
+Batches:   3%|▎         | 41/1478 [00:16<10:59,  2.18it/s][A
+Batches:   3%|▎         | 42/1478 [00:16<09:05,  2.63it/s][A
+Batches:   3%|▎         | 43/1478 [00:16<07:35,  3.15it/s][A
+Batches:   3%|▎         | 44/1478 [00:16<06:40,  3.58it/s][A
+Batches:   3%|▎         | 45/1478 [00:17<10:48,  2.21it/s][A
+Batches:   3%|▎         | 46/1478 [00:17<08:55,  2.68it/s][A
+Batches:   3%|▎         | 47/1478 [00:17<07:33,  3.16it/s][A
+Batches:   3%|▎         | 48/1478 [00:18<06:33,  3.63it/s][A
+Batches:   3%|▎         | 49/1478 [00:19<10:59,  2.17it/s][A
+Batches:   3%|▎         | 50/1478 [00:19<08:55,  2.67it/s][A
+Batches:   3%|▎         | 51/1478 [00:19<07:37,  3.12it/s][A
+Batches:   4%|▎         | 52/1478 [00:19<06:36,  3.60it/s][A
+Batches:   4%|▎         | 53/1478 [00:20<10:46,  2.21it/s][A
+Batches:   4%|▎         | 54/1478 [00:20<08:56,  2.65it/s][A
+Batches:   4%|▎         | 55/1478 [00:20<07:22,  3.22it/s][A
+Batches:   4%|▍         | 56/1478 [00:21<06:28,  3.66it/s][A
+Batches:   4%|▍         | 57/1478 [00:21<10:44,  2.20it/s][A
+Batches:   4%|▍         | 58/1478 [00:22<08:51,  2.67it/s][A
+Batches:   4%|▍         | 59/1478 [00:22<07:27,  3.17it/s][A
+Batches:   4%|▍         | 60/1478 [00:22<06:28,  3.65it/s][A
+Batches:   4%|▍         | 61/1478 [00:23<10:45,  2.20it/s][A
+Batches:   4%|▍         | 62/1478 [00:23<08:49,  2.68it/s][A
+Batches:   4%|▍         | 63/1478 [00:23<07:16,  3.24it/s][A
+Batches:   4%|▍         | 64/1478 [00:23<06:33,  3.59it/s][A
+Batches:   4%|▍         | 65/1478 [00:24<10:49,  2.18it/s][A
+Batches:   4%|▍         | 66/1478 [00:24<08:59,  2.62it/s][A
+Batches:   5%|▍         | 67/1478 [00:25<07:26,  3.16it/s][A
+Batches:   5%|▍         | 68/1478 [00:25<06:29,  3.62it/s][A
+Batches:   5%|▍         | 69/1478 [00:26<11:05,  2.12it/s][A
+Batches:   5%|▍         | 70/1478 [00:26<09:01,  2.60it/s][A
+Batches:   5%|▍         | 71/1478 [00:26<07:41,  3.05it/s][A
+Batches:   5%|▍         | 72/1478 [00:26<06:40,  3.51it/s][A
+Batches:   5%|▍         | 73/1478 [00:27<10:39,  2.20it/s][A
+Batches:   5%|▌         | 74/1478 [00:27<08:52,  2.64it/s][A
+Batches:   5%|▌         | 75/1478 [00:27<07:24,  3.16it/s][A
+Batches:   5%|▌         | 76/1478 [00:28<06:28,  3.60it/s][A
+Batches:   5%|▌         | 77/1478 [00:29<10:52,  2.15it/s][A
+Batches:   5%|▌         | 78/1478 [00:29<09:00,  2.59it/s][A
+Batches:   5%|▌         | 79/1478 [00:29<07:30,  3.11it/s][A
+Batches:   5%|▌         | 80/1478 [00:29<06:31,  3.57it/s][A
+Batches:   5%|▌         | 81/1478 [00:30<10:46,  2.16it/s][A
+Batches:   6%|▌         | 82/1478 [00:30<08:46,  2.65it/s][A
+Batches:   6%|▌         | 83/1478 [00:30<07:24,  3.14it/s][A
+Batches:   6%|▌         | 84/1478 [00:31<06:20,  3.66it/s][A
+Batches:   6%|▌         | 85/1478 [00:31<10:50,  2.14it/s][A
+Batches:   6%|▌         | 86/1478 [00:32<08:42,  2.67it/s][A
+Batches:   6%|▌         | 87/1478 [00:32<07:28,  3.10it/s][A
+Batches:   6%|▌         | 88/1478 [00:32<06:24,  3.61it/s][A
+Batches:   6%|▌         | 89/1478 [00:33<11:02,  2.10it/s][A
+Batches:   6%|▌         | 90/1478 [00:33<09:01,  2.56it/s][A
+Batches:   6%|▌         | 91/1478 [00:33<07:37,  3.03it/s][A
+Batches:   6%|▌         | 92/1478 [00:34<06:36,  3.49it/s][A
+Batches:   6%|▋         | 93/1478 [00:34<10:47,  2.14it/s][A
+Batches:   6%|▋         | 94/1478 [00:35<08:35,  2.68it/s][A
+Batches:   6%|▋         | 95/1478 [00:35<07:18,  3.15it/s][A
+Batches:   6%|▋         | 96/1478 [00:35<06:22,  3.61it/s][A
+Batches:   7%|▋         | 97/1478 [00:36<10:33,  2.18it/s][A
+Batches:   7%|▋         | 98/1478 [00:36<08:45,  2.63it/s][A
+Batches:   7%|▋         | 99/1478 [00:36<07:10,  3.20it/s][A
+Batches:   7%|▋         | 100/1478 [00:36<06:02,  3.80it/s][A
+Batches:   7%|▋         | 101/1478 [00:37<10:26,  2.20it/s][A
+Batches:   7%|▋         | 102/1478 [00:37<08:43,  2.63it/s][A
+Batches:   7%|▋         | 103/1478 [00:38<07:21,  3.11it/s][A
+Batches:   7%|▋         | 104/1478 [00:38<06:21,  3.60it/s][A
+Batches:   7%|▋         | 105/1478 [00:39<10:19,  2.22it/s][A
+Batches:   7%|▋         | 106/1478 [00:39<08:38,  2.65it/s][A
+Batches:   7%|▋         | 107/1478 [00:39<07:11,  3.18it/s][A
+Batches:   7%|▋         | 108/1478 [00:39<06:12,  3.68it/s][A
+Batches:   7%|▋         | 109/1478 [00:40<10:30,  2.17it/s][A
+Batches:   7%|▋         | 110/1478 [00:40<08:27,  2.69it/s][A
+Batches:   8%|▊         | 111/1478 [00:40<07:01,  3.24it/s][A
+Batches:   8%|▊         | 112/1478 [00:41<06:15,  3.64it/s][A
+Batches:   8%|▊         | 113/1478 [00:42<10:40,  2.13it/s][A
+Batches:   8%|▊         | 114/1478 [00:42<08:44,  2.60it/s][A
+Batches:   8%|▊         | 115/1478 [00:42<07:08,  3.18it/s][A
+Batches:   8%|▊         | 116/1478 [00:42<06:25,  3.54it/s][A
+Batches:   8%|▊         | 117/1478 [00:43<10:42,  2.12it/s][A
+Batches:   8%|▊         | 118/1478 [00:43<08:36,  2.63it/s][A
+Batches:   8%|▊         | 119/1478 [00:43<07:20,  3.08it/s][A
+Batches:   8%|▊         | 120/1478 [00:44<06:19,  3.58it/s][A
+Batches:   8%|▊         | 121/1478 [00:44<10:45,  2.10it/s][A
+Batches:   8%|▊         | 122/1478 [00:45<08:45,  2.58it/s][A
+Batches:   8%|▊         | 123/1478 [00:45<07:27,  3.03it/s][A
+Batches:   8%|▊         | 124/1478 [00:45<06:14,  3.61it/s][A
+Batches:   8%|▊         | 125/1478 [00:46<10:32,  2.14it/s][A
+Batches:   9%|▊         | 126/1478 [00:46<08:27,  2.66it/s][A
+Batches:   9%|▊         | 127/1478 [00:46<07:15,  3.11it/s][A
+Batches:   9%|▊         | 128/1478 [00:46<06:14,  3.60it/s][A
+Batches:   9%|▊         | 129/1478 [00:47<10:34,  2.13it/s][A
+Batches:   9%|▉         | 130/1478 [00:48<08:35,  2.62it/s][A
+Batches:   9%|▉         | 131/1478 [00:48<07:07,  3.15it/s][A
+Batches:   9%|▉         | 132/1478 [00:48<06:16,  3.58it/s][A
+Batches:   9%|▉         | 133/1478 [00:49<10:31,  2.13it/s][A
+Batches:   9%|▉         | 134/1478 [00:49<08:15,  2.71it/s][A
+Batches:   9%|▉         | 135/1478 [00:49<06:59,  3.20it/s][A
+Batches:   9%|▉         | 136/1478 [00:49<06:09,  3.64it/s][A
+Batches:   9%|▉         | 137/1478 [00:50<10:38,  2.10it/s][A
+Batches:   9%|▉         | 138/1478 [00:50<08:41,  2.57it/s][A
+Batches:   9%|▉         | 139/1478 [00:51<07:19,  3.04it/s][A
+Batches:   9%|▉         | 140/1478 [00:51<06:12,  3.59it/s][A
+Batches:  10%|▉         | 141/1478 [00:52<10:16,  2.17it/s][A
+Batches:  10%|▉         | 142/1478 [00:52<08:31,  2.61it/s][A
+Batches:  10%|▉         | 143/1478 [00:52<06:55,  3.21it/s][A
+Batches:  10%|▉         | 144/1478 [00:52<05:53,  3.78it/s][A
+Batches:  10%|▉         | 145/1478 [00:53<10:32,  2.11it/s][A
+Batches:  10%|▉         | 146/1478 [00:53<09:39,  2.30it/s][A
+Batches:  10%|▉         | 147/1478 [00:54<07:42,  2.88it/s][A
+Batches:  10%|█         | 149/1478 [00:55<09:21,  2.37it/s][A
+Batches:  10%|█         | 150/1478 [00:55<08:57,  2.47it/s][A
+Batches:  10%|█         | 151/1478 [00:55<07:19,  3.02it/s][A
+Batches:  10%|█         | 153/1478 [00:56<08:47,  2.51it/s][A
+Batches:  10%|█         | 154/1478 [00:56<08:39,  2.55it/s][A
+Batches:  10%|█         | 155/1478 [00:57<07:11,  3.06it/s][A
+Batches:  11%|█         | 157/1478 [00:58<08:51,  2.49it/s][A
+Batches:  11%|█         | 158/1478 [00:58<08:24,  2.62it/s][A
+Batches:  11%|█         | 160/1478 [00:58<05:55,  3.71it/s][A
+Batches:  11%|█         | 161/1478 [00:59<09:00,  2.44it/s][A
+Batches:  11%|█         | 162/1478 [00:59<07:53,  2.78it/s][A
+Batches:  11%|█         | 163/1478 [00:59<06:50,  3.21it/s][A
+Batches:  11%|█         | 164/1478 [01:00<06:09,  3.56it/s][A
+Batches:  11%|█         | 165/1478 [01:00<09:51,  2.22it/s][A
+Batches:  11%|█         | 166/1478 [01:01<09:13,  2.37it/s][A
+Batches:  11%|█▏        | 168/1478 [01:01<06:02,  3.62it/s][A
+Batches:  11%|█▏        | 169/1478 [01:02<09:35,  2.27it/s][A
+Batches:  12%|█▏        | 170/1478 [01:02<08:13,  2.65it/s][A
+Batches:  12%|█▏        | 171/1478 [01:02<07:01,  3.10it/s][A
+Batches:  12%|█▏        | 172/1478 [01:03<06:21,  3.43it/s][A
+Batches:  12%|█▏        | 173/1478 [01:03<10:03,  2.16it/s][A
+Batches:  12%|█▏        | 174/1478 [01:04<08:17,  2.62it/s][A
+Batches:  12%|█▏        | 175/1478 [01:04<07:14,  3.00it/s][A
+Batches:  12%|█▏        | 176/1478 [01:04<06:14,  3.47it/s][A
+Batches:  12%|█▏        | 177/1478 [01:05<10:09,  2.14it/s][A
+Batches:  12%|█▏        | 178/1478 [01:05<08:12,  2.64it/s][A
+Batches:  12%|█▏        | 179/1478 [01:05<06:51,  3.16it/s][A
+Batches:  12%|█▏        | 180/1478 [01:05<06:14,  3.47it/s][A
+Batches:  12%|█▏        | 181/1478 [01:06<09:57,  2.17it/s][A
+Batches:  12%|█▏        | 182/1478 [01:07<09:16,  2.33it/s][A
+Batches:  12%|█▏        | 184/1478 [01:07<05:53,  3.66it/s][A
+Batches:  13%|█▎        | 185/1478 [01:08<09:09,  2.35it/s][A
+Batches:  13%|█▎        | 186/1478 [01:08<08:43,  2.47it/s][A
+Batches:  13%|█▎        | 188/1478 [01:08<05:56,  3.62it/s][A
+Batches:  13%|█▎        | 189/1478 [01:09<09:06,  2.36it/s][A
+Batches:  13%|█▎        | 190/1478 [01:10<08:36,  2.50it/s][A
+Batches:  13%|█▎        | 191/1478 [01:10<07:01,  3.06it/s][A
+Batches:  13%|█▎        | 193/1478 [01:11<08:19,  2.57it/s][A
+Batches:  13%|█▎        | 194/1478 [01:11<08:08,  2.63it/s][A
+Batches:  13%|█▎        | 196/1478 [01:11<05:44,  3.73it/s][A
+Batches:  13%|█▎        | 197/1478 [01:12<08:47,  2.43it/s][A
+Batches:  13%|█▎        | 198/1478 [01:12<08:18,  2.57it/s][A
+Batches:  14%|█▎        | 200/1478 [01:13<05:46,  3.69it/s][A
+Batches:  14%|█▎        | 201/1478 [01:14<08:48,  2.42it/s][A
+Batches:  14%|█▎        | 202/1478 [01:14<08:22,  2.54it/s][A
+Batches:  14%|█▍        | 204/1478 [01:14<05:50,  3.64it/s][A
+Batches:  14%|█▍        | 205/1478 [01:15<08:53,  2.39it/s][A
+Batches:  14%|█▍        | 206/1478 [01:15<08:16,  2.56it/s][A
+Batches:  14%|█▍        | 208/1478 [01:16<05:52,  3.60it/s][A
+Batches:  14%|█▍        | 209/1478 [01:16<08:48,  2.40it/s][A
+Batches:  14%|█▍        | 210/1478 [01:17<08:27,  2.50it/s][A
+Batches:  14%|█▍        | 212/1478 [01:17<05:45,  3.66it/s][A
+Batches:  14%|█▍        | 213/1478 [01:18<08:43,  2.42it/s][A
+Batches:  14%|█▍        | 214/1478 [01:18<07:31,  2.80it/s][A
+Batches:  15%|█▍        | 215/1478 [01:18<06:35,  3.19it/s][A
+Batches:  15%|█▍        | 216/1478 [01:18<05:43,  3.68it/s][A
+Batches:  15%|█▍        | 217/1478 [01:19<09:29,  2.21it/s][A
+Batches:  15%|█▍        | 218/1478 [01:19<07:57,  2.64it/s][A
+Batches:  15%|█▍        | 219/1478 [01:20<06:46,  3.10it/s][A
+Batches:  15%|█▍        | 220/1478 [01:20<05:53,  3.56it/s][A
+Batches:  15%|█▍        | 221/1478 [01:21<09:36,  2.18it/s][A
+Batches:  15%|█▌        | 222/1478 [01:21<07:58,  2.62it/s][A
+Batches:  15%|█▌        | 223/1478 [01:21<06:36,  3.16it/s][A
+Batches:  15%|█▌        | 224/1478 [01:21<05:57,  3.51it/s][A
+Batches:  15%|█▌        | 225/1478 [01:22<09:34,  2.18it/s][A
+Batches:  15%|█▌        | 226/1478 [01:22<07:51,  2.66it/s][A
+Batches:  15%|█▌        | 227/1478 [01:23<06:37,  3.15it/s][A
+Batches:  15%|█▌        | 228/1478 [01:23<05:46,  3.61it/s][A
+Batches:  15%|█▌        | 229/1478 [01:24<09:29,  2.19it/s][A
+Batches:  16%|█▌        | 230/1478 [01:24<07:57,  2.61it/s][A
+Batches:  16%|█▌        | 231/1478 [01:24<06:36,  3.14it/s][A
+Batches:  16%|█▌        | 232/1478 [01:24<05:51,  3.55it/s][A
+Batches:  16%|█▌        | 233/1478 [01:25<09:42,  2.14it/s][A
+Batches:  16%|█▌        | 234/1478 [01:25<07:51,  2.64it/s][A
+Batches:  16%|█▌        | 235/1478 [01:25<06:40,  3.10it/s][A
+Batches:  16%|█▌        | 236/1478 [01:26<05:47,  3.57it/s][A
+Batches:  16%|█▌        | 237/1478 [01:26<09:34,  2.16it/s][A
+Batches:  16%|█▌        | 238/1478 [01:27<07:31,  2.75it/s][A
+Batches:  16%|█▌        | 239/1478 [01:27<06:32,  3.16it/s][A
+Batches:  16%|█▌        | 240/1478 [01:27<05:41,  3.63it/s][A
+Batches:  16%|█▋        | 241/1478 [01:28<09:26,  2.18it/s][A
+Batches:  16%|█▋        | 242/1478 [01:28<07:46,  2.65it/s][A
+Batches:  16%|█▋        | 243/1478 [01:28<06:33,  3.14it/s][A
+Batches:  17%|█▋        | 244/1478 [01:28<05:35,  3.68it/s][A
+Batches:  17%|█▋        | 245/1478 [01:29<09:41,  2.12it/s][A
+Batches:  17%|█▋        | 246/1478 [01:30<07:51,  2.61it/s][A
+Batches:  17%|█▋        | 247/1478 [01:30<06:34,  3.12it/s][A
+Batches:  17%|█▋        | 248/1478 [01:30<05:31,  3.72it/s][A
+Batches:  17%|█▋        | 249/1478 [01:31<09:21,  2.19it/s][A
+Batches:  17%|█▋        | 250/1478 [01:31<07:43,  2.65it/s][A
+Batches:  17%|█▋        | 251/1478 [01:31<06:31,  3.13it/s][A
+Batches:  17%|█▋        | 252/1478 [01:31<05:44,  3.56it/s][A
+Batches:  17%|█▋        | 253/1478 [01:32<09:14,  2.21it/s][A
+Batches:  17%|█▋        | 254/1478 [01:32<07:38,  2.67it/s][A
+Batches:  17%|█▋        | 255/1478 [01:33<06:30,  3.13it/s][A
+Batches:  17%|█▋        | 256/1478 [01:33<05:38,  3.61it/s][A
+Batches:  17%|█▋        | 257/1478 [01:34<09:23,  2.17it/s][A
+Batches:  17%|█▋        | 258/1478 [01:34<07:51,  2.59it/s][A
+Batches:  18%|█▊        | 259/1478 [01:34<06:37,  3.07it/s][A
+Batches:  18%|█▊        | 260/1478 [01:34<05:28,  3.71it/s][A
+Batches:  18%|█▊        | 261/1478 [01:35<09:23,  2.16it/s][A
+Batches:  18%|█▊        | 262/1478 [01:35<07:59,  2.53it/s][A
+Batches:  18%|█▊        | 263/1478 [01:35<06:37,  3.06it/s][A
+Batches:  18%|█▊        | 264/1478 [01:36<05:36,  3.61it/s][A
+Batches:  18%|█▊        | 265/1478 [01:37<09:19,  2.17it/s][A
+Batches:  18%|█▊        | 266/1478 [01:37<07:37,  2.65it/s][A
+Batches:  18%|█▊        | 267/1478 [01:37<06:33,  3.08it/s][A
+Batches:  18%|█▊        | 268/1478 [01:37<05:37,  3.58it/s][A
+Batches:  18%|█▊        | 269/1478 [01:38<09:09,  2.20it/s][A
+Batches:  18%|█▊        | 270/1478 [01:38<07:35,  2.65it/s][A
+Batches:  18%|█▊        | 271/1478 [01:38<06:27,  3.12it/s][A
+Batches:  18%|█▊        | 272/1478 [01:39<05:35,  3.60it/s][A
+Batches:  18%|█▊        | 273/1478 [01:39<09:00,  2.23it/s][A
+Batches:  19%|█▊        | 274/1478 [01:40<08:41,  2.31it/s][A
+Batches:  19%|█▊        | 275/1478 [01:40<06:48,  2.94it/s][A
+Batches:  19%|█▊        | 277/1478 [01:41<07:53,  2.54it/s][A
+Batches:  19%|█▉        | 278/1478 [01:41<07:50,  2.55it/s][A
+Batches:  19%|█▉        | 280/1478 [01:41<05:19,  3.75it/s][A
+Batches:  19%|█▉        | 281/1478 [01:42<07:59,  2.50it/s][A
+Batches:  19%|█▉        | 282/1478 [01:43<07:53,  2.53it/s][A
+Batches:  19%|█▉        | 284/1478 [01:43<05:18,  3.75it/s][A
+Batches:  19%|█▉        | 285/1478 [01:44<08:22,  2.37it/s][Aslurmstepd: error: *** JOB 26287076 ON holygpu2c0913 CANCELLED AT 2022-09-11T21:32:24 ***

@@ -1,0 +1,8 @@
+3
+Task is classification, not lift the flap.
+Traceback (most recent call last):
+  File "train_simple_cnn_whole_img.py", line 75, in <module>
+    dataset = COCODataset(cfg.annotations, cfg.imagedir, image_size =(224,224), normalize_means=[0.485, 0.456, 0.406], normalize_stds=[0.229, 0.224, 0.225],two_d_transforms=args.two_d_transforms)
+  File "/n/holylfs05/LABS/pfister_lab/Lab/coxfs01/pfister_lab2/Lab/spandan/contextual_domain_adaptation/WhenPigsFlyContext/core/dataset_grayscale.py", line 36, in __init__
+    with open(annotations_file) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '../iLab/annotation_files/train_iLab_viewpoints_v3_extreme_4_by_5_repeat.json'

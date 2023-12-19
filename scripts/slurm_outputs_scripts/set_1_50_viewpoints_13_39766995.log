@@ -1,0 +1,53 @@
+13
+Task is classification, not lift the flap.
+Hard mining set to:both
+Using materials: ['main_xml_viewpoint_2', 'main_xml_viewpoint_3', 'main_xml_viewpoint_4']
+Hotswapped material loader being used.
+{1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9, 11: 10, 12: 11, 13: 12}
+-------------------------------
+Annotation Counts
+-------------------------------
+table                     10252
+sofa                       3102
+chair                     17117
+window                     5089
+bookshelf                  3324
+bed                        2831
+monitor                    2408
+trash_bin                  2857
+file_cabinet               1418
+desk                       4200
+lamp                        589
+bathtub                    1518
+flowerpot                   162
+Total                     54867
+-------------------------------
+
+annotations: ../openrooms/annotation_files/train_main_viewpoints_0_1_v3.json
+batch_size: 100
+checkpoint: last
+git: 2179780af36e53218cf9f25623959fb36ae2379d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: null
+test_imagedir: null
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+Searching for last checkpoint...
+No checkpoints found, starting from scratch...
+No checkpoint was passed.
+Starting epoch: 1
+batch num:0
+overall: tensor(7.9937, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(7.1840, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(6.4278, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(6.9422, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(6.5889, device='cuda:0', grad_fn=<AddBackward0>)
+overall: tensor(6.7000, device='cuda:0', grad_fn=<AddBackward0>)
+slurmstepd: error: *** JOB 39766998 ON holygpu8a29201 CANCELLED AT 2023-01-21T17:29:49 ***

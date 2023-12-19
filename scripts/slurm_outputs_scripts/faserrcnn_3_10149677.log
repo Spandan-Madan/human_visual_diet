@@ -1,0 +1,444 @@
+3
+Region proposal deactivated, ground truth bounding boxes are used.
+[32m[05/16 17:22:15 d2.data.datasets.coco]: [0mLoading ../../../../openrooms/annotation_files/train_main_xml_50_v3_combined_fasterrcnn.json takes 1.56 seconds.
+[32m[05/16 17:22:15 d2.data.datasets.coco]: [0mLoaded 78845 images in COCO format from ../../../../openrooms/annotation_files/train_main_xml_50_v3_combined_fasterrcnn.json
+[32m[05/16 17:22:16 d2.data.build]: [0mRemoved 4845 images with no usable annotations. 74000 images left.
+[32m[05/16 17:22:20 d2.data.build]: [0mDistribution of instances among all 13 categories:
+[36m|   category   | #instances   |  category  | #instances   |  category  | #instances   |
+|:------------:|:-------------|:----------:|:-------------|:----------:|:-------------|
+|    table     | 57705        |    desk    | 24145        | bookshelf  | 19510        |
+|     sofa     | 17750        | trash_bin  | 16020        |    bed     | 16070        |
+|    chair     | 99525        |  monitor   | 15470        |  bathtub   | 9940         |
+| file_cabinet | 8635         | flowerpot  | 1135         |   window   | 51020        |
+|     lamp     | 12445        |            |              |            |              |
+|    total     | 349370       |            |              |            |              |[0m
+Proposal boxes added.
+[32m[05/16 17:22:21 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in training: []
+[32m[05/16 17:22:21 d2.data.common]: [0mSerializing 74000 elements to byte tensors and concatenating them all ...
+[32m[05/16 17:22:23 d2.data.common]: [0mSerialized dataset takes 55.92 MiB
+[5m[31mWARNING[0m [32m[05/16 17:22:23 d2.solver.build]: [0mSOLVER.STEPS contains values larger than SOLVER.MAX_ITER. These values will be ignored.
+/n/home05/smadan/.conda/envs/faster_rcnn_env/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Skip loading parameter 'roi_heads.box_predictor.cls_score.weight' to the model due to incompatible shapes: (81, 1024) in the checkpoint but (14, 1024) in the model! You might want to double check if this is expected.
+Skip loading parameter 'roi_heads.box_predictor.cls_score.bias' to the model due to incompatible shapes: (81,) in the checkpoint but (14,) in the model! You might want to double check if this is expected.
+Skip loading parameter 'roi_heads.box_predictor.bbox_pred.weight' to the model due to incompatible shapes: (320, 1024) in the checkpoint but (52, 1024) in the model! You might want to double check if this is expected.
+Skip loading parameter 'roi_heads.box_predictor.bbox_pred.bias' to the model due to incompatible shapes: (320,) in the checkpoint but (52,) in the model! You might want to double check if this is expected.
+Some model parameters or buffers are not found in the checkpoint:
+[34mroi_heads.box_predictor.bbox_pred.{bias, weight}[0m
+[34mroi_heads.box_predictor.cls_score.{bias, weight}[0m
+[32m[05/16 17:22:24 d2.engine.train_loop]: [0mStarting training from iteration 0
+/n/home05/smadan/.conda/envs/faster_rcnn_env/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+[32m[05/16 17:22:42 d2.utils.events]: [0m eta: 2:12:17  iter: 19  total_loss: 2.708  loss_cls: 2.647  loss_box_reg: 0.06315  time: 0.8041  data_time: 0.3711  lr: 4.9953e-06  max_mem: 8091M
+[32m[05/16 17:22:58 d2.utils.events]: [0m eta: 2:12:12  iter: 39  total_loss: 2.666  loss_cls: 2.618  loss_box_reg: 0.04804  time: 0.8078  data_time: 0.3137  lr: 9.9902e-06  max_mem: 8091M
+[32m[05/16 17:23:14 d2.utils.events]: [0m eta: 2:13:06  iter: 59  total_loss: 2.635  loss_cls: 2.594  loss_box_reg: 0.0409  time: 0.8068  data_time: 0.3092  lr: 1.4985e-05  max_mem: 8091M
+[32m[05/16 17:23:31 d2.utils.events]: [0m eta: 2:13:06  iter: 79  total_loss: 2.579  loss_cls: 2.544  loss_box_reg: 0.0367  time: 0.8096  data_time: 0.3222  lr: 1.998e-05  max_mem: 8091M
+[32m[05/16 17:23:46 d2.utils.events]: [0m eta: 2:12:48  iter: 99  total_loss: 2.502  loss_cls: 2.468  loss_box_reg: 0.03347  time: 0.8066  data_time: 0.2978  lr: 2.4975e-05  max_mem: 8091M
+[32m[05/16 17:24:02 d2.utils.events]: [0m eta: 2:12:26  iter: 119  total_loss: 2.435  loss_cls: 2.403  loss_box_reg: 0.03197  time: 0.8054  data_time: 0.3045  lr: 2.997e-05  max_mem: 8091M
+[32m[05/16 17:24:19 d2.utils.events]: [0m eta: 2:12:07  iter: 139  total_loss: 2.339  loss_cls: 2.309  loss_box_reg: 0.0288  time: 0.8050  data_time: 0.3024  lr: 3.4965e-05  max_mem: 8091M
+[32m[05/16 17:24:35 d2.utils.events]: [0m eta: 2:11:50  iter: 159  total_loss: 2.236  loss_cls: 2.209  loss_box_reg: 0.02663  time: 0.8061  data_time: 0.3162  lr: 3.996e-05  max_mem: 8091M
+[32m[05/16 17:24:51 d2.utils.events]: [0m eta: 2:11:25  iter: 179  total_loss: 2.198  loss_cls: 2.171  loss_box_reg: 0.02675  time: 0.8052  data_time: 0.3000  lr: 4.4955e-05  max_mem: 8091M
+[32m[05/16 17:25:07 d2.utils.events]: [0m eta: 2:11:09  iter: 199  total_loss: 2.108  loss_cls: 2.082  loss_box_reg: 0.02597  time: 0.8061  data_time: 0.3205  lr: 4.995e-05  max_mem: 8091M
+[32m[05/16 17:25:23 d2.utils.events]: [0m eta: 2:10:58  iter: 219  total_loss: 2.021  loss_cls: 1.994  loss_box_reg: 0.02553  time: 0.8058  data_time: 0.3070  lr: 5.4945e-05  max_mem: 8091M
+[32m[05/16 17:25:39 d2.utils.events]: [0m eta: 2:10:22  iter: 239  total_loss: 1.966  loss_cls: 1.942  loss_box_reg: 0.02432  time: 0.8057  data_time: 0.3060  lr: 5.994e-05  max_mem: 8091M
+[32m[05/16 17:25:56 d2.utils.events]: [0m eta: 2:10:26  iter: 259  total_loss: 1.895  loss_cls: 1.871  loss_box_reg: 0.02483  time: 0.8063  data_time: 0.3109  lr: 6.4935e-05  max_mem: 8091M
+[32m[05/16 17:26:12 d2.utils.events]: [0m eta: 2:10:14  iter: 279  total_loss: 1.846  loss_cls: 1.821  loss_box_reg: 0.02514  time: 0.8065  data_time: 0.3135  lr: 6.993e-05  max_mem: 8091M
+[32m[05/16 17:26:28 d2.utils.events]: [0m eta: 2:10:00  iter: 299  total_loss: 1.782  loss_cls: 1.753  loss_box_reg: 0.02742  time: 0.8067  data_time: 0.3132  lr: 7.4925e-05  max_mem: 8091M
+[32m[05/16 17:26:44 d2.utils.events]: [0m eta: 2:09:45  iter: 319  total_loss: 1.709  loss_cls: 1.681  loss_box_reg: 0.02794  time: 0.8075  data_time: 0.3221  lr: 7.992e-05  max_mem: 8091M
+[32m[05/16 17:27:00 d2.utils.events]: [0m eta: 2:09:29  iter: 339  total_loss: 1.65  loss_cls: 1.622  loss_box_reg: 0.03048  time: 0.8071  data_time: 0.3026  lr: 8.4915e-05  max_mem: 8091M
+[32m[05/16 17:27:17 d2.utils.events]: [0m eta: 2:09:18  iter: 359  total_loss: 1.561  loss_cls: 1.529  loss_box_reg: 0.03318  time: 0.8076  data_time: 0.3144  lr: 8.991e-05  max_mem: 8091M
+[32m[05/16 17:27:33 d2.utils.events]: [0m eta: 2:08:59  iter: 379  total_loss: 1.501  loss_cls: 1.464  loss_box_reg: 0.03742  time: 0.8077  data_time: 0.3091  lr: 9.4905e-05  max_mem: 8091M
+[32m[05/16 17:27:49 d2.utils.events]: [0m eta: 2:08:43  iter: 399  total_loss: 1.485  loss_cls: 1.439  loss_box_reg: 0.04614  time: 0.8078  data_time: 0.3167  lr: 9.99e-05  max_mem: 8091M
+[32m[05/16 17:28:05 d2.utils.events]: [0m eta: 2:08:27  iter: 419  total_loss: 1.486  loss_cls: 1.437  loss_box_reg: 0.0484  time: 0.8074  data_time: 0.3011  lr: 0.0001049  max_mem: 8091M
+[32m[05/16 17:28:21 d2.utils.events]: [0m eta: 2:08:13  iter: 439  total_loss: 1.494  loss_cls: 1.434  loss_box_reg: 0.05415  time: 0.8074  data_time: 0.3113  lr: 0.00010989  max_mem: 8091M
+[32m[05/16 17:28:37 d2.utils.events]: [0m eta: 2:07:52  iter: 459  total_loss: 1.392  loss_cls: 1.336  loss_box_reg: 0.06116  time: 0.8070  data_time: 0.3049  lr: 0.00011489  max_mem: 8091M
+[32m[05/16 17:28:53 d2.utils.events]: [0m eta: 2:07:34  iter: 479  total_loss: 1.368  loss_cls: 1.301  loss_box_reg: 0.06984  time: 0.8070  data_time: 0.3119  lr: 0.00011988  max_mem: 8091M
+[32m[05/16 17:29:10 d2.utils.events]: [0m eta: 2:07:15  iter: 499  total_loss: 1.347  loss_cls: 1.287  loss_box_reg: 0.06496  time: 0.8073  data_time: 0.3186  lr: 0.00012488  max_mem: 8091M
+[32m[05/16 17:29:26 d2.utils.events]: [0m eta: 2:06:59  iter: 519  total_loss: 1.366  loss_cls: 1.302  loss_box_reg: 0.07111  time: 0.8072  data_time: 0.3066  lr: 0.00012987  max_mem: 8091M
+[32m[05/16 17:29:42 d2.utils.events]: [0m eta: 2:06:42  iter: 539  total_loss: 1.363  loss_cls: 1.25  loss_box_reg: 0.1069  time: 0.8074  data_time: 0.3146  lr: 0.00013487  max_mem: 8091M
+[32m[05/16 17:29:58 d2.utils.events]: [0m eta: 2:06:24  iter: 559  total_loss: 1.3  loss_cls: 1.218  loss_box_reg: 0.07654  time: 0.8072  data_time: 0.3056  lr: 0.00013986  max_mem: 8091M
+[32m[05/16 17:30:15 d2.utils.events]: [0m eta: 2:06:10  iter: 579  total_loss: 1.323  loss_cls: 1.212  loss_box_reg: 0.09394  time: 0.8080  data_time: 0.3291  lr: 0.00014486  max_mem: 8091M
+[32m[05/16 17:30:31 d2.utils.events]: [0m eta: 2:05:52  iter: 599  total_loss: 1.339  loss_cls: 1.24  loss_box_reg: 0.09461  time: 0.8078  data_time: 0.3021  lr: 0.00014985  max_mem: 8091M
+[32m[05/16 17:30:47 d2.utils.events]: [0m eta: 2:05:30  iter: 619  total_loss: 1.287  loss_cls: 1.19  loss_box_reg: 0.09715  time: 0.8074  data_time: 0.2996  lr: 0.00015485  max_mem: 8091M
+[32m[05/16 17:31:03 d2.utils.events]: [0m eta: 2:05:16  iter: 639  total_loss: 1.24  loss_cls: 1.134  loss_box_reg: 0.09998  time: 0.8074  data_time: 0.3100  lr: 0.00015984  max_mem: 8091M
+[32m[05/16 17:31:19 d2.utils.events]: [0m eta: 2:04:55  iter: 659  total_loss: 1.257  loss_cls: 1.134  loss_box_reg: 0.1156  time: 0.8067  data_time: 0.2848  lr: 0.00016484  max_mem: 8091M
+[32m[05/16 17:31:34 d2.utils.events]: [0m eta: 2:04:36  iter: 679  total_loss: 1.258  loss_cls: 1.149  loss_box_reg: 0.1183  time: 0.8063  data_time: 0.2968  lr: 0.00016983  max_mem: 8091M
+[32m[05/16 17:31:51 d2.utils.events]: [0m eta: 2:04:21  iter: 699  total_loss: 1.161  loss_cls: 1.065  loss_box_reg: 0.1053  time: 0.8064  data_time: 0.3126  lr: 0.00017483  max_mem: 8091M
+[32m[05/16 17:32:07 d2.utils.events]: [0m eta: 2:04:04  iter: 719  total_loss: 1.235  loss_cls: 1.104  loss_box_reg: 0.1247  time: 0.8062  data_time: 0.3037  lr: 0.00017982  max_mem: 8091M
+[32m[05/16 17:32:23 d2.utils.events]: [0m eta: 2:03:45  iter: 739  total_loss: 1.223  loss_cls: 1.111  loss_box_reg: 0.1063  time: 0.8064  data_time: 0.3159  lr: 0.00018482  max_mem: 8091M
+[32m[05/16 17:32:39 d2.utils.events]: [0m eta: 2:03:23  iter: 759  total_loss: 1.189  loss_cls: 1.103  loss_box_reg: 0.0893  time: 0.8060  data_time: 0.2936  lr: 0.00018981  max_mem: 8091M
+[32m[05/16 17:32:55 d2.utils.events]: [0m eta: 2:03:10  iter: 779  total_loss: 1.159  loss_cls: 1.07  loss_box_reg: 0.09169  time: 0.8058  data_time: 0.3006  lr: 0.00019481  max_mem: 8091M
+[32m[05/16 17:33:11 d2.utils.events]: [0m eta: 2:02:50  iter: 799  total_loss: 1.097  loss_cls: 0.985  loss_box_reg: 0.1096  time: 0.8061  data_time: 0.3183  lr: 0.0001998  max_mem: 8091M
+[32m[05/16 17:33:27 d2.utils.events]: [0m eta: 2:02:30  iter: 819  total_loss: 1.151  loss_cls: 1.044  loss_box_reg: 0.1128  time: 0.8057  data_time: 0.2944  lr: 0.0002048  max_mem: 8091M
+[32m[05/16 17:33:43 d2.utils.events]: [0m eta: 2:02:13  iter: 839  total_loss: 1.107  loss_cls: 1.002  loss_box_reg: 0.1084  time: 0.8055  data_time: 0.2965  lr: 0.00020979  max_mem: 8091M
+[32m[05/16 17:33:59 d2.utils.events]: [0m eta: 2:01:58  iter: 859  total_loss: 1.164  loss_cls: 1.08  loss_box_reg: 0.08961  time: 0.8059  data_time: 0.3249  lr: 0.00021479  max_mem: 8091M
+[32m[05/16 17:34:16 d2.utils.events]: [0m eta: 2:01:43  iter: 879  total_loss: 1.057  loss_cls: 0.975  loss_box_reg: 0.08773  time: 0.8062  data_time: 0.3212  lr: 0.00021978  max_mem: 8091M
+[32m[05/16 17:34:32 d2.utils.events]: [0m eta: 2:01:26  iter: 899  total_loss: 1.033  loss_cls: 0.9344  loss_box_reg: 0.09844  time: 0.8060  data_time: 0.3029  lr: 0.00022478  max_mem: 8091M
+[32m[05/16 17:34:48 d2.utils.events]: [0m eta: 2:01:10  iter: 919  total_loss: 1.096  loss_cls: 0.9821  loss_box_reg: 0.1058  time: 0.8058  data_time: 0.2981  lr: 0.00022977  max_mem: 8091M
+[32m[05/16 17:35:04 d2.utils.events]: [0m eta: 2:00:53  iter: 939  total_loss: 1.106  loss_cls: 1.002  loss_box_reg: 0.0957  time: 0.8056  data_time: 0.2995  lr: 0.00023477  max_mem: 8091M
+[32m[05/16 17:35:20 d2.utils.events]: [0m eta: 2:00:38  iter: 959  total_loss: 1.079  loss_cls: 0.9697  loss_box_reg: 0.1065  time: 0.8057  data_time: 0.3076  lr: 0.00023976  max_mem: 8091M
+[32m[05/16 17:35:36 d2.utils.events]: [0m eta: 2:00:22  iter: 979  total_loss: 1.043  loss_cls: 0.9465  loss_box_reg: 0.08777  time: 0.8055  data_time: 0.2940  lr: 0.00024476  max_mem: 8091M
+[32m[05/16 17:35:52 d2.utils.events]: [0m eta: 2:00:08  iter: 999  total_loss: 1.095  loss_cls: 0.9736  loss_box_reg: 0.11  time: 0.8055  data_time: 0.3144  lr: 0.00024975  max_mem: 8091M
+[32m[05/16 17:36:08 d2.utils.events]: [0m eta: 1:59:57  iter: 1019  total_loss: 1.087  loss_cls: 0.9793  loss_box_reg: 0.1081  time: 0.8056  data_time: 0.3117  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:36:25 d2.utils.events]: [0m eta: 1:59:43  iter: 1039  total_loss: 1.003  loss_cls: 0.9073  loss_box_reg: 0.09958  time: 0.8060  data_time: 0.3292  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:36:41 d2.utils.events]: [0m eta: 1:59:26  iter: 1059  total_loss: 1.042  loss_cls: 0.9549  loss_box_reg: 0.08642  time: 0.8062  data_time: 0.3229  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:36:57 d2.utils.events]: [0m eta: 1:59:03  iter: 1079  total_loss: 1.043  loss_cls: 0.9565  loss_box_reg: 0.0848  time: 0.8061  data_time: 0.3047  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:37:13 d2.utils.events]: [0m eta: 1:58:47  iter: 1099  total_loss: 0.978  loss_cls: 0.8836  loss_box_reg: 0.09091  time: 0.8062  data_time: 0.3153  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:37:29 d2.utils.events]: [0m eta: 1:58:32  iter: 1119  total_loss: 1.018  loss_cls: 0.9277  loss_box_reg: 0.08589  time: 0.8061  data_time: 0.3039  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:37:45 d2.utils.events]: [0m eta: 1:58:21  iter: 1139  total_loss: 0.9699  loss_cls: 0.8796  loss_box_reg: 0.08258  time: 0.8061  data_time: 0.3105  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:38:02 d2.utils.events]: [0m eta: 1:58:02  iter: 1159  total_loss: 1.027  loss_cls: 0.9422  loss_box_reg: 0.09442  time: 0.8062  data_time: 0.3089  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:38:18 d2.utils.events]: [0m eta: 1:57:46  iter: 1179  total_loss: 0.9832  loss_cls: 0.8881  loss_box_reg: 0.08877  time: 0.8061  data_time: 0.3084  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:38:34 d2.utils.events]: [0m eta: 1:57:30  iter: 1199  total_loss: 0.9282  loss_cls: 0.8316  loss_box_reg: 0.0902  time: 0.8061  data_time: 0.3054  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:38:50 d2.utils.events]: [0m eta: 1:57:14  iter: 1219  total_loss: 1.031  loss_cls: 0.9251  loss_box_reg: 0.08945  time: 0.8061  data_time: 0.3038  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:39:06 d2.utils.events]: [0m eta: 1:57:01  iter: 1239  total_loss: 0.9719  loss_cls: 0.8926  loss_box_reg: 0.07955  time: 0.8060  data_time: 0.3037  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:39:22 d2.utils.events]: [0m eta: 1:56:42  iter: 1259  total_loss: 0.898  loss_cls: 0.8301  loss_box_reg: 0.07251  time: 0.8061  data_time: 0.3183  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:39:38 d2.utils.events]: [0m eta: 1:56:23  iter: 1279  total_loss: 1.004  loss_cls: 0.9252  loss_box_reg: 0.07654  time: 0.8060  data_time: 0.2985  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:39:54 d2.utils.events]: [0m eta: 1:56:07  iter: 1299  total_loss: 0.9232  loss_cls: 0.842  loss_box_reg: 0.08179  time: 0.8058  data_time: 0.2964  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:40:10 d2.utils.events]: [0m eta: 1:55:51  iter: 1319  total_loss: 0.9384  loss_cls: 0.8636  loss_box_reg: 0.07739  time: 0.8060  data_time: 0.3228  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:40:27 d2.utils.events]: [0m eta: 1:55:35  iter: 1339  total_loss: 1.012  loss_cls: 0.9411  loss_box_reg: 0.07074  time: 0.8061  data_time: 0.3088  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:40:43 d2.utils.events]: [0m eta: 1:55:18  iter: 1359  total_loss: 0.9804  loss_cls: 0.8953  loss_box_reg: 0.07766  time: 0.8060  data_time: 0.3058  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:40:59 d2.utils.events]: [0m eta: 1:55:00  iter: 1379  total_loss: 0.8835  loss_cls: 0.7869  loss_box_reg: 0.09152  time: 0.8059  data_time: 0.3030  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:41:15 d2.utils.events]: [0m eta: 1:54:44  iter: 1399  total_loss: 0.959  loss_cls: 0.8754  loss_box_reg: 0.092  time: 0.8061  data_time: 0.3174  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:41:31 d2.utils.events]: [0m eta: 1:54:28  iter: 1419  total_loss: 0.8603  loss_cls: 0.7899  loss_box_reg: 0.07744  time: 0.8061  data_time: 0.3080  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:41:47 d2.utils.events]: [0m eta: 1:54:11  iter: 1439  total_loss: 0.9391  loss_cls: 0.865  loss_box_reg: 0.0718  time: 0.8060  data_time: 0.3044  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:42:03 d2.utils.events]: [0m eta: 1:53:55  iter: 1459  total_loss: 0.919  loss_cls: 0.8355  loss_box_reg: 0.081  time: 0.8060  data_time: 0.3051  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:42:19 d2.utils.events]: [0m eta: 1:53:40  iter: 1479  total_loss: 0.893  loss_cls: 0.8099  loss_box_reg: 0.07865  time: 0.8060  data_time: 0.3146  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:42:36 d2.utils.events]: [0m eta: 1:53:26  iter: 1499  total_loss: 0.9202  loss_cls: 0.8462  loss_box_reg: 0.0692  time: 0.8060  data_time: 0.3001  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:42:51 d2.utils.events]: [0m eta: 1:53:08  iter: 1519  total_loss: 0.9136  loss_cls: 0.8432  loss_box_reg: 0.07785  time: 0.8058  data_time: 0.2975  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:43:08 d2.utils.events]: [0m eta: 1:52:52  iter: 1539  total_loss: 0.8725  loss_cls: 0.7884  loss_box_reg: 0.08363  time: 0.8058  data_time: 0.3076  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:43:24 d2.utils.events]: [0m eta: 1:52:36  iter: 1559  total_loss: 0.9255  loss_cls: 0.8371  loss_box_reg: 0.08506  time: 0.8058  data_time: 0.3087  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:43:40 d2.utils.events]: [0m eta: 1:52:20  iter: 1579  total_loss: 0.9006  loss_cls: 0.8265  loss_box_reg: 0.07275  time: 0.8059  data_time: 0.3155  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:43:56 d2.utils.events]: [0m eta: 1:52:05  iter: 1599  total_loss: 0.8053  loss_cls: 0.7403  loss_box_reg: 0.06769  time: 0.8058  data_time: 0.3048  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:44:12 d2.utils.events]: [0m eta: 1:51:51  iter: 1619  total_loss: 0.8996  loss_cls: 0.8165  loss_box_reg: 0.07539  time: 0.8058  data_time: 0.3048  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:44:29 d2.utils.events]: [0m eta: 1:51:37  iter: 1639  total_loss: 0.8849  loss_cls: 0.8131  loss_box_reg: 0.07673  time: 0.8060  data_time: 0.3273  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:44:45 d2.utils.events]: [0m eta: 1:51:25  iter: 1659  total_loss: 0.8624  loss_cls: 0.7995  loss_box_reg: 0.07571  time: 0.8061  data_time: 0.3114  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:45:01 d2.utils.events]: [0m eta: 1:51:09  iter: 1679  total_loss: 0.8957  loss_cls: 0.8129  loss_box_reg: 0.06709  time: 0.8062  data_time: 0.3176  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:45:18 d2.utils.events]: [0m eta: 1:50:54  iter: 1699  total_loss: 0.8576  loss_cls: 0.7923  loss_box_reg: 0.06549  time: 0.8065  data_time: 0.3354  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:45:34 d2.utils.events]: [0m eta: 1:50:43  iter: 1719  total_loss: 0.9005  loss_cls: 0.8203  loss_box_reg: 0.07247  time: 0.8068  data_time: 0.3342  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:45:50 d2.utils.events]: [0m eta: 1:50:24  iter: 1739  total_loss: 0.8703  loss_cls: 0.7888  loss_box_reg: 0.0771  time: 0.8066  data_time: 0.2993  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:46:07 d2.utils.events]: [0m eta: 1:50:13  iter: 1759  total_loss: 0.8443  loss_cls: 0.7661  loss_box_reg: 0.07757  time: 0.8067  data_time: 0.3153  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:46:23 d2.utils.events]: [0m eta: 1:49:53  iter: 1779  total_loss: 0.8859  loss_cls: 0.8075  loss_box_reg: 0.07333  time: 0.8066  data_time: 0.2993  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:46:38 d2.utils.events]: [0m eta: 1:49:36  iter: 1799  total_loss: 0.8404  loss_cls: 0.7749  loss_box_reg: 0.06137  time: 0.8065  data_time: 0.2999  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:46:55 d2.utils.events]: [0m eta: 1:49:25  iter: 1819  total_loss: 0.8414  loss_cls: 0.7758  loss_box_reg: 0.06774  time: 0.8067  data_time: 0.3218  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:47:11 d2.utils.events]: [0m eta: 1:49:12  iter: 1839  total_loss: 0.8819  loss_cls: 0.8025  loss_box_reg: 0.07148  time: 0.8068  data_time: 0.3256  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:47:28 d2.utils.events]: [0m eta: 1:48:57  iter: 1859  total_loss: 0.8762  loss_cls: 0.8079  loss_box_reg: 0.06907  time: 0.8071  data_time: 0.3380  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:47:44 d2.utils.events]: [0m eta: 1:48:39  iter: 1879  total_loss: 0.8564  loss_cls: 0.7824  loss_box_reg: 0.06957  time: 0.8070  data_time: 0.2976  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:48:00 d2.utils.events]: [0m eta: 1:48:23  iter: 1899  total_loss: 0.8416  loss_cls: 0.7606  loss_box_reg: 0.083  time: 0.8071  data_time: 0.3161  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:48:17 d2.utils.events]: [0m eta: 1:48:08  iter: 1919  total_loss: 0.8436  loss_cls: 0.7734  loss_box_reg: 0.07108  time: 0.8071  data_time: 0.3182  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:48:33 d2.utils.events]: [0m eta: 1:47:53  iter: 1939  total_loss: 0.83  loss_cls: 0.7547  loss_box_reg: 0.07235  time: 0.8072  data_time: 0.3158  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:48:49 d2.utils.events]: [0m eta: 1:47:42  iter: 1959  total_loss: 0.8123  loss_cls: 0.7471  loss_box_reg: 0.06626  time: 0.8073  data_time: 0.3148  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:49:05 d2.utils.events]: [0m eta: 1:47:27  iter: 1979  total_loss: 0.7784  loss_cls: 0.7182  loss_box_reg: 0.06181  time: 0.8074  data_time: 0.3195  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:49:21 d2.utils.events]: [0m eta: 1:47:10  iter: 1999  total_loss: 0.8211  loss_cls: 0.7609  loss_box_reg: 0.06106  time: 0.8072  data_time: 0.2951  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:49:37 d2.utils.events]: [0m eta: 1:46:54  iter: 2019  total_loss: 0.8109  loss_cls: 0.7485  loss_box_reg: 0.06397  time: 0.8072  data_time: 0.3065  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:49:54 d2.utils.events]: [0m eta: 1:46:38  iter: 2039  total_loss: 0.8196  loss_cls: 0.7508  loss_box_reg: 0.06542  time: 0.8072  data_time: 0.3126  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:50:10 d2.utils.events]: [0m eta: 1:46:22  iter: 2059  total_loss: 0.8775  loss_cls: 0.8119  loss_box_reg: 0.0651  time: 0.8073  data_time: 0.3103  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:50:26 d2.utils.events]: [0m eta: 1:46:09  iter: 2079  total_loss: 0.8384  loss_cls: 0.777  loss_box_reg: 0.06249  time: 0.8073  data_time: 0.3162  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:50:42 d2.utils.events]: [0m eta: 1:45:54  iter: 2099  total_loss: 0.7567  loss_cls: 0.6946  loss_box_reg: 0.06395  time: 0.8073  data_time: 0.3046  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:50:58 d2.utils.events]: [0m eta: 1:45:39  iter: 2119  total_loss: 0.8131  loss_cls: 0.7363  loss_box_reg: 0.06753  time: 0.8072  data_time: 0.3036  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:51:14 d2.utils.events]: [0m eta: 1:45:24  iter: 2139  total_loss: 0.8424  loss_cls: 0.7689  loss_box_reg: 0.07116  time: 0.8072  data_time: 0.3090  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:51:31 d2.utils.events]: [0m eta: 1:45:08  iter: 2159  total_loss: 0.8118  loss_cls: 0.74  loss_box_reg: 0.07654  time: 0.8073  data_time: 0.3157  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:51:47 d2.utils.events]: [0m eta: 1:44:53  iter: 2179  total_loss: 0.8052  loss_cls: 0.7435  loss_box_reg: 0.06624  time: 0.8073  data_time: 0.3120  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:52:03 d2.utils.events]: [0m eta: 1:44:37  iter: 2199  total_loss: 0.7938  loss_cls: 0.7152  loss_box_reg: 0.06848  time: 0.8074  data_time: 0.3158  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:52:19 d2.utils.events]: [0m eta: 1:44:21  iter: 2219  total_loss: 0.7904  loss_cls: 0.7281  loss_box_reg: 0.06674  time: 0.8074  data_time: 0.3096  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:52:36 d2.utils.events]: [0m eta: 1:44:09  iter: 2239  total_loss: 0.8479  loss_cls: 0.7758  loss_box_reg: 0.06338  time: 0.8074  data_time: 0.3116  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:52:52 d2.utils.events]: [0m eta: 1:43:51  iter: 2259  total_loss: 0.8099  loss_cls: 0.736  loss_box_reg: 0.06619  time: 0.8074  data_time: 0.3046  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:53:08 d2.utils.events]: [0m eta: 1:43:35  iter: 2279  total_loss: 0.7341  loss_cls: 0.6747  loss_box_reg: 0.06176  time: 0.8074  data_time: 0.3129  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:53:24 d2.utils.events]: [0m eta: 1:43:21  iter: 2299  total_loss: 0.8447  loss_cls: 0.7879  loss_box_reg: 0.05993  time: 0.8075  data_time: 0.3228  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:53:40 d2.utils.events]: [0m eta: 1:43:04  iter: 2319  total_loss: 0.7768  loss_cls: 0.7146  loss_box_reg: 0.05747  time: 0.8075  data_time: 0.3095  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:53:57 d2.utils.events]: [0m eta: 1:42:49  iter: 2339  total_loss: 0.8771  loss_cls: 0.8191  loss_box_reg: 0.06158  time: 0.8076  data_time: 0.3157  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:54:13 d2.utils.events]: [0m eta: 1:42:33  iter: 2359  total_loss: 0.7844  loss_cls: 0.7166  loss_box_reg: 0.06731  time: 0.8076  data_time: 0.3167  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:54:29 d2.utils.events]: [0m eta: 1:42:18  iter: 2379  total_loss: 0.7463  loss_cls: 0.6776  loss_box_reg: 0.06294  time: 0.8077  data_time: 0.3140  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:54:46 d2.utils.events]: [0m eta: 1:42:05  iter: 2399  total_loss: 0.7607  loss_cls: 0.7039  loss_box_reg: 0.05675  time: 0.8078  data_time: 0.3241  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:55:02 d2.utils.events]: [0m eta: 1:41:50  iter: 2419  total_loss: 0.8464  loss_cls: 0.7744  loss_box_reg: 0.07004  time: 0.8078  data_time: 0.3133  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:55:18 d2.utils.events]: [0m eta: 1:41:38  iter: 2439  total_loss: 0.7416  loss_cls: 0.6753  loss_box_reg: 0.06523  time: 0.8078  data_time: 0.3014  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:55:34 d2.utils.events]: [0m eta: 1:41:25  iter: 2459  total_loss: 0.8029  loss_cls: 0.7314  loss_box_reg: 0.07306  time: 0.8078  data_time: 0.3058  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:55:51 d2.utils.events]: [0m eta: 1:41:10  iter: 2479  total_loss: 0.8025  loss_cls: 0.7382  loss_box_reg: 0.06177  time: 0.8079  data_time: 0.3211  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:56:09 d2.utils.events]: [0m eta: 1:40:52  iter: 2499  total_loss: 0.8033  loss_cls: 0.739  loss_box_reg: 0.06206  time: 0.8078  data_time: 0.3059  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:56:25 d2.utils.events]: [0m eta: 1:40:39  iter: 2519  total_loss: 0.7253  loss_cls: 0.6596  loss_box_reg: 0.06384  time: 0.8078  data_time: 0.3125  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:56:41 d2.utils.events]: [0m eta: 1:40:30  iter: 2539  total_loss: 0.7736  loss_cls: 0.7098  loss_box_reg: 0.06545  time: 0.8079  data_time: 0.3125  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:56:58 d2.utils.events]: [0m eta: 1:40:14  iter: 2559  total_loss: 0.7897  loss_cls: 0.7292  loss_box_reg: 0.06243  time: 0.8079  data_time: 0.3117  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:57:14 d2.utils.events]: [0m eta: 1:39:57  iter: 2579  total_loss: 0.7166  loss_cls: 0.6523  loss_box_reg: 0.06536  time: 0.8079  data_time: 0.3092  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:57:30 d2.utils.events]: [0m eta: 1:39:38  iter: 2599  total_loss: 0.7899  loss_cls: 0.7276  loss_box_reg: 0.06396  time: 0.8078  data_time: 0.2993  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:57:46 d2.utils.events]: [0m eta: 1:39:19  iter: 2619  total_loss: 0.7932  loss_cls: 0.7201  loss_box_reg: 0.06578  time: 0.8078  data_time: 0.3099  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:58:02 d2.utils.events]: [0m eta: 1:39:02  iter: 2639  total_loss: 0.8111  loss_cls: 0.7424  loss_box_reg: 0.06704  time: 0.8079  data_time: 0.3179  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:58:18 d2.utils.events]: [0m eta: 1:38:47  iter: 2659  total_loss: 0.8162  loss_cls: 0.7554  loss_box_reg: 0.05844  time: 0.8079  data_time: 0.3116  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:58:34 d2.utils.events]: [0m eta: 1:38:31  iter: 2679  total_loss: 0.7808  loss_cls: 0.7265  loss_box_reg: 0.05627  time: 0.8078  data_time: 0.3003  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:58:51 d2.utils.events]: [0m eta: 1:38:13  iter: 2699  total_loss: 0.7515  loss_cls: 0.6931  loss_box_reg: 0.05926  time: 0.8079  data_time: 0.3206  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:59:07 d2.utils.events]: [0m eta: 1:37:53  iter: 2719  total_loss: 0.7745  loss_cls: 0.7113  loss_box_reg: 0.063  time: 0.8078  data_time: 0.3026  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:59:23 d2.utils.events]: [0m eta: 1:37:39  iter: 2739  total_loss: 0.7344  loss_cls: 0.6749  loss_box_reg: 0.05498  time: 0.8079  data_time: 0.3102  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:59:39 d2.utils.events]: [0m eta: 1:37:24  iter: 2759  total_loss: 0.7334  loss_cls: 0.6759  loss_box_reg: 0.06021  time: 0.8079  data_time: 0.3069  lr: 0.00025  max_mem: 8091M
+[32m[05/16 17:59:55 d2.utils.events]: [0m eta: 1:37:10  iter: 2779  total_loss: 0.7967  loss_cls: 0.726  loss_box_reg: 0.06853  time: 0.8079  data_time: 0.3132  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:00:12 d2.utils.events]: [0m eta: 1:37:00  iter: 2799  total_loss: 0.7749  loss_cls: 0.7013  loss_box_reg: 0.06381  time: 0.8080  data_time: 0.3216  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:00:29 d2.utils.events]: [0m eta: 1:36:45  iter: 2819  total_loss: 0.6837  loss_cls: 0.6262  loss_box_reg: 0.05913  time: 0.8081  data_time: 0.3332  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:00:45 d2.utils.events]: [0m eta: 1:36:29  iter: 2839  total_loss: 0.7592  loss_cls: 0.6982  loss_box_reg: 0.06068  time: 0.8082  data_time: 0.3169  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:01:01 d2.utils.events]: [0m eta: 1:36:10  iter: 2859  total_loss: 0.7156  loss_cls: 0.6579  loss_box_reg: 0.05871  time: 0.8082  data_time: 0.3168  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:01:17 d2.utils.events]: [0m eta: 1:35:56  iter: 2879  total_loss: 0.7155  loss_cls: 0.6629  loss_box_reg: 0.05368  time: 0.8082  data_time: 0.3084  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:01:34 d2.utils.events]: [0m eta: 1:35:41  iter: 2899  total_loss: 0.7017  loss_cls: 0.6433  loss_box_reg: 0.05617  time: 0.8083  data_time: 0.3199  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:01:50 d2.utils.events]: [0m eta: 1:35:24  iter: 2919  total_loss: 0.8013  loss_cls: 0.7384  loss_box_reg: 0.06336  time: 0.8082  data_time: 0.3011  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:02:06 d2.utils.events]: [0m eta: 1:35:09  iter: 2939  total_loss: 0.7512  loss_cls: 0.6919  loss_box_reg: 0.05912  time: 0.8083  data_time: 0.3213  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:02:23 d2.utils.events]: [0m eta: 1:34:52  iter: 2959  total_loss: 0.7006  loss_cls: 0.635  loss_box_reg: 0.07142  time: 0.8084  data_time: 0.3315  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:02:38 d2.utils.events]: [0m eta: 1:34:26  iter: 2979  total_loss: 0.7453  loss_cls: 0.6773  loss_box_reg: 0.07155  time: 0.8083  data_time: 0.2773  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:02:54 d2.utils.events]: [0m eta: 1:34:10  iter: 2999  total_loss: 0.6929  loss_cls: 0.6251  loss_box_reg: 0.06277  time: 0.8082  data_time: 0.2847  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:03:10 d2.utils.events]: [0m eta: 1:33:48  iter: 3019  total_loss: 0.713  loss_cls: 0.6459  loss_box_reg: 0.06315  time: 0.8080  data_time: 0.2750  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:03:25 d2.utils.events]: [0m eta: 1:33:25  iter: 3039  total_loss: 0.6905  loss_cls: 0.6275  loss_box_reg: 0.06505  time: 0.8078  data_time: 0.2798  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:03:41 d2.utils.events]: [0m eta: 1:33:02  iter: 3059  total_loss: 0.6772  loss_cls: 0.6194  loss_box_reg: 0.0598  time: 0.8077  data_time: 0.2803  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:03:57 d2.utils.events]: [0m eta: 1:32:40  iter: 3079  total_loss: 0.7428  loss_cls: 0.6745  loss_box_reg: 0.05868  time: 0.8076  data_time: 0.2870  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:04:13 d2.utils.events]: [0m eta: 1:32:20  iter: 3099  total_loss: 0.6693  loss_cls: 0.611  loss_box_reg: 0.05942  time: 0.8075  data_time: 0.2895  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:04:29 d2.utils.events]: [0m eta: 1:31:58  iter: 3119  total_loss: 0.7115  loss_cls: 0.6442  loss_box_reg: 0.0626  time: 0.8073  data_time: 0.2811  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:04:45 d2.utils.events]: [0m eta: 1:31:39  iter: 3139  total_loss: 0.6826  loss_cls: 0.6209  loss_box_reg: 0.05698  time: 0.8072  data_time: 0.2947  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:05:01 d2.utils.events]: [0m eta: 1:31:19  iter: 3159  total_loss: 0.6873  loss_cls: 0.6339  loss_box_reg: 0.05547  time: 0.8073  data_time: 0.3101  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:05:17 d2.utils.events]: [0m eta: 1:31:01  iter: 3179  total_loss: 0.65  loss_cls: 0.59  loss_box_reg: 0.05857  time: 0.8072  data_time: 0.2936  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:05:33 d2.utils.events]: [0m eta: 1:30:41  iter: 3199  total_loss: 0.6886  loss_cls: 0.6234  loss_box_reg: 0.05956  time: 0.8071  data_time: 0.2871  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:05:48 d2.utils.events]: [0m eta: 1:30:22  iter: 3219  total_loss: 0.7123  loss_cls: 0.6562  loss_box_reg: 0.05495  time: 0.8070  data_time: 0.2827  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:06:04 d2.utils.events]: [0m eta: 1:30:02  iter: 3239  total_loss: 0.721  loss_cls: 0.6713  loss_box_reg: 0.05573  time: 0.8069  data_time: 0.2858  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:06:20 d2.utils.events]: [0m eta: 1:29:42  iter: 3259  total_loss: 0.6969  loss_cls: 0.6414  loss_box_reg: 0.05313  time: 0.8067  data_time: 0.2785  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:06:36 d2.utils.events]: [0m eta: 1:29:24  iter: 3279  total_loss: 0.6868  loss_cls: 0.6345  loss_box_reg: 0.05413  time: 0.8066  data_time: 0.2807  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:06:51 d2.utils.events]: [0m eta: 1:29:05  iter: 3299  total_loss: 0.7057  loss_cls: 0.6503  loss_box_reg: 0.05807  time: 0.8065  data_time: 0.2891  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:07:07 d2.utils.events]: [0m eta: 1:28:41  iter: 3319  total_loss: 0.6559  loss_cls: 0.5973  loss_box_reg: 0.05762  time: 0.8063  data_time: 0.2763  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:07:23 d2.utils.events]: [0m eta: 1:28:17  iter: 3339  total_loss: 0.6891  loss_cls: 0.6321  loss_box_reg: 0.05662  time: 0.8062  data_time: 0.2799  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:07:38 d2.utils.events]: [0m eta: 1:27:51  iter: 3359  total_loss: 0.6807  loss_cls: 0.6165  loss_box_reg: 0.0625  time: 0.8060  data_time: 0.2769  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:07:54 d2.utils.events]: [0m eta: 1:27:32  iter: 3379  total_loss: 0.6629  loss_cls: 0.6131  loss_box_reg: 0.0559  time: 0.8059  data_time: 0.2820  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:08:10 d2.utils.events]: [0m eta: 1:27:12  iter: 3399  total_loss: 0.6524  loss_cls: 0.5971  loss_box_reg: 0.05738  time: 0.8058  data_time: 0.2875  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:08:25 d2.utils.events]: [0m eta: 1:26:54  iter: 3419  total_loss: 0.6909  loss_cls: 0.6308  loss_box_reg: 0.06019  time: 0.8057  data_time: 0.2875  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:08:41 d2.utils.events]: [0m eta: 1:26:35  iter: 3439  total_loss: 0.6565  loss_cls: 0.595  loss_box_reg: 0.0611  time: 0.8056  data_time: 0.2843  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:08:57 d2.utils.events]: [0m eta: 1:26:18  iter: 3459  total_loss: 0.6371  loss_cls: 0.5711  loss_box_reg: 0.06817  time: 0.8055  data_time: 0.2927  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:09:13 d2.utils.events]: [0m eta: 1:25:59  iter: 3479  total_loss: 0.6803  loss_cls: 0.6225  loss_box_reg: 0.05822  time: 0.8054  data_time: 0.2819  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:09:28 d2.utils.events]: [0m eta: 1:25:41  iter: 3499  total_loss: 0.6772  loss_cls: 0.6222  loss_box_reg: 0.05794  time: 0.8053  data_time: 0.2823  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:09:44 d2.utils.events]: [0m eta: 1:25:24  iter: 3519  total_loss: 0.6207  loss_cls: 0.5592  loss_box_reg: 0.06479  time: 0.8051  data_time: 0.2827  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:10:00 d2.utils.events]: [0m eta: 1:25:06  iter: 3539  total_loss: 0.6949  loss_cls: 0.6284  loss_box_reg: 0.06107  time: 0.8050  data_time: 0.2892  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:10:16 d2.utils.events]: [0m eta: 1:24:49  iter: 3559  total_loss: 0.6695  loss_cls: 0.6041  loss_box_reg: 0.06102  time: 0.8050  data_time: 0.2862  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:10:31 d2.utils.events]: [0m eta: 1:24:32  iter: 3579  total_loss: 0.6533  loss_cls: 0.6018  loss_box_reg: 0.05467  time: 0.8049  data_time: 0.2923  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:10:47 d2.utils.events]: [0m eta: 1:24:14  iter: 3599  total_loss: 0.6646  loss_cls: 0.6072  loss_box_reg: 0.05449  time: 0.8048  data_time: 0.2882  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:11:03 d2.utils.events]: [0m eta: 1:23:57  iter: 3619  total_loss: 0.6148  loss_cls: 0.5601  loss_box_reg: 0.05896  time: 0.8047  data_time: 0.2827  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:11:19 d2.utils.events]: [0m eta: 1:23:38  iter: 3639  total_loss: 0.6847  loss_cls: 0.622  loss_box_reg: 0.06207  time: 0.8046  data_time: 0.2873  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:11:34 d2.utils.events]: [0m eta: 1:23:19  iter: 3659  total_loss: 0.6824  loss_cls: 0.6182  loss_box_reg: 0.0646  time: 0.8045  data_time: 0.2869  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:11:50 d2.utils.events]: [0m eta: 1:22:58  iter: 3679  total_loss: 0.6789  loss_cls: 0.612  loss_box_reg: 0.06585  time: 0.8044  data_time: 0.2831  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:12:06 d2.utils.events]: [0m eta: 1:22:40  iter: 3699  total_loss: 0.6606  loss_cls: 0.6045  loss_box_reg: 0.05596  time: 0.8043  data_time: 0.2802  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:12:22 d2.utils.events]: [0m eta: 1:22:24  iter: 3719  total_loss: 0.6172  loss_cls: 0.5483  loss_box_reg: 0.06312  time: 0.8042  data_time: 0.2943  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:12:38 d2.utils.events]: [0m eta: 1:22:07  iter: 3739  total_loss: 0.6197  loss_cls: 0.5534  loss_box_reg: 0.06309  time: 0.8042  data_time: 0.2893  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:12:54 d2.utils.events]: [0m eta: 1:21:49  iter: 3759  total_loss: 0.6315  loss_cls: 0.574  loss_box_reg: 0.05735  time: 0.8041  data_time: 0.2917  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:13:09 d2.utils.events]: [0m eta: 1:21:32  iter: 3779  total_loss: 0.6428  loss_cls: 0.5843  loss_box_reg: 0.05301  time: 0.8040  data_time: 0.2873  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:13:25 d2.utils.events]: [0m eta: 1:21:14  iter: 3799  total_loss: 0.6758  loss_cls: 0.6231  loss_box_reg: 0.05232  time: 0.8039  data_time: 0.2810  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:13:41 d2.utils.events]: [0m eta: 1:20:55  iter: 3819  total_loss: 0.6035  loss_cls: 0.5505  loss_box_reg: 0.05493  time: 0.8038  data_time: 0.2806  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:13:57 d2.utils.events]: [0m eta: 1:20:39  iter: 3839  total_loss: 0.6403  loss_cls: 0.5886  loss_box_reg: 0.05239  time: 0.8038  data_time: 0.2921  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:14:13 d2.utils.events]: [0m eta: 1:20:23  iter: 3859  total_loss: 0.6589  loss_cls: 0.605  loss_box_reg: 0.05512  time: 0.8038  data_time: 0.2966  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:14:29 d2.utils.events]: [0m eta: 1:20:07  iter: 3879  total_loss: 0.7012  loss_cls: 0.6456  loss_box_reg: 0.06165  time: 0.8037  data_time: 0.2847  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:14:44 d2.utils.events]: [0m eta: 1:19:50  iter: 3899  total_loss: 0.6332  loss_cls: 0.5776  loss_box_reg: 0.06126  time: 0.8036  data_time: 0.2829  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:15:00 d2.utils.events]: [0m eta: 1:19:34  iter: 3919  total_loss: 0.6119  loss_cls: 0.5539  loss_box_reg: 0.06406  time: 0.8035  data_time: 0.2860  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:15:16 d2.utils.events]: [0m eta: 1:19:17  iter: 3939  total_loss: 0.6474  loss_cls: 0.5926  loss_box_reg: 0.05291  time: 0.8034  data_time: 0.2832  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:15:32 d2.utils.events]: [0m eta: 1:19:00  iter: 3959  total_loss: 0.6508  loss_cls: 0.5939  loss_box_reg: 0.05764  time: 0.8034  data_time: 0.2882  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:15:47 d2.utils.events]: [0m eta: 1:18:44  iter: 3979  total_loss: 0.6783  loss_cls: 0.6252  loss_box_reg: 0.05736  time: 0.8033  data_time: 0.2841  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:16:03 d2.utils.events]: [0m eta: 1:18:28  iter: 3999  total_loss: 0.6033  loss_cls: 0.5554  loss_box_reg: 0.05021  time: 0.8033  data_time: 0.2946  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:16:19 d2.utils.events]: [0m eta: 1:18:12  iter: 4019  total_loss: 0.6231  loss_cls: 0.5736  loss_box_reg: 0.05072  time: 0.8032  data_time: 0.2756  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:16:35 d2.utils.events]: [0m eta: 1:17:57  iter: 4039  total_loss: 0.694  loss_cls: 0.6367  loss_box_reg: 0.06071  time: 0.8031  data_time: 0.2901  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:16:50 d2.utils.events]: [0m eta: 1:17:41  iter: 4059  total_loss: 0.6793  loss_cls: 0.6187  loss_box_reg: 0.06094  time: 0.8030  data_time: 0.2846  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:17:06 d2.utils.events]: [0m eta: 1:17:26  iter: 4079  total_loss: 0.6482  loss_cls: 0.5935  loss_box_reg: 0.05512  time: 0.8029  data_time: 0.2889  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:17:22 d2.utils.events]: [0m eta: 1:17:10  iter: 4099  total_loss: 0.6734  loss_cls: 0.6201  loss_box_reg: 0.05799  time: 0.8029  data_time: 0.2881  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:17:38 d2.utils.events]: [0m eta: 1:16:56  iter: 4119  total_loss: 0.6397  loss_cls: 0.5905  loss_box_reg: 0.05241  time: 0.8028  data_time: 0.2910  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:17:53 d2.utils.events]: [0m eta: 1:16:40  iter: 4139  total_loss: 0.6552  loss_cls: 0.6018  loss_box_reg: 0.05248  time: 0.8027  data_time: 0.2769  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:18:09 d2.utils.events]: [0m eta: 1:16:25  iter: 4159  total_loss: 0.6224  loss_cls: 0.5721  loss_box_reg: 0.04974  time: 0.8027  data_time: 0.2982  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:18:25 d2.utils.events]: [0m eta: 1:16:09  iter: 4179  total_loss: 0.6281  loss_cls: 0.5768  loss_box_reg: 0.0515  time: 0.8026  data_time: 0.2854  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:18:41 d2.utils.events]: [0m eta: 1:15:51  iter: 4199  total_loss: 0.5919  loss_cls: 0.5399  loss_box_reg: 0.04873  time: 0.8025  data_time: 0.2821  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:18:57 d2.utils.events]: [0m eta: 1:15:35  iter: 4219  total_loss: 0.5613  loss_cls: 0.5069  loss_box_reg: 0.05427  time: 0.8024  data_time: 0.2851  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:19:13 d2.utils.events]: [0m eta: 1:15:20  iter: 4239  total_loss: 0.6747  loss_cls: 0.6243  loss_box_reg: 0.05106  time: 0.8025  data_time: 0.3084  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:19:29 d2.utils.events]: [0m eta: 1:15:06  iter: 4259  total_loss: 0.6364  loss_cls: 0.5859  loss_box_reg: 0.0545  time: 0.8024  data_time: 0.2840  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:19:45 d2.utils.events]: [0m eta: 1:14:50  iter: 4279  total_loss: 0.5843  loss_cls: 0.5352  loss_box_reg: 0.05009  time: 0.8024  data_time: 0.2985  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:20:00 d2.utils.events]: [0m eta: 1:14:35  iter: 4299  total_loss: 0.5964  loss_cls: 0.5458  loss_box_reg: 0.05345  time: 0.8023  data_time: 0.2874  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:20:16 d2.utils.events]: [0m eta: 1:14:20  iter: 4319  total_loss: 0.6661  loss_cls: 0.6101  loss_box_reg: 0.05665  time: 0.8023  data_time: 0.2893  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:20:32 d2.utils.events]: [0m eta: 1:14:05  iter: 4339  total_loss: 0.634  loss_cls: 0.5801  loss_box_reg: 0.05666  time: 0.8022  data_time: 0.2889  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:20:48 d2.utils.events]: [0m eta: 1:13:50  iter: 4359  total_loss: 0.6034  loss_cls: 0.5483  loss_box_reg: 0.05275  time: 0.8021  data_time: 0.2792  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:21:03 d2.utils.events]: [0m eta: 1:13:37  iter: 4379  total_loss: 0.6019  loss_cls: 0.5402  loss_box_reg: 0.0583  time: 0.8021  data_time: 0.2808  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:21:19 d2.utils.events]: [0m eta: 1:13:21  iter: 4399  total_loss: 0.6079  loss_cls: 0.5506  loss_box_reg: 0.056  time: 0.8020  data_time: 0.2931  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:21:35 d2.utils.events]: [0m eta: 1:13:06  iter: 4419  total_loss: 0.6274  loss_cls: 0.5793  loss_box_reg: 0.0489  time: 0.8020  data_time: 0.2835  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:21:51 d2.utils.events]: [0m eta: 1:12:51  iter: 4439  total_loss: 0.5905  loss_cls: 0.5384  loss_box_reg: 0.05267  time: 0.8019  data_time: 0.2923  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:22:07 d2.utils.events]: [0m eta: 1:12:35  iter: 4459  total_loss: 0.6104  loss_cls: 0.5409  loss_box_reg: 0.06605  time: 0.8019  data_time: 0.2998  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:22:23 d2.utils.events]: [0m eta: 1:12:21  iter: 4479  total_loss: 0.6154  loss_cls: 0.5549  loss_box_reg: 0.06035  time: 0.8019  data_time: 0.2960  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:22:39 d2.utils.events]: [0m eta: 1:12:05  iter: 4499  total_loss: 0.653  loss_cls: 0.6017  loss_box_reg: 0.05249  time: 0.8018  data_time: 0.2766  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:22:55 d2.utils.events]: [0m eta: 1:11:50  iter: 4519  total_loss: 0.6249  loss_cls: 0.572  loss_box_reg: 0.05118  time: 0.8018  data_time: 0.2977  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:23:10 d2.utils.events]: [0m eta: 1:11:34  iter: 4539  total_loss: 0.6018  loss_cls: 0.5525  loss_box_reg: 0.04883  time: 0.8017  data_time: 0.2957  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:23:26 d2.utils.events]: [0m eta: 1:11:18  iter: 4559  total_loss: 0.6222  loss_cls: 0.5695  loss_box_reg: 0.05149  time: 0.8017  data_time: 0.2798  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:23:42 d2.utils.events]: [0m eta: 1:11:02  iter: 4579  total_loss: 0.6281  loss_cls: 0.5731  loss_box_reg: 0.05014  time: 0.8016  data_time: 0.2830  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:23:58 d2.utils.events]: [0m eta: 1:10:47  iter: 4599  total_loss: 0.5616  loss_cls: 0.5041  loss_box_reg: 0.05392  time: 0.8015  data_time: 0.2840  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:24:13 d2.utils.events]: [0m eta: 1:10:32  iter: 4619  total_loss: 0.619  loss_cls: 0.5581  loss_box_reg: 0.05608  time: 0.8015  data_time: 0.2822  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:24:29 d2.utils.events]: [0m eta: 1:10:17  iter: 4639  total_loss: 0.6287  loss_cls: 0.5733  loss_box_reg: 0.0509  time: 0.8014  data_time: 0.2912  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:24:45 d2.utils.events]: [0m eta: 1:10:02  iter: 4659  total_loss: 0.5737  loss_cls: 0.5241  loss_box_reg: 0.0496  time: 0.8014  data_time: 0.2889  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:25:01 d2.utils.events]: [0m eta: 1:09:46  iter: 4679  total_loss: 0.5781  loss_cls: 0.5277  loss_box_reg: 0.04878  time: 0.8013  data_time: 0.2855  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:25:16 d2.utils.events]: [0m eta: 1:09:30  iter: 4699  total_loss: 0.5976  loss_cls: 0.5462  loss_box_reg: 0.05088  time: 0.8012  data_time: 0.2790  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:25:32 d2.utils.events]: [0m eta: 1:09:13  iter: 4719  total_loss: 0.5807  loss_cls: 0.5289  loss_box_reg: 0.05198  time: 0.8012  data_time: 0.2864  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:25:48 d2.utils.events]: [0m eta: 1:08:57  iter: 4739  total_loss: 0.6241  loss_cls: 0.5725  loss_box_reg: 0.05272  time: 0.8012  data_time: 0.3015  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:26:04 d2.utils.events]: [0m eta: 1:08:41  iter: 4759  total_loss: 0.629  loss_cls: 0.5825  loss_box_reg: 0.05023  time: 0.8011  data_time: 0.2906  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:26:20 d2.utils.events]: [0m eta: 1:08:25  iter: 4779  total_loss: 0.58  loss_cls: 0.5304  loss_box_reg: 0.04938  time: 0.8011  data_time: 0.2829  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:26:36 d2.utils.events]: [0m eta: 1:08:10  iter: 4799  total_loss: 0.5721  loss_cls: 0.5122  loss_box_reg: 0.05987  time: 0.8011  data_time: 0.3013  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:26:52 d2.utils.events]: [0m eta: 1:07:54  iter: 4819  total_loss: 0.6099  loss_cls: 0.5653  loss_box_reg: 0.04576  time: 0.8011  data_time: 0.3082  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:27:08 d2.utils.events]: [0m eta: 1:07:38  iter: 4839  total_loss: 0.5824  loss_cls: 0.5358  loss_box_reg: 0.04841  time: 0.8010  data_time: 0.2838  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:27:24 d2.utils.events]: [0m eta: 1:07:21  iter: 4859  total_loss: 0.6052  loss_cls: 0.5627  loss_box_reg: 0.04924  time: 0.8010  data_time: 0.2850  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:27:39 d2.utils.events]: [0m eta: 1:07:04  iter: 4879  total_loss: 0.6434  loss_cls: 0.5888  loss_box_reg: 0.05448  time: 0.8009  data_time: 0.2852  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:27:55 d2.utils.events]: [0m eta: 1:06:49  iter: 4899  total_loss: 0.6013  loss_cls: 0.5546  loss_box_reg: 0.04914  time: 0.8009  data_time: 0.2945  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:28:12 d2.utils.events]: [0m eta: 1:06:33  iter: 4919  total_loss: 0.574  loss_cls: 0.5247  loss_box_reg: 0.04399  time: 0.8010  data_time: 0.3209  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:28:28 d2.utils.events]: [0m eta: 1:06:17  iter: 4939  total_loss: 0.5549  loss_cls: 0.5032  loss_box_reg: 0.04869  time: 0.8010  data_time: 0.2853  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:28:44 d2.utils.events]: [0m eta: 1:06:02  iter: 4959  total_loss: 0.5456  loss_cls: 0.4927  loss_box_reg: 0.04874  time: 0.8009  data_time: 0.2921  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:28:59 d2.utils.events]: [0m eta: 1:05:46  iter: 4979  total_loss: 0.6011  loss_cls: 0.5505  loss_box_reg: 0.04918  time: 0.8009  data_time: 0.2853  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:29:18 d2.data.datasets.coco]: [0mLoaded 15915 images in COCO format from ../../../../openrooms/annotation_files/train_main_xml_50_test_v3_fastercnn.json
+[32m[05/16 18:29:18 d2.data.build]: [0mRemoved 969 images with no usable annotations. 14946 images left.
+[32m[05/16 18:29:19 d2.data.build]: [0mDistribution of instances among all 13 categories:
+[36m|   category   | #instances   |  category  | #instances   |  category  | #instances   |
+|:------------:|:-------------|:----------:|:-------------|:----------:|:-------------|
+|    table     | 11652        |    desk    | 4952         | bookshelf  | 4002         |
+|     sofa     | 3567         | trash_bin  | 3281         |    bed     | 3356         |
+|    chair     | 20114        |  monitor   | 3103         |  bathtub   | 1988         |
+| file_cabinet | 1735         | flowerpot  | 227          |   window   | 10283        |
+|     lamp     | 2513         |            |              |            |              |
+|    total     | 70773        |            |              |            |              |[0m
+Proposal boxes for test data added.
+[32m[05/16 18:29:19 d2.data.dataset_mapper]: [0m[DatasetMapper] Augmentations used in inference: []
+[32m[05/16 18:29:19 d2.data.common]: [0mSerializing 14946 elements to byte tensors and concatenating them all ...
+[32m[05/16 18:29:19 d2.data.common]: [0mSerialized dataset takes 11.25 MiB
+[32m[05/16 18:29:19 d2.evaluation.evaluator]: [0mStart inference on 14946 batches
+[32m[05/16 18:29:20 d2.evaluation.evaluator]: [0mInference done 11/14946. Dataloading: 0.0077 s/iter. Inference: 0.0139 s/iter. Eval: 0.0002 s/iter. Total: 0.0218 s/iter. ETA=0:05:25
+[32m[05/16 18:29:25 d2.evaluation.evaluator]: [0mInference done 231/14946. Dataloading: 0.0094 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0227 s/iter. ETA=0:05:34
+[32m[05/16 18:29:30 d2.evaluation.evaluator]: [0mInference done 452/14946. Dataloading: 0.0094 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0227 s/iter. ETA=0:05:28
+[32m[05/16 18:29:35 d2.evaluation.evaluator]: [0mInference done 672/14946. Dataloading: 0.0094 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0227 s/iter. ETA=0:05:24
+[32m[05/16 18:29:40 d2.evaluation.evaluator]: [0mInference done 890/14946. Dataloading: 0.0095 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0228 s/iter. ETA=0:05:20
+[32m[05/16 18:29:45 d2.evaluation.evaluator]: [0mInference done 1110/14946. Dataloading: 0.0095 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0228 s/iter. ETA=0:05:15
+[32m[05/16 18:29:50 d2.evaluation.evaluator]: [0mInference done 1328/14946. Dataloading: 0.0095 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0228 s/iter. ETA=0:05:10
+[32m[05/16 18:29:55 d2.evaluation.evaluator]: [0mInference done 1480/14946. Dataloading: 0.0105 s/iter. Inference: 0.0132 s/iter. Eval: 0.0002 s/iter. Total: 0.0239 s/iter. ETA=0:05:21
+[32m[05/16 18:30:00 d2.evaluation.evaluator]: [0mInference done 1697/14946. Dataloading: 0.0104 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0238 s/iter. ETA=0:05:14
+[32m[05/16 18:30:05 d2.evaluation.evaluator]: [0mInference done 1914/14946. Dataloading: 0.0103 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0237 s/iter. ETA=0:05:08
+[32m[05/16 18:30:10 d2.evaluation.evaluator]: [0mInference done 2133/14946. Dataloading: 0.0102 s/iter. Inference: 0.0132 s/iter. Eval: 0.0002 s/iter. Total: 0.0236 s/iter. ETA=0:05:02
+[32m[05/16 18:30:15 d2.evaluation.evaluator]: [0mInference done 2352/14946. Dataloading: 0.0102 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0235 s/iter. ETA=0:04:56
+[32m[05/16 18:30:20 d2.evaluation.evaluator]: [0mInference done 2573/14946. Dataloading: 0.0101 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0235 s/iter. ETA=0:04:50
+[32m[05/16 18:30:25 d2.evaluation.evaluator]: [0mInference done 2794/14946. Dataloading: 0.0101 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0234 s/iter. ETA=0:04:44
+[32m[05/16 18:30:30 d2.evaluation.evaluator]: [0mInference done 3014/14946. Dataloading: 0.0100 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0234 s/iter. ETA=0:04:38
+[32m[05/16 18:30:35 d2.evaluation.evaluator]: [0mInference done 3232/14946. Dataloading: 0.0100 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0233 s/iter. ETA=0:04:33
+[32m[05/16 18:30:40 d2.evaluation.evaluator]: [0mInference done 3453/14946. Dataloading: 0.0100 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0233 s/iter. ETA=0:04:27
+[32m[05/16 18:30:45 d2.evaluation.evaluator]: [0mInference done 3673/14946. Dataloading: 0.0099 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0233 s/iter. ETA=0:04:22
+[32m[05/16 18:30:50 d2.evaluation.evaluator]: [0mInference done 3892/14946. Dataloading: 0.0099 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0232 s/iter. ETA=0:04:16
+[32m[05/16 18:30:55 d2.evaluation.evaluator]: [0mInference done 4112/14946. Dataloading: 0.0099 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0232 s/iter. ETA=0:04:11
+[32m[05/16 18:31:00 d2.evaluation.evaluator]: [0mInference done 4333/14946. Dataloading: 0.0099 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0232 s/iter. ETA=0:04:06
+[32m[05/16 18:31:05 d2.evaluation.evaluator]: [0mInference done 4554/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0232 s/iter. ETA=0:04:00
+[32m[05/16 18:31:10 d2.evaluation.evaluator]: [0mInference done 4777/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:03:55
+[32m[05/16 18:31:15 d2.evaluation.evaluator]: [0mInference done 4997/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:03:49
+[32m[05/16 18:31:20 d2.evaluation.evaluator]: [0mInference done 5219/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:03:44
+[32m[05/16 18:31:25 d2.evaluation.evaluator]: [0mInference done 5383/14946. Dataloading: 0.0100 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0233 s/iter. ETA=0:03:43
+[32m[05/16 18:31:30 d2.evaluation.evaluator]: [0mInference done 5599/14946. Dataloading: 0.0100 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0233 s/iter. ETA=0:03:38
+[32m[05/16 18:31:35 d2.evaluation.evaluator]: [0mInference done 5823/14946. Dataloading: 0.0099 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0233 s/iter. ETA=0:03:32
+[32m[05/16 18:31:40 d2.evaluation.evaluator]: [0mInference done 6043/14946. Dataloading: 0.0099 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0233 s/iter. ETA=0:03:27
+[32m[05/16 18:31:45 d2.evaluation.evaluator]: [0mInference done 6266/14946. Dataloading: 0.0099 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0232 s/iter. ETA=0:03:21
+[32m[05/16 18:31:50 d2.evaluation.evaluator]: [0mInference done 6490/14946. Dataloading: 0.0099 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0232 s/iter. ETA=0:03:16
+[32m[05/16 18:31:55 d2.evaluation.evaluator]: [0mInference done 6715/14946. Dataloading: 0.0099 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0232 s/iter. ETA=0:03:10
+[32m[05/16 18:32:00 d2.evaluation.evaluator]: [0mInference done 6935/14946. Dataloading: 0.0099 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0232 s/iter. ETA=0:03:05
+[32m[05/16 18:32:05 d2.evaluation.evaluator]: [0mInference done 7158/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:03:00
+[32m[05/16 18:32:10 d2.evaluation.evaluator]: [0mInference done 7381/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:02:54
+[32m[05/16 18:32:15 d2.evaluation.evaluator]: [0mInference done 7604/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:02:49
+[32m[05/16 18:32:20 d2.evaluation.evaluator]: [0mInference done 7826/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:02:44
+[32m[05/16 18:32:25 d2.evaluation.evaluator]: [0mInference done 8045/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:02:39
+[32m[05/16 18:32:30 d2.evaluation.evaluator]: [0mInference done 8265/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:02:34
+[32m[05/16 18:32:35 d2.evaluation.evaluator]: [0mInference done 8486/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:02:28
+[32m[05/16 18:32:40 d2.evaluation.evaluator]: [0mInference done 8709/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:02:23
+[32m[05/16 18:32:45 d2.evaluation.evaluator]: [0mInference done 8931/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:02:18
+[32m[05/16 18:32:50 d2.evaluation.evaluator]: [0mInference done 9150/14946. Dataloading: 0.0097 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:02:13
+[32m[05/16 18:32:55 d2.evaluation.evaluator]: [0mInference done 9367/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:02:08
+[32m[05/16 18:33:00 d2.evaluation.evaluator]: [0mInference done 9585/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:02:03
+[32m[05/16 18:33:05 d2.evaluation.evaluator]: [0mInference done 9802/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:58
+[32m[05/16 18:33:10 d2.evaluation.evaluator]: [0mInference done 10021/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:53
+[32m[05/16 18:33:15 d2.evaluation.evaluator]: [0mInference done 10241/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:48
+[32m[05/16 18:33:20 d2.evaluation.evaluator]: [0mInference done 10459/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:43
+[32m[05/16 18:33:25 d2.evaluation.evaluator]: [0mInference done 10678/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:38
+[32m[05/16 18:33:30 d2.evaluation.evaluator]: [0mInference done 10889/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:33
+[32m[05/16 18:33:35 d2.evaluation.evaluator]: [0mInference done 11109/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:28
+[32m[05/16 18:33:40 d2.evaluation.evaluator]: [0mInference done 11329/14946. Dataloading: 0.0097 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:23
+[32m[05/16 18:33:45 d2.evaluation.evaluator]: [0mInference done 11547/14946. Dataloading: 0.0098 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:18
+[32m[05/16 18:33:50 d2.evaluation.evaluator]: [0mInference done 11767/14946. Dataloading: 0.0097 s/iter. Inference: 0.0131 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:13
+[32m[05/16 18:33:55 d2.evaluation.evaluator]: [0mInference done 11985/14946. Dataloading: 0.0097 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:08
+[32m[05/16 18:34:00 d2.evaluation.evaluator]: [0mInference done 12204/14946. Dataloading: 0.0097 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:01:03
+[32m[05/16 18:34:05 d2.evaluation.evaluator]: [0mInference done 12408/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:58
+[32m[05/16 18:34:11 d2.evaluation.evaluator]: [0mInference done 12625/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0231 s/iter. ETA=0:00:53
+[32m[05/16 18:34:16 d2.evaluation.evaluator]: [0mInference done 12843/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:48
+[32m[05/16 18:34:21 d2.evaluation.evaluator]: [0mInference done 13060/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:43
+[32m[05/16 18:34:26 d2.evaluation.evaluator]: [0mInference done 13279/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:38
+[32m[05/16 18:34:31 d2.evaluation.evaluator]: [0mInference done 13499/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:33
+[32m[05/16 18:34:36 d2.evaluation.evaluator]: [0mInference done 13718/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:28
+[32m[05/16 18:34:41 d2.evaluation.evaluator]: [0mInference done 13936/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:23
+[32m[05/16 18:34:46 d2.evaluation.evaluator]: [0mInference done 14153/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:18
+[32m[05/16 18:34:51 d2.evaluation.evaluator]: [0mInference done 14369/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:13
+[32m[05/16 18:34:56 d2.evaluation.evaluator]: [0mInference done 14586/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:08
+[32m[05/16 18:35:01 d2.evaluation.evaluator]: [0mInference done 14804/14946. Dataloading: 0.0098 s/iter. Inference: 0.0130 s/iter. Eval: 0.0002 s/iter. Total: 0.0230 s/iter. ETA=0:00:03
+[32m[05/16 18:35:04 d2.evaluation.evaluator]: [0mTotal inference time: 0:05:44.278105 (0.023043 s / iter per device, on 1 devices)
+[32m[05/16 18:35:04 d2.evaluation.evaluator]: [0mTotal inference pure compute time: 0:03:14 (0.013038 s / iter per device, on 1 devices)
+[32m[05/16 18:35:05 d2.evaluation.coco_evaluation]: [0mPreparing results for COCO format ...
+[32m[05/16 18:35:05 d2.evaluation.coco_evaluation]: [0mSaving results to combined_material_transfer_fasterrcnn/coco_instances_results.json
+[32m[05/16 18:35:06 d2.evaluation.coco_evaluation]: [0mEvaluating predictions with unofficial COCO API...
+Loading and preparing results...
+DONE (t=0.57s)
+creating index...
+index created!
+[32m[05/16 18:35:06 d2.evaluation.fast_eval_api]: [0mEvaluate annotation type *bbox*
+[32m[05/16 18:35:13 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.evaluate() finished in 7.01 seconds.
+[32m[05/16 18:35:13 d2.evaluation.fast_eval_api]: [0mAccumulating evaluation results...
+[32m[05/16 18:35:14 d2.evaluation.fast_eval_api]: [0mCOCOeval_opt.accumulate() finished in 1.17 seconds.
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.809
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.810
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.809
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.414
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.635
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.865
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.677
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.913
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.913
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.719
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.847
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.939
+[32m[05/16 18:35:14 d2.evaluation.coco_evaluation]: [0mEvaluation results for bbox: 
+|   AP   |  AP50  |  AP75  |  APs   |  APm   |  APl   |
+|:------:|:------:|:------:|:------:|:------:|:------:|
+| 80.881 | 80.968 | 80.852 | 41.394 | 63.533 | 86.458 |
+[32m[05/16 18:35:14 d2.evaluation.coco_evaluation]: [0mPer-category bbox AP: 
+| category     | AP     | category   | AP     | category   | AP     |
+|:-------------|:-------|:-----------|:-------|:-----------|:-------|
+| table        | 85.117 | desk       | 58.754 | bookshelf  | 79.131 |
+| sofa         | 75.130 | trash_bin  | 86.752 | bed        | 82.119 |
+| chair        | 95.388 | monitor    | 86.118 | bathtub    | 83.760 |
+| file_cabinet | 61.819 | flowerpot  | 62.205 | window     | 98.769 |
+| lamp         | 96.391 |            |        |            |        |
+[32m[05/16 18:35:15 d2.engine.defaults]: [0mEvaluation results for test in csv format:
+[32m[05/16 18:35:15 d2.evaluation.testing]: [0mcopypaste: Task: bbox
+[32m[05/16 18:35:15 d2.evaluation.testing]: [0mcopypaste: AP,AP50,AP75,APs,APm,APl
+[32m[05/16 18:35:15 d2.evaluation.testing]: [0mcopypaste: 80.8809,80.9681,80.8520,41.3944,63.5325,86.4577
+[32m[05/16 18:35:15 d2.utils.events]: [0m eta: 1:05:30  iter: 4999  total_loss: 0.5108  loss_cls: 0.463  loss_box_reg: 0.04567  time: 0.8008  data_time: 0.2947  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:35:31 d2.utils.events]: [0m eta: 1:05:16  iter: 5019  total_loss: 0.5599  loss_cls: 0.5088  loss_box_reg: 0.04956  time: 0.8008  data_time: 0.2926  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:35:47 d2.utils.events]: [0m eta: 1:05:00  iter: 5039  total_loss: 0.5937  loss_cls: 0.5426  loss_box_reg: 0.05434  time: 0.8008  data_time: 0.2966  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:36:03 d2.utils.events]: [0m eta: 1:04:44  iter: 5059  total_loss: 0.5309  loss_cls: 0.4789  loss_box_reg: 0.04964  time: 0.8007  data_time: 0.2986  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:36:19 d2.utils.events]: [0m eta: 1:04:29  iter: 5079  total_loss: 0.5872  loss_cls: 0.5272  loss_box_reg: 0.05602  time: 0.8008  data_time: 0.3200  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:36:35 d2.utils.events]: [0m eta: 1:04:13  iter: 5099  total_loss: 0.5949  loss_cls: 0.5359  loss_box_reg: 0.06309  time: 0.8007  data_time: 0.2958  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:36:50 d2.utils.events]: [0m eta: 1:03:57  iter: 5119  total_loss: 0.5894  loss_cls: 0.5325  loss_box_reg: 0.05224  time: 0.8007  data_time: 0.2853  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:37:06 d2.utils.events]: [0m eta: 1:03:41  iter: 5139  total_loss: 0.6192  loss_cls: 0.5652  loss_box_reg: 0.05024  time: 0.8006  data_time: 0.2893  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:37:22 d2.utils.events]: [0m eta: 1:03:25  iter: 5159  total_loss: 0.5957  loss_cls: 0.5543  loss_box_reg: 0.04398  time: 0.8005  data_time: 0.2891  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:37:37 d2.utils.events]: [0m eta: 1:03:10  iter: 5179  total_loss: 0.5835  loss_cls: 0.5453  loss_box_reg: 0.04026  time: 0.8005  data_time: 0.2898  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:37:53 d2.utils.events]: [0m eta: 1:02:54  iter: 5199  total_loss: 0.5692  loss_cls: 0.5278  loss_box_reg: 0.04404  time: 0.8004  data_time: 0.2830  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:38:08 d2.utils.events]: [0m eta: 1:02:38  iter: 5219  total_loss: 0.5878  loss_cls: 0.5398  loss_box_reg: 0.04645  time: 0.8003  data_time: 0.2784  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:38:24 d2.utils.events]: [0m eta: 1:02:22  iter: 5239  total_loss: 0.5211  loss_cls: 0.4774  loss_box_reg: 0.04752  time: 0.8003  data_time: 0.2949  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:38:40 d2.utils.events]: [0m eta: 1:02:06  iter: 5259  total_loss: 0.5946  loss_cls: 0.5443  loss_box_reg: 0.05212  time: 0.8002  data_time: 0.2855  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:38:56 d2.utils.events]: [0m eta: 1:01:50  iter: 5279  total_loss: 0.614  loss_cls: 0.563  loss_box_reg: 0.04778  time: 0.8002  data_time: 0.2913  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:39:12 d2.utils.events]: [0m eta: 1:01:34  iter: 5299  total_loss: 0.5785  loss_cls: 0.5256  loss_box_reg: 0.05345  time: 0.8001  data_time: 0.2896  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:39:27 d2.utils.events]: [0m eta: 1:01:19  iter: 5319  total_loss: 0.6408  loss_cls: 0.5834  loss_box_reg: 0.05118  time: 0.8001  data_time: 0.2926  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:39:43 d2.utils.events]: [0m eta: 1:01:03  iter: 5339  total_loss: 0.5472  loss_cls: 0.4984  loss_box_reg: 0.04606  time: 0.8001  data_time: 0.2960  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:39:59 d2.utils.events]: [0m eta: 1:00:47  iter: 5359  total_loss: 0.5522  loss_cls: 0.5044  loss_box_reg: 0.04611  time: 0.8000  data_time: 0.2927  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:40:15 d2.utils.events]: [0m eta: 1:00:31  iter: 5379  total_loss: 0.5566  loss_cls: 0.5085  loss_box_reg: 0.04828  time: 0.8000  data_time: 0.2891  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:40:31 d2.utils.events]: [0m eta: 1:00:16  iter: 5399  total_loss: 0.522  loss_cls: 0.4762  loss_box_reg: 0.04636  time: 0.8000  data_time: 0.2892  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:40:47 d2.utils.events]: [0m eta: 1:00:00  iter: 5419  total_loss: 0.5653  loss_cls: 0.5216  loss_box_reg: 0.04365  time: 0.7999  data_time: 0.2932  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:41:02 d2.utils.events]: [0m eta: 0:59:43  iter: 5439  total_loss: 0.5463  loss_cls: 0.5015  loss_box_reg: 0.04708  time: 0.7999  data_time: 0.2873  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:41:18 d2.utils.events]: [0m eta: 0:59:28  iter: 5459  total_loss: 0.578  loss_cls: 0.5302  loss_box_reg: 0.04798  time: 0.7999  data_time: 0.3021  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:41:34 d2.utils.events]: [0m eta: 0:59:11  iter: 5479  total_loss: 0.6203  loss_cls: 0.568  loss_box_reg: 0.0524  time: 0.7998  data_time: 0.2839  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:41:50 d2.utils.events]: [0m eta: 0:58:57  iter: 5499  total_loss: 0.6058  loss_cls: 0.5559  loss_box_reg: 0.05235  time: 0.7998  data_time: 0.3075  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:42:06 d2.utils.events]: [0m eta: 0:58:41  iter: 5519  total_loss: 0.5672  loss_cls: 0.5188  loss_box_reg: 0.04949  time: 0.7998  data_time: 0.3027  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:42:22 d2.utils.events]: [0m eta: 0:58:26  iter: 5539  total_loss: 0.5701  loss_cls: 0.5075  loss_box_reg: 0.05369  time: 0.7998  data_time: 0.3108  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:42:38 d2.utils.events]: [0m eta: 0:58:11  iter: 5559  total_loss: 0.5517  loss_cls: 0.4992  loss_box_reg: 0.0564  time: 0.7998  data_time: 0.2962  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:42:54 d2.utils.events]: [0m eta: 0:57:56  iter: 5579  total_loss: 0.6394  loss_cls: 0.5823  loss_box_reg: 0.05955  time: 0.7998  data_time: 0.3069  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:43:10 d2.utils.events]: [0m eta: 0:57:42  iter: 5599  total_loss: 0.5474  loss_cls: 0.4941  loss_box_reg: 0.0507  time: 0.7999  data_time: 0.3059  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:43:27 d2.utils.events]: [0m eta: 0:57:27  iter: 5619  total_loss: 0.5668  loss_cls: 0.5152  loss_box_reg: 0.05057  time: 0.7999  data_time: 0.3032  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:43:43 d2.utils.events]: [0m eta: 0:57:12  iter: 5639  total_loss: 0.5695  loss_cls: 0.5159  loss_box_reg: 0.04941  time: 0.7999  data_time: 0.3094  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:43:59 d2.utils.events]: [0m eta: 0:56:57  iter: 5659  total_loss: 0.5474  loss_cls: 0.5013  loss_box_reg: 0.04735  time: 0.8000  data_time: 0.3268  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:44:15 d2.utils.events]: [0m eta: 0:56:42  iter: 5679  total_loss: 0.5799  loss_cls: 0.536  loss_box_reg: 0.04991  time: 0.8000  data_time: 0.3028  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:44:32 d2.utils.events]: [0m eta: 0:56:28  iter: 5699  total_loss: 0.5641  loss_cls: 0.5169  loss_box_reg: 0.04946  time: 0.8001  data_time: 0.3167  lr: 0.00025  max_mem: 8091M
+[32m[05/16 18:44:48 d2.utils.events]: [0m eta: 0:56:14  iter: 5719  total_loss: 0.6109  loss_cls: 0.5621  loss_box_reg: 0.04707  time: 0.8001  data_time: 0.3135  lr: 0.00025  max_mem: 8091M
+slurmstepd: error: *** JOB 10149677 ON seasdgx104 CANCELLED AT 2022-05-16T18:44:56 ***

@@ -1,0 +1,15 @@
+1
+Traceback (most recent call last):
+  File "finetune.py", line 9, in <module>
+    from detectron2 import model_zoo
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/model_zoo/__init__.py", line 8, in <module>
+    from .model_zoo import get, get_config_file, get_checkpoint_url, get_config
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/model_zoo/model_zoo.py", line 9, in <module>
+    from detectron2.modeling import build_model
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/modeling/__init__.py", line 2, in <module>
+    from detectron2.layers import ShapeSpec
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/layers/__init__.py", line 3, in <module>
+    from .deform_conv import DeformConv, ModulatedDeformConv
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/layers/deform_conv.py", line 11, in <module>
+    from detectron2 import _C
+ImportError: /n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/detectron2/_C.cpython-38-x86_64-linux-gnu.so: undefined symbol: _ZNK2at6Tensor7reshapeEN3c108ArrayRefIlEE

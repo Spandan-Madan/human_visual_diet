@@ -1,0 +1,59 @@
+25
+Warning: You are running the empty baseline, so network is being fed an input of just zeros.
+annotations: ../openrooms/annotation_files/train_main_xml_50_v3.json
+batch_size: 200
+checkpoint: checkpoint_19.tar
+empty_baseline: false
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+lift_the_flap: false
+no_context: false
+num_classes: 13
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../openrooms/annotation_files/scannet_test_set.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: true
+
+Initializing model from checkpoint checkpoint_19.tar
+-------------------------------
+Annotation Counts
+-------------------------------
+table                       447
+file_cabinet                232
+desk                        262
+window                      232
+chair                       853
+bed                         169
+lamp                         44
+trash_bin                   207
+monitor                     129
+bookshelf                    59
+bathtub                      43
+sofa                         22
+Total                      2699
+-------------------------------
+
+batch size is 200
+Data Loader lenght is 14
+Test Batches:   0%|          | 0/14 [00:00<?, ?it/s]Test Batches:   7%|▋         | 1/14 [00:07<01:32,  7.14s/it]Test Batches:  14%|█▍        | 2/14 [00:13<01:19,  6.63s/it]Test Batches:  21%|██▏       | 3/14 [00:19<01:10,  6.41s/it]Test Batches:  29%|██▊       | 4/14 [00:25<01:02,  6.20s/it]Test Batches:  36%|███▌      | 5/14 [00:31<00:55,  6.12s/it]Test Batches:  43%|████▎     | 6/14 [00:37<00:48,  6.10s/it]Test Batches:  50%|█████     | 7/14 [00:43<00:42,  6.04s/it]Test Batches:  57%|█████▋    | 8/14 [00:49<00:36,  6.02s/it]Test Batches:  64%|██████▍   | 9/14 [00:55<00:30,  6.01s/it]Test Batches:  71%|███████▏  | 10/14 [01:01<00:24,  6.02s/it]Test Batches:  79%|███████▊  | 11/14 [01:07<00:18,  6.02s/it]Test Batches:  86%|████████▌ | 12/14 [01:13<00:12,  6.02s/it]Test Batches:  93%|█████████▎| 13/14 [01:19<00:05,  5.98s/it]Test Batches: 100%|██████████| 14/14 [01:22<00:00,  4.99s/it]Test Batches: 100%|██████████| 14/14 [01:22<00:00,  5.86s/it]
+
+Total Test Accuracy: 0.4868770241737366
+Class                Accuracy  
+table                    0.5705
+desk                     0.5115
+bookshelf                0.7119
+sofa                     0.3182
+trash_bin                0.6184
+bed                      0.3905
+chair                    0.7479
+monitor                  0.4419
+bathtub                  0.7209
+file_cabinet             0.1595
+flowerpot                0.0000
+window                   0.7974
+lamp                     0.3409

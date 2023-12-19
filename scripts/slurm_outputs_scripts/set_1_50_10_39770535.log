@@ -1,0 +1,13 @@
+10
+Traceback (most recent call last):
+  File "train_hotswapped_auto_load.py", line 11, in <module>
+    from torch.utils.tensorboard import SummaryWriter
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/tensorboard/__init__.py", line 12, in <module>
+    from .writer import FileWriter, SummaryWriter  # noqa: F401
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/tensorboard/writer.py", line 9, in <module>
+    from tensorboard.compat.proto.event_pb2 import SessionLog
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/tensorboard/compat/proto/event_pb2.py", line 8, in <module>
+    from google.protobuf import descriptor as _descriptor
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/google/protobuf/descriptor.py", line 47, in <module>
+    from google.protobuf.pyext import _message
+ImportError: /lib64/libstdc++.so.6: version `GLIBCXX_3.4.21' not found (required by /n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/google/protobuf/pyext/_message.cpython-38-x86_64-linux-gnu.so)

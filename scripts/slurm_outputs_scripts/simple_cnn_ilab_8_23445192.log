@@ -1,0 +1,52 @@
+8
+/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/utils/data/dataloader.py:487: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 1, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+Task is classification, not lift the flap.
+-------------------------------
+Annotation Counts
+-------------------------------
+car                        9624
+tank                       3964
+monster                    2724
+f1car                      3156
+mil                        6900
+boat                       3644
+train                      3140
+equip                      3172
+plane                      2868
+bus                        4004
+van                        3208
+semi                       3372
+heli                       3892
+ufo                        2328
+pickup                     3500
+Total                     59496
+-------------------------------
+
+annotations: ../iLab/annotation_files/train_iLab_light_v2.json
+batch_size: 40
+checkpoint: checkpoint_9.tar
+git: e22ff54d4e15e859ff3672c5fc808cec0abfc80d
+imagedir: ../
+imbalance_reweighting: false
+learning_rate: 1.0e-05
+num_classes: 15
+num_decoder_heads: 8
+num_decoder_layers: 6
+test_annotations: ../iLab/annotation_files/test_iLab_light_v2.json
+test_imagedir: ../
+uncertainty_gate_type: learned
+uncertainty_threshold: 0.8
+weighted_prediction: false
+
+Initializing from checkpoint checkpoint_9.tar
+Traceback (most recent call last):
+  File "train_simple_cnn.py", line 112, in <module>
+    checkpoint = torch.load(cfg.checkpoint, map_location="cpu")
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/serialization.py", line 699, in load
+    with _open_file_like(f, 'rb') as opened_file:
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/serialization.py", line 231, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/serialization.py", line 212, in __init__
+    super(_open_file, self).__init__(open(name, mode))
+FileNotFoundError: [Errno 2] No such file or directory: 'ilab/vit_light/checkpoint_9.tar'

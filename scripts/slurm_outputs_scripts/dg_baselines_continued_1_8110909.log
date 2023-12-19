@@ -1,0 +1,52 @@
+1
+Continue training, so reading seed...
+Seed changed to 10451
+loaded algorithm_dict
+Environment:
+	Python: 3.8.11
+	PyTorch: 1.9.1+cu102
+	Torchvision: 0.10.1+cu102
+	CUDA: 10.2
+	CUDNN: 7605
+	NumPy: 1.21.2
+	PIL: 8.3.1
+Args:
+	algorithm: GroupDRO
+	checkpoint_freq: None
+	continue_training: True
+	data_dir: ./domainbed/data/
+	dataset: DGMaterials
+	holdout_fraction: 0.01
+	hparams: None
+	hparams_seed: 10451
+	output_dir: train_output_crops_hparams/GroupDRO
+	save_model_every_checkpoint: False
+	seed: 0
+	skip_model_save: False
+	steps: None
+	task: domain_generalization
+	test_envs: [1]
+	trial_seed: 0
+	uda_holdout_fraction: 0
+HParams:
+	batch_size: 12
+	class_balanced: False
+	data_augmentation: True
+	groupdro_eta: 0.010308658884497703
+	lr: 0.00011416900757832279
+	nonlinear_classifier: False
+	resnet18: False
+	resnet_dropout: 0.1
+	weight_decay: 3.7667078744086606e-06
+loading set weights
+Traceback (most recent call last):
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/net/coxfs01/srv/export/coxfs01/pfister_lab2/share_root/Lab/spandan/contextual_domain_adaptation/DomainBed/domainbed/scripts/train.py", line 224, in <module>
+    algorithm.load_state_dict(algorithm_dict)
+  File "/n/home05/smadan/.conda/envs/domain_adaptation/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1406, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for GroupDRO:
+	size mismatch for q: copying a param with shape torch.Size([1]) from checkpoint, the shape in current model is torch.Size([0]).
