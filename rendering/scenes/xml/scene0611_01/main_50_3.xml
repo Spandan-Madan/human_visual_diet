@@ -1,0 +1,385 @@
+<?xml version="1.0" ?>
+<scene verion="0.5.0">
+    <integrator type="path"/>
+    <bsdf id="scene0611_01_wall" type="microfacet">
+        <rgb name="albedo" value="0.500 0.500 0.500"/>
+        <rgb name="albedoScale" value="1.030 1.107 0.836"/>
+        <float name="roughness" value="0.700"/>
+        <float name="roughnessScale" value="1.375"/>
+    </bsdf>
+    <bsdf id="scene0611_01_ceiling" type="microfacet">
+        <rgb name="albedo" value="0.500 0.500 0.500"/>
+        <rgb name="albedoScale" value="0.849 1.086 1.291"/>
+        <float name="roughness" value="0.700"/>
+        <float name="roughnessScale" value="0.759"/>
+    </bsdf>
+    <bsdf id="scene0611_01_floor" type="microfacet">
+        <float name="uvScale" value="0.352"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__mud_forest_track_travelled_light_mud/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="0.948 1.076 1.054"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__mud_forest_track_travelled_light_mud/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__mud_forest_track_travelled_light_mud/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="0.998"/>
+    </bsdf>
+    <shape id="scene0611_01_object" type="obj">
+        <string name="filename" value="../../../../../layoutMesh/scene0611_01/uv_mapped.obj"/>
+        <transform name="toWorld">
+            <scale x="1.000000" y="1.000000" z="1.000000"/>
+            <rotate angle="90.000000" x="-1.000000" y="0.000000" z="0.000000"/>
+            <translate x="-3.916232" y="-1.103163" z="2.522987"/>
+        </transform>
+        <ref id="scene0611_01_wall" name="bsdf"/>
+        <ref id="scene0611_01_ceiling" name="bsdf"/>
+        <ref id="scene0611_01_floor" name="bsdf"/>
+    </shape>
+    <shape id="scene0611_01_object" type="obj">
+        <string name="filename" value="../../../../../layoutMesh/scene0611_01/container.obj"/>
+        <transform name="toWorld">
+            <scale x="1.000000" y="1.000000" z="1.000000"/>
+            <rotate angle="90.000000" x="-1.000000" y="0.000000" z="0.000000"/>
+            <translate x="-3.916232" y="-1.103163" z="2.522987"/>
+        </transform>
+        <ref id="scene0611_01_wall" name="bsdf"/>
+        <ref id="scene0611_01_ceiling" name="bsdf"/>
+        <ref id="scene0611_01_floor" name="bsdf"/>
+    </shape>
+    <bsdf id="02747177_56efabe64ce30e08d7bc2c778b186f58_part0" type="microfacet">
+        <rgb name="albedo" value="0.168 0.168 0.168"/>
+        <rgb name="albedoScale" value="0.954 0.943 0.762"/>
+        <float name="roughness" value="0.100"/>
+        <float name="roughnessScale" value="0.575"/>
+    </bsdf>
+    <shape id="02747177_56efabe64ce30e08d7bc2c778b186f58_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/02747177/56efabe64ce30e08d7bc2c778b186f58/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="0.515951" y="0.492282" z="0.468513"/>
+            <rotate angle="109.595540" x="0.000000" y="-1.000000" z="0.000000"/>
+            <translate x="-1.637759" y="-0.724265" z="-1.741125"/>
+            <translate x="0.000000" y="-0.099430" z="0.000000"/>
+        </transform>
+        <ref id="02747177_56efabe64ce30e08d7bc2c778b186f58_part0" name="bsdf"/>
+    </shape>
+    <bsdf id="04379243_c37632eafbf41b9c1fb41007d56c0ca1_part0" type="microfacet">
+        <float name="uvScale" value="1.128"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__copper_oxydized/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="0.818 1.181 1.103"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__copper_oxydized/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__copper_oxydized/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="1.081"/>
+    </bsdf>
+    <bsdf id="04379243_c37632eafbf41b9c1fb41007d56c0ca1_part1" type="microfacet">
+        <rgb name="albedo" value="0.863 0.863 0.863"/>
+        <rgb name="albedoScale" value="0.926 1.159 1.140"/>
+        <float name="roughness" value="0.100"/>
+        <float name="roughnessScale" value="0.761"/>
+    </bsdf>
+    <shape id="04379243_c37632eafbf41b9c1fb41007d56c0ca1_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/04379243/c37632eafbf41b9c1fb41007d56c0ca1/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="2.541548" y="2.153715" z="2.490971"/>
+            <rotate angle="147.620445" x="0.000000" y="1.000000" z="0.000000"/>
+            <translate x="0.193566" y="-0.382573" z="-0.094639"/>
+            <translate x="0.000000" y="-0.117550" z="0.000000"/>
+        </transform>
+        <ref id="04379243_c37632eafbf41b9c1fb41007d56c0ca1_part0" name="bsdf"/>
+        <ref id="04379243_c37632eafbf41b9c1fb41007d56c0ca1_part1" name="bsdf"/>
+    </shape>
+    <bsdf id="03001627_d91457217673528ef91663a74ccd2338_part0" type="microfacet">
+        <float name="uvScale" value="1.187"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__military_camouflage/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="1.174 1.064 1.007"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__military_camouflage/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__military_camouflage/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="0.990"/>
+    </bsdf>
+    <bsdf id="03001627_d91457217673528ef91663a74ccd2338_part1" type="microfacet">
+        <float name="uvScale" value="1.187"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__cotton_flannel/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="0.958 1.148 0.860"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__cotton_flannel/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__cotton_flannel/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="1.048"/>
+    </bsdf>
+    <bsdf id="03001627_d91457217673528ef91663a74ccd2338_part2" type="microfacet">
+        <float name="uvScale" value="1.187"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__colored_powder_3d_print_glossy_blue/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="0.842 1.242 1.071"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__colored_powder_3d_print_glossy_blue/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__colored_powder_3d_print_glossy_blue/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="1.066"/>
+    </bsdf>
+    <shape id="03001627_d91457217673528ef91663a74ccd2338_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/03001627/d91457217673528ef91663a74ccd2338/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="1.216607" y="1.356411" z="1.065895"/>
+            <rotate angle="11.581380" x="0.000000" y="1.000000" z="0.000000"/>
+            <translate x="1.711481" y="-0.691144" z="1.061784"/>
+            <translate x="0.000000" y="-0.029376" z="0.000000"/>
+        </transform>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part0" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part1" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part2" name="bsdf"/>
+    </shape>
+    <shape id="03001627_d91457217673528ef91663a74ccd2338_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/03001627/d91457217673528ef91663a74ccd2338/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="1.158866" y="1.284410" z="1.104488"/>
+            <rotate angle="36.913249" x="0.000000" y="-1.000000" z="0.000000"/>
+            <translate x="0.527600" y="-0.704970" z="1.144543"/>
+            <translate x="0.000000" y="-0.035862" z="0.000000"/>
+        </transform>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part0" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part1" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part2" name="bsdf"/>
+    </shape>
+    <shape id="03001627_d91457217673528ef91663a74ccd2338_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/03001627/d91457217673528ef91663a74ccd2338/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="1.114212" y="1.314706" z="1.206146"/>
+            <rotate angle="149.650664" x="0.000000" y="1.000000" z="0.000000"/>
+            <translate x="1.387102" y="-0.709385" z="-0.142867"/>
+            <translate x="0.000000" y="-0.022899" z="0.000000"/>
+        </transform>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part0" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part1" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part2" name="bsdf"/>
+    </shape>
+    <shape id="03001627_d91457217673528ef91663a74ccd2338_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/03001627/d91457217673528ef91663a74ccd2338/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="1.271524" y="1.293964" z="0.985680"/>
+            <rotate angle="37.708967" x="0.000000" y="-1.000000" z="0.000000"/>
+            <translate x="0.005721" y="-0.701344" z="0.593427"/>
+            <translate x="0.000000" y="-0.036792" z="0.000000"/>
+        </transform>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part0" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part1" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part2" name="bsdf"/>
+    </shape>
+    <shape id="03001627_d91457217673528ef91663a74ccd2338_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/03001627/d91457217673528ef91663a74ccd2338/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="1.109120" y="1.281117" z="0.884226"/>
+            <rotate angle="37.594775" x="0.000000" y="-1.000000" z="0.000000"/>
+            <translate x="-0.699825" y="-0.716570" z="0.136286"/>
+            <translate x="0.000000" y="-0.025190" z="0.000000"/>
+        </transform>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part0" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part1" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part2" name="bsdf"/>
+    </shape>
+    <shape id="03001627_d91457217673528ef91663a74ccd2338_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/03001627/d91457217673528ef91663a74ccd2338/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="1.106262" y="1.271809" z="1.506221"/>
+            <rotate angle="141.873039" x="0.000000" y="1.000000" z="0.000000"/>
+            <translate x="-0.104227" y="-0.734042" z="-0.937687"/>
+            <translate x="0.000000" y="-0.010344" z="0.000000"/>
+        </transform>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part0" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part1" name="bsdf"/>
+        <ref id="03001627_d91457217673528ef91663a74ccd2338_part2" name="bsdf"/>
+    </shape>
+    <bsdf id="door_2df413de74de82d2fcbd07bde5deede4_part0" type="microfacet">
+        <float name="uvScale" value="0.982"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__polyester_hydrosoft_weave/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="0.701 0.980 0.829"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__polyester_hydrosoft_weave/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__polyester_hydrosoft_weave/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="1.031"/>
+    </bsdf>
+    <bsdf id="door_2df413de74de82d2fcbd07bde5deede4_part1" type="microfacet">
+        <float name="uvScale" value="0.982"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__wood_pulp_light_wood/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="1.093 0.992 0.997"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__wood_pulp_light_wood/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__wood_pulp_light_wood/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="0.948"/>
+    </bsdf>
+    <bsdf id="window_2_part0" type="microfacet">
+        <float name="uvScale" value="0.740"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__polyester_structured_double_weave/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="1.296 0.932 0.760"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__polyester_structured_double_weave/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__polyester_structured_double_weave/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="0.863"/>
+    </bsdf>
+    <bsdf id="curtain_1_part0" type="microfacet">
+        <float name="uvScale" value="1.258"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__parquet_european_ash/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="1.196 1.139 1.143"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__parquet_european_ash/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__parquet_european_ash/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="1.021"/>
+    </bsdf>
+    <bsdf id="curtain_1_part1" type="microfacet">
+        <float name="uvScale" value="1.258"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__gold_natural_rough_damage_surface/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="1.088 1.267 0.905"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__gold_natural_rough_damage_surface/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__gold_natural_rough_damage_surface/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="1.100"/>
+    </bsdf>
+    <bsdf id="ceiling_lamp_14559_part1" type="microfacet">
+        <float name="uvScale" value="0.785"/>
+        <texture name="albedo" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__synthetic_canvas_thin/tiled/diffuse_tiled.png"/>
+        </texture>
+        <rgb name="albedoScale" value="0.702 1.082 0.978"/>
+        <texture name="normal" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__synthetic_canvas_thin/tiled/normal_tiled.png"/>
+        </texture>
+        <texture name="roughness" type="bitmap">
+            <string name="filename" value="../../../TileableTextureSynthesis/materials_50_3_modified/Material__synthetic_canvas_thin/tiled/rough_tiled.png"/>
+        </texture>
+        <float name="roughnessScale" value="1.015"/>
+    </bsdf>
+    <shape id="ceiling_lamp_14559_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/ceiling_lamp/14559/aligned_shape.obj"/>
+        <transform name="toWorld">
+            <scale x="0.257865" y="0.500000" z="0.257865"/>
+            <rotate angle="90.000000" x="1.000000" y="0.000000" z="-0.000000"/>
+            <translate x="4.025361" y="2.780081" z="2.909000"/>
+            <scale x="1.000000" y="1.000000" z="1.000000"/>
+            <rotate angle="90.000000" x="-1.000000" y="0.000000" z="0.000000"/>
+            <translate x="-3.916232" y="-1.103163" z="2.522987"/>
+        </transform>
+        <ref id="ceiling_lamp_14559_part1" name="bsdf"/>
+    </shape>
+    <shape id="ceiling_lamp_14559_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/ceiling_lamp/14559/aligned_light.obj"/>
+        <transform name="toWorld">
+            <scale x="0.257865" y="0.500000" z="0.257865"/>
+            <rotate angle="90.000000" x="1.000000" y="0.000000" z="-0.000000"/>
+            <translate x="4.025361" y="2.780081" z="2.909000"/>
+            <scale x="1.000000" y="1.000000" z="1.000000"/>
+            <rotate angle="90.000000" x="-1.000000" y="0.000000" z="0.000000"/>
+            <translate x="-3.916232" y="-1.103163" z="2.522987"/>
+        </transform>
+    </shape>
+    <shape id="door_2df413de74de82d2fcbd07bde5deede4_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/door/2df413de74de82d2fcbd07bde5deede4/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="1.955395" y="1.343437" z="2.361763"/>
+            <rotate angle="102.455551" x="0.803223" y="0.421208" z="0.421208"/>
+            <translate x="1.466499" y="3.537677" z="1.196710"/>
+            <scale x="1.000000" y="1.000000" z="1.000000"/>
+            <rotate angle="90.000000" x="-1.000000" y="0.000000" z="0.000000"/>
+            <translate x="-3.916232" y="-1.103163" z="2.522987"/>
+        </transform>
+        <ref id="door_2df413de74de82d2fcbd07bde5deede4_part0" name="bsdf"/>
+        <ref id="door_2df413de74de82d2fcbd07bde5deede4_part1" name="bsdf"/>
+    </shape>
+    <shape id="window_2_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/window/2/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="0.595525" y="0.756595" z="1.373977"/>
+            <rotate angle="102.455551" x="0.803223" y="0.421208" z="0.421208"/>
+            <translate x="1.462223" y="4.790029" z="0.620773"/>
+            <scale x="1.000000" y="1.000000" z="1.000000"/>
+            <rotate angle="90.000000" x="-1.000000" y="0.000000" z="0.000000"/>
+            <translate x="-3.916232" y="-1.103163" z="2.522987"/>
+        </transform>
+        <ref id="window_2_part0" name="bsdf"/>
+    </shape>
+    <shape id="window_2_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/window/2/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="0.976274" y="0.756595" z="1.373977"/>
+            <rotate angle="141.829656" x="0.345991" y="-0.663434" z="-0.663434"/>
+            <translate x="7.241636" y="1.694379" z="0.620773"/>
+            <scale x="1.000000" y="1.000000" z="1.000000"/>
+            <rotate angle="90.000000" x="-1.000000" y="0.000000" z="0.000000"/>
+            <translate x="-3.916232" y="-1.103163" z="2.522987"/>
+        </transform>
+        <ref id="window_2_part0" name="bsdf"/>
+    </shape>
+    <shape id="door_2df413de74de82d2fcbd07bde5deede4_object" type="obj">
+        <string name="filename" value="../../../../../uv_mapped/door/2df413de74de82d2fcbd07bde5deede4/alignedNew.obj"/>
+        <transform name="toWorld">
+            <scale x="0.328175" y="1.343437" z="2.361763"/>
+            <rotate angle="141.829656" x="0.345991" y="-0.663434" z="-0.663434"/>
+            <translate x="5.381476" y="0.279703" z="1.196710"/>
+            <scale x="1.000000" y="1.000000" z="1.000000"/>
+            <rotate angle="90.000000" x="-1.000000" y="0.000000" z="0.000000"/>
+            <translate x="-3.916232" y="-1.103163" z="2.522987"/>
+        </transform>
+        <ref id="door_2df413de74de82d2fcbd07bde5deede4_part0" name="bsdf"/>
+        <ref id="door_2df413de74de82d2fcbd07bde5deede4_part1" name="bsdf"/>
+    </shape>
+    <sensor type="perspective">
+        <float name="fov" value="57.9516"/>
+        <string name="fovAxis" value="x"/>
+        <film type="hdrfilm">
+            <integer name="width" value="640"/>
+            <integer name="height" value="480"/>
+        </film>
+        <sampler type="adaptive">
+            <integer name="sampleCount" value="1024"/>
+        </sampler>
+    </sensor>
+    <emitter type="envmap">
+        <string name="filename" value="../../../../../EnvDataset/2170L.hdr"/>
+        <float name="scale" value="161.0083"/>
+    </emitter>
+</scene>
