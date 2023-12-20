@@ -1,4 +1,4 @@
-# human_visual_diet
+# Improving generalization by mimicking the human visual diet
 
 <div align="center">
 <h3>Improving generalization by mimicking the human visual diet</h3>
@@ -10,7 +10,7 @@
   <a href="#data">Accessing the data</a> •
 </div>
 
-This repository contains the official implementation of our paper: *Adversarial examples within the training distribution: A widespread challenge.* Here you can find the code, demos and the data used for this project.
+This repository contains the official implementation of our paper: *Improving generalization by mimicking the human visual diet.* Here you can find the code and the data used for this project.
 
 The paper can be accessed [here](https://arxiv.org/abs/2206.07802).
 
@@ -55,4 +55,4 @@ The code should work out of the box on most linux distributions. The code was no
 - Download the data (not needed to run demos) following instructions below.
 
 # Data
-The HVD and Semantic iLab datasets can be foud here:
+The HVD dataset can be found here: https://drive.google.com/drive/folders/1W0Wxp3DYGjzHNxOUnZI-H9uyR6D9mU83?usp=share_link
